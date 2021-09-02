@@ -1,0 +1,323 @@
+.columnatablatodoslosdatosmensajeria {
+	text-align: center;
+	width: 20vw;
+	position: relative;
+}
+.columnatablatodoslosnuevosdatosmensajeria {
+	text-align: center;
+	width: 20vw;
+	position: relative;
+}
+.columnatablatodoslospendientesmensajeria {
+	text-align: center;
+	width: 20vw;
+	position: relative;
+}
+.columnatablatodoslosfinalizadosmensajeria {
+	text-align: center;
+	width: 20vw;
+	position: relative;
+}
+.columnatablatodoslosfalladosmensajeria {
+	text-align: center;
+	width: 20vw;
+	position: relative;
+}
+
+.columnamenutodoslosdatos {
+	width: 25%;
+	display: table-column;
+	float: left;
+	text-indent: 5%;
+	cursor: pointer;
+}
+.columnamenutodoslosnuevosdatos {
+	width: 33.33%;
+	display: table-column;
+	float: left;
+	text-indent: 5%;
+	cursor: pointer;
+}
+.columnamenutodoslospendientes {
+	width: 33.33%;
+	display: table-column;
+	float: left;
+	text-indent: 5%;
+	cursor: pointer;
+}
+.columnamenutodoslosfinalizados {
+	width: 33.33%;
+	display: table-column;
+	float: left;
+	text-indent: 5%;
+	cursor: pointer;
+}
+.columnamenutodoslosfallados {
+	width: 33.33%;
+	display: table-column;
+	float: left;
+	text-indent: 5%;
+	cursor: pointer;
+}
+.columnamenutodoslosdatos:hover {
+	-webkit-box-shadow: 2px 3px #593E2E;
+	box-shadow: 2px 3px #593E2E;
+	color: #8C6E5D;
+	opacity: 1;
+}
+.columnamenutodoslospendientes:hover {
+	-webkit-box-shadow: 2px 3px #593E2E;
+	box-shadow: 2px 3px #593E2E;
+	color: #8C6E5D;
+	opacity: 1;
+}
+.columnamenutodoslosfinalizados:hover {
+	-webkit-box-shadow: 2px 3px #593E2E;
+	box-shadow: 2px 3px #593E2E;
+	color: #8C6E5D;
+	opacity: 1;
+}
+.columnamenutodoslosfallados:hover {
+	-webkit-box-shadow: 2px 3px #593E2E;
+	box-shadow: 2px 3px #593E2E;
+	color: #8C6E5D;
+	opacity: 1;
+}
+.columnamenutodoslosnuevosdatos:hover {
+	-webkit-box-shadow: 2px 3px #593E2E;
+	box-shadow: 2px 3px #593E2E;
+	color: #8C6E5D;
+	opacity: 1;
+}
+.ventanatablatodoslosdatos {
+	border: thin groove #A2D4F2;
+}
+.ventanatablatodoslosnuevosdatos {
+	border: thin groove #A2D4F2;
+}
+.ventanatablatodoslospendientes {
+	border: thin groove #A2D4F2;
+}
+.ventanatablatodoslosfinalizados {
+	border: thin groove #A2D4F2;
+}
+.ventanatablatodoslosfallados {
+	border: thin groove #A2D4F2;
+}
+.filamenutodoslosdatos {
+	width: 100%;
+	border-bottom: thin groove #A2D4F2;
+	clear: none;
+	float: left;
+}
+.filamenutodoslosnuevosdatos {
+	width: 100%;
+	border-bottom: thin groove #A2D4F2;
+	clear: none;
+	float: left;
+}
+.filamenutodoslospendientes {
+	width: 100%;
+	border-bottom: thin groove #A2D4F2;
+	clear: none;
+	float: left;
+}
+.filamenutodoslosfinalizados {
+	width: 100%;
+	border-bottom: thin groove #A2D4F2;
+	clear: none;
+	float: left;
+}
+.filamenutodoslosfallados {
+	width: 100%;
+	border-bottom: thin groove #A2D4F2;
+	clear: none;
+	float: left;
+}
+.tablatodoslosdatos {
+	display: none;
+	text-align: center;
+	width: 100%;
+	min-width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.tablatodoslosnuevosdatos {
+	display: none;
+	text-align: center;
+	width: 100%;
+	min-width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.tablatodoslospendientes {
+	display: none;
+	text-align: center;
+	width: 100%;
+	min-width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.tablatodoslosfinalizados {
+	display: none;
+	text-align: center;
+	width: 100%;
+	min-width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.tablatodoslosfallados {
+	display: none;
+	text-align: center;
+	width: 100%;
+	min-width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.columnatablatodoslosdatosreuniones {
+	width: 20vw;
+}
+.columnatablatodoslosnuevosdatosreuniones {
+	width: 20vw;
+}
+.columnatablatodoslospendientesreuniones {
+	width: 20vw;
+}
+.columnatablatodoslosfinalizadosreuniones {
+	width: 20vw;
+}
+.columnatablatodoslosfalladosreuniones {
+	width: 20vw;
+}
+.tbodytodoslosdatos {
+}
+.tbodytodoslosnuevosdatos {
+}
+.tbodytodoslospendientes {
+}
+.tbodytodoslosfinalizados {
+}
+.tbodytodoslosfallados {
+}
+.filatodoslosdatos:hover {
+	-webkit-box-shadow: 2px 2px 2px #593E2E;
+	box-shadow: 2px 2px 2px #593E2E;
+}
+.filatodoslosnuevosdatos:hover {
+	-webkit-box-shadow: 2px 2px 2px #593E2E;
+	box-shadow: 2px 2px 2px #593E2E;
+}
+.filatodoslospendientes:hover {
+	-webkit-box-shadow: 2px 2px 2px #593E2E;
+	box-shadow: 2px 2px 2px #593E2E;
+}
+.filatodoslosfinalizados:hover {
+	-webkit-box-shadow: 2px 2px 2px #593E2E;
+	box-shadow: 2px 2px 2px #593E2E;
+}
+.filatodoslosfallados:hover {
+	-webkit-box-shadow: 2px 2px 2px #593E2E;
+	box-shadow: 2px 2px 2px #593E2E;
+}
+.filatodoslosdatos {
+	border-top: medium solid #593E2E;
+	border-bottom: thin solid #593E2E;
+	display: table-row;
+	/* [disabled]min-width: 100%; */
+	width: 100%;
+}
+.filatodoslosnuevosdatos {
+	border-top: medium solid #593E2E;
+	border-bottom: thin solid #593E2E;
+	display: table-row;
+	/* [disabled]min-width: 100%; */
+	width: 100%;
+}
+.filatodoslospendientes {
+	border-top: medium solid #593E2E;
+	border-bottom: thin solid #593E2E;
+	display: table-row;
+	/* [disabled]min-width: 100%; */
+	width: 100%;
+}
+.filatodoslosfinalizados {
+	border-top: medium solid #593E2E;
+	border-bottom: thin solid #593E2E;
+	display: table-row;
+	/* [disabled]min-width: 100%; */
+	width: 100%;
+}
+.filatodoslosfallados {
+	border-top: medium solid #593E2E;
+	border-bottom: thin solid #593E2E;
+	display: table-row;
+	/* [disabled]min-width: 100%; */
+	width: 100%;
+}
+.columnatablatodoslosdatosrequerimientos {
+	width: 16.66vw;
+}
+.columnatablatodoslosnuevosdatosrequerimientos {
+	width: 16.66vw;
+}
+.columnatablatodoslospendientesrequerimientos {
+	width: 16.66vw;
+}
+.columnatablatodoslosfinalizadosrequerimientos {
+	width: 16.66vw;
+}
+.columnatablatodoslosfalladosrequerimientos {
+	width: 16.66vw;
+}
+.columnatablatodoslosdatosperfilusuario {
+	width: 20vw;
+}
+#paneltodoslosdatos {
+}
+#paneltodoslosnuevosdatos {
+}
+#paneltodoslospendientes {
+}
+#paneltodoslosfinalizados {
+}
+#paneltodoslosfallados {
+}
+
+#paneladministrador {
+	display: none;
+}
+
+.paneladmindesplegado {
+	font-family: cardo;
+	font-style: normal;
+	font-weight: 400;
+	color: #403939;
+	margin-right: 6vw;
+	float: right;
+	animation-name: despliegue;
+	animation-duration: 0.5s;
+	border: medium ridge #A2D4F2;
+	border-radius: 7px;
+	background-image: -webkit-linear-gradient(270deg,rgba(191,179,164,1.00) 45.60%,rgba(162,212,242,1.00) 100%);
+	background-image: linear-gradient(180deg,rgba(191,179,164,1.00) 45.60%,rgba(162,212,242,1.00) 100%);
+	-webkit-box-shadow: 14px 14px 5px #593E2E;
+	box-shadow: 14px 14px 5px #593E2E;
+	width: 80%;
+	padding-top: 2vh;
+	padding-bottom: 2vh;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	margin-top: 6vh;
+	top: -4vh;
+	position: relative;
+}
+.formulariocotizador {
+	display: none;
+	text-align: left;
+	float: left;
+}

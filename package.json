@@ -1,0 +1,22 @@
+{
+  "name": "prueba2",
+  "version": "1.0.0",
+  "description": "prototipo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kirkinche/prueba2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kirkinche/prueba2/issues"
+  },
+  "homepage": "https://github.com/Kirkinche/prueba2#readme",
+  "dependencies": {
+    "firebase-admin": "^9.11.0"
+  }
+}

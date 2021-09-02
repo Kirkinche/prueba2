@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+.bottomarticle {
+	background-color: #FFFFFF;
+	color: #FFFFFF;
+	background-repeat: repeat;
+	background-clip: padding-box;
+	-webkit-box-shadow: 15px 15px 1px #8C6E5D;
+	box-shadow: 15px 15px 1px #8C6E5D;
+	vertical-align: bottom;
+	height: 600px;
+}

@@ -1,0 +1,39 @@
+@charset "utf-8";
+.accesocuenta {
+	text-align: center;
+	font-family: cardo;
+	font-style: normal;
+	font-weight: 400;
+}
+.panelprincipal {
+	width: 100%;
+	display: none;
+}
+.accesocuenta .tituloingreso a {
+	color: #403939;
+	text-decoration: none;
+	font-size: x-large;
+	font-variant: small-caps;
+}
+.accesocuenta .tituloingreso a:hover {
+	color: #A2D4F2;
+}
+.footerregistro {
+	background-color: #403939;
+	height: 10px;
+	margin-top: -10px;
+}
+
+#panelgeneral {
+	background-color: #BFB3A4;
+	float: left;
+	margin-top: -10px;
+	width: 100%;
+}
+.panelusuarioinferior {
+	background-color: #593E2E;
+	width: 100%;
+	clear: right;
+	height: 1rem;
+	top: 0rem;
+}

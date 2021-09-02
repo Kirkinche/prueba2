@@ -1,0 +1,1166 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Testingcode</title>
+	<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="https://use.edgefonts.net/cuprum:n4:default;cardo:n4:default;cantata-one:n4:default.js" type="text/javascript"></script>
+
+<link href="css/templateglobaljm.css" rel="stylesheet" type="text/css">
+<link href="css/estiloregistro2.css" rel="stylesheet" type="text/css">
+<link href="css/estiloappusuario.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+@media (min-width: 1001px) and (max-width: 1587px){
+}
+
+@media (max-width: 1587px){
+}
+</style>
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/cardo:n4,n7:default;cuprum:n4:default;cantata-one:n4:default;inconsolata:n5:default;nova-mono:n4:default;pt-mono:n4:default.js" type="text/javascript"></script>
+</head>
+
+<body>
+	
+	
+
+	
+	
+<header>
+ <iframe class="cuadromenu" src="Menusuperior.html" align="middle"> </iframe>
+</header>
+<main class="contenidousuario">	
+	<div id="panelaccesofuera" class="panelprincipal">
+	  <!-- Header section containing title -->
+  			<header class="encabezadoingreso">
+    <div class="accesocuenta">
+      <div class="tituloingreso">
+		  <a href="/registro.html"><h3>¡Regístrese para poder programar sus requerimientos o ingrese directamente a su cuenta!</h3></a>
+		</div>
+    </div>
+  </header>
+ 			 <section class="mdl-layout__content mdl-color--grey-100">
+  			  <div class="accesocuenta">
+
+      <!-- Container for the demo -->
+      <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
+        <div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
+          <h2 class="mdl-card__title-text"> Autentificación por correo electrónico &amp; clave secreta</h2>
+        </div>
+        <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+          <p>Ingrese su correo electrónico y clave secreta para ingresar a una cuenta existente o crear una nueva cuenta</p>
+
+          <input class="mdl-textfield__input" style="display:inline;width:auto;" type="text" id="email" name="email" placeholder="Correo electrónico"/>
+          &nbsp;&nbsp;&nbsp;
+          <input class="mdl-textfield__input" style="display:inline;width:auto;" type="password" id="password" name="password" placeholder="Clave secreta"/>
+          <br/><br/>
+          <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Ingrese</button>
+          &nbsp;&nbsp;&nbsp;
+          <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-up" name="signup">Crear cuenta nueva</button>
+          &nbsp;&nbsp;&nbsp;
+          <button class="mdl-button mdl-js-button mdl-button--raised" disabled id="quickstart-verify-email" name="verify-email">Enviar correo de verificación</button>
+          &nbsp;&nbsp;&nbsp;
+          <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-password-reset" name="verify-email">Enviar correo de reseteo de clave secreta</button>
+			
+          <!-- Container where we'll display the user details -->
+          <div class="quickstart-user-details-container">
+            Estado de acceso con Firebase: <span id="quickstart-sign-in-status">Unknown</span>
+            <div>Autentificación por Firebase <code>currentUser</code> valor de objeto:</div>
+            <pre><code id="quickstart-account-details">null</code></pre>
+          </div>
+      				  </div>
+     			 </div>
+   			 </div>
+  			</section>
+		</div>
+	
+	
+		<div id="panelaccesodentro">
+			<div id="panelgeneral">
+				<section id="panelcontrol">
+					
+					<img alt="logo de cliente" src="images/fondolindo1500-1000.jpg" class="thumbnail thumbnail_align"> 
+					 <aside id="datosusuario"> <h1> Panel de control de usuario</h1> <p>Nombre de usuario: <br> Organización: <br> Correo electrónico:</p>					
+					
+					</aside>
+					<button onClick="logout()" id="signout" name="signout" >Salir del sistema</button>
+					<div  id="franja1">
+						
+							<!-- cambiar el intercambio de indicaciones con un intercambio de imágenes con animación.-->
+					<section id="panelboton1" class="panelboton">
+										<ul><strong> Indicaciones para el uso de la mensajería:</strong>
+		<li>Puedes seleccionar varios archivos para adjuntarlos a tu mensaje.</li>
+		<li>Puedes intercambiar de panel entre la mensajería, las reuniones, los requerimientos y los archivos sin perder la información ingresada.</li>
+		<li>El mensaje escrito y los archivos seleccionados se borran si cierras el panel con el botón de cierre en la esquina superior derecha.</li>
+	  </ul>
+					</section>
+					<section id="panelboton2" class="panelboton">
+										<ul> <strong> Indicaciones para concertar reuniones:</strong>
+		<li>Elije la fecha y hora para concertar una reunión por videoconferencia.</li>
+		<li>Puedes dejar un comentario para considerar en tu solicitud.</li>
+		<li>Elije si deseas invitar a los participantes a una sessión de videoconferencia o si prefieres ser el invitado.</li>
+		<li>Agrega los correos electrónicos de los participantes que deseas incluir como invitados.</li>
+		<li>Puedes intercambiar de panel entre la mensajería, las reuniones, los requerimientos y los archivos sin perder la información ingresada.</li>
+		<li>La fecha, el comentario y los participantes indicados se borran si cierras el panel con el botón de cierre en la esquina superior derecha.</li>
+	  </ul>
+					</section>
+					<section id="panelboton3" class="panelboton">
+										<ul> Listado de ejemplo 3:
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+	  </ul>
+					</section>
+					<section id="panelboton4" class="panelboton">
+										<ul> Listado de ejemplo 4:
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+	  </ul>
+					</section>				
+					</div>
+								
+					
+					<!-- a continuación se disponen los botones de control, se debe incluir luego la función para cada panel correspondiente-->
+					<section id="botoneracontrol">
+						
+					<div class="filaboton">
+						<div class="columna"><input type="button" value="Mensajería" class="botoncontrol" id="botonmensajeria" onClick="desplieguemsj()"/>
+						</div>
+						<div class="columna"><input type="button" value="Reuniones" class="botoncontrol" id="botonreuniones" onClick="desplieguereuniones()"/>
+						</div>
+					</div>
+					<div class="filaboton">
+						<div class="columna"><input type="button" value="Requerimientos" class="botoncontrol" id="botonrequerimientos" onClick="desplieguerequerimientos()"/>
+						</div>
+						<div class="columna"><input type="button" value="Archivos" class="botoncontrol" id="botonarchivos" onClick="desplieguearchivos()"/>
+						</div>
+					</div>
+						</section>
+					
+			<footer id="botonesinferior"></footer>
+				</section>
+				<!-- Es el panellateral que se desplazará al activar los botones de control en el script-->
+				<aside id="panellateral">
+				<div id="panelpublicitario">	
+					
+				
+					</div>
+					
+				  <div id="panelmensajeria" class="paneldesplegado">
+					  <input type="button" onClick="cierrepanelmsj()" class="botoncierre" value="x"/>
+					  <form class="formulario" id="mensajeria" action="images/fondolindo1500-1000.jpg">
+					      <h1>Mensajería abierta para resolver tus dudas y responder tus consultas</h1> 
+						  <label for="mensajeusuario">Escribe tu mensaje a continuación:</label>
+					      <textarea class="form-control" id="mensajeusuario" rows="6" name="mensajeusuario"></textarea><br>
+						  <label for="file"> Tus archivos:  </label>
+						<input type="file" multiple name="file" id="file" onchange="javascript:updateList()">
+								<p>Archivos seleccionados:</p>
+								<div id="fileList"></div>
+						  <label for="enviarmsj"> Confirma tu envío: </label>
+						<input type="submit" id="enviarmsj"><br>
+					  </form>
+				  </div>
+				
+				  <div id="panelreuniones" class="paneldesplegado">
+				      <input type="button" onClick="cierrepanelreuniones()" class="botoncierre" value="x">
+					  <h1>Solicita una sesión de videoconferencia:</h1>
+						<form class="formulario" id="reuniones" action="images/fondolindo1500-1000.jpg">
+							<label for="fechareunion">Elije una fecha y hora (GMT-4: Santiago de Chile):</label>
+						<input type="datetime-local" name="fechareunion" id="fechareunion"><br><br>
+						 <label for="mensajereunion">Puedes agregar algún comentario en tu solicitud:</label>
+					      <textarea class="form-control" id="mensajereunion" rows="6" name="mensajereunion"></textarea>
+						   Selecciona una opción: <br>
+								  	<small><input type="radio" id="invitadousuario" name="invitador" value="invitadousuario" checked>
+								  	<label for="invitadousuario">Tu te encargas de invitar y administrar la sesión de videoconferencia.</label><br>
+									<input type="radio" id="invitalocal" name="invitador" value="invitalocal">
+  									<label for="invitalocal">Nosotros te enviamos las invitaciones para la sesión de videoconferencia. </label><br>
+									</small><br>
+						  <div id="participantesadicionales">
+									<label for="participante1">Indica el correo electrónico de los participantes que desees agregar a la sesión:</label><br>
+									<input type="email" name="participante1" id="participante1" class="participante"> 
+  						
+							<div id="emailList"></div></div>
+							 <input type="button" id="agregaemail" class="agregador" onClick="agregaparticipante()" value="+"><small><span> Agrega más participantes</span></small><br>
+  						Confirme su solicitud de reunión:
+							<label for="solicitareunion">  </label>
+						<input type="submit" id="solicitareunion"><br>
+
+							
+						</form>
+						<!-- ver opción de crear sesiones con meet: accediente al siguiente link: url: http://meet.google.com/new o con /hangout-->
+						
+					
+					</div>
+				  <div id="panelrequerimientos" class="paneldesplegado">
+						 <input type="button" onClick="cierrepanelrequerimientos()" class="botoncierre" value="x"/>
+							<h1>Programa tu requerimiento</h1>
+						
+							<table class="tablarequerimientos" id="requerimientos">
+								<thead>
+									<tr>
+										<th>En tramitación de expedientes:</th>
+										<th>Protección de su propiedad industrial:</th>
+										<th>Análisis de activos:</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr class="filareq">
+										<td class="celda" onClick="nuevatraduccion()" id="traduccion">Traducción de documento de patentes</td>
+										<td class="celda" onClick="nuevabusqueda()" id="busqueda">Búsqueda del estado del arte y estudios de patentabilidad</td>
+										<td class="celda" onClick="nuevaestudioinfraccion()" id="estudioinfraccion">Estudios de infracción</td>
+									</tr>
+									<tr class="filareq">
+										<td class="celda" onClick="nuevainformepericial()" id="informepericial">Análisis de informes periciales</td>
+										<td class="celda" onClick="nuevaredaccion()" id="redaccion">Redacción de patentes de invención, modelos de utilidad o Diseños industriales</td>
+										<td class="celda" onClick="nuevaelo()" id="elo">Estudios de Libertad de Operación</td>
+									</tr>
+									<tr class="filareq">
+										<td class="celda" onClick="nuevarespuestapericial()" id="respuesta">Respuesta a informe periciales</td>
+										<td class="celda" onClick="nuevarevision()" id="revision">Revisión y corrección de pliegos de reivindicaciones</td>
+										<td class="celda" onClick="nuevanulidad()" id="nulidad">Documentos para oposición o nulidad de patente</td>
+									</tr>
+								</tbody>
+							</table>
+															<form id="formulariotraduccion" class="formulario" action="images/fondolindo1500-1000.jpg">
+															  <label for="filetraduccion"> Agregua los documentos que deseas traducir: </label>
+																<input type="file" multiple name="filetraduccion" id="filetraduccion" onchange="javascript:updateListtraduccion()">
+																		<p>Archivos seleccionados:</p>
+																			<div id="fileListtraduccion"></div>
+																<label for="fechatraduccion">Elije una fecha para el plazo de entrega de la traducción:</label>
+																<input type="date" name="fechatraduccion" id="fechatraduccion"><br><br>
+																Selecciona el idioma al cual deseas traducir: <br>
+																<input type="radio" id="espanol" name="idioma" value="espanol" >
+																<label for="espanol">Español</label><br>
+																<input type="radio" id="ingles" name="idioma" value="ingles" >
+																<label for="ingles">Inglés</label><br>
+																<input type="radio" id="frances" name="idioma" value="frances">
+																<label for="frances">Francés </label><br>
+																<label for="cotizatraduccion">Deseo recibir una cotización antes de confirmar mi requerimiento:</label>
+																<input type="checkbox" name="cotizatraduccion" id="cotizatraduccion"> <br>
+																<label for="mensajetraduccion" class="formulariotexto">Agrega algún comentario, también puedes solicitar que nosotros conigamos el documento en base a su identificación con número de solicitud y/o detalle:</label>
+																<textarea class="form-control" id="mensajetraduccion" rows="6" name="mensajetraduccion"></textarea><br>
+																<label for="enviartraduccion"> Confirme su envío: </label>
+																<input type="submit" id="enviartraduccion">
+																<input type="button" onClick="volverpanelrequerimientos()" name="botonvolver" class="botonvolver" value="<<"/>
+																<br>
+
+													  </form>		
+															<form id="formularioinformepericial" class="formulario" action="images/fondolindo1500-1000.jpg">
+																	<p class="formulariotexto">Se analisa el informe pericial entregando un documento que identifica las objeciones, sugerencias y consideraciones pertinentes para un titular. También se ajusta al formato necesario según las preferencias.</p>
+																	<label for="fileinformepericial">Selecciona los archivos necesarios en tu gestión (formato de reporte, informe pericial, texto reglamentario, traducción, etc.):</label>
+																	<input type="file" multiple name="fileinformepericial" id="fileinformepericial" onchange="javascript:updateListinformepericial()">
+																			<p>Archivos seleccionados:</p>
+																				<div id="fileListinformepericial"></div>
+																	<label for="fechainformepericial">Elije una fecha para el plazo de entrega de los documentos:</label>
+																	<input type="date" name="fechainformepericial" id="fechainformepericial"><br><br>
+																	Selecciona el idioma que deseas para tus documentos: <br>
+																	<input type="radio" id="espanolinformepericial" name="idioma" value="espanol" checked>
+																	<label for="espanolinformepericial">Español</label><br>
+																	<input type="radio" id="inglesinformepericial" name="idioma" value="ingles" >
+																	<label for="inglesinformepericial">Inglés</label><br>
+																	<input type="radio" id="francesinformepericial" name="idioma" value="frances">
+																	<label for="francesinformepericial">Francés </label><br>
+																	<label for="cotizainformepericial">Deseo recibir una cotización antes de confirmar mi requerimiento:</label>
+																	<input type="checkbox" name="cotizainformepericial" id="cotizainformepericial"> <br>
+																	<label for="mensajeinformepericial" class="formulariotexto"> Indica algún comentario que debamos considerar, también puedes solicitar que consigamos los documentos necesarios en base al número de solicitud y detalle del estado administrativo a considerar:</label>
+																	<textarea class="form-control" id="mensajeinformepericial" rows="6" name="mensajeinformepericial"></textarea><br>
+																	<label for="enviarinformepericial"> Confirme su envío: </label>
+																	<input type="submit" id="enviarinformepericial">
+																	<input type="button" onClick="volverpanelrequerimientos()" name="botonvolver" class="botonvolver" value="<<"/><br>
+
+														  </form>
+															<form id="formulariorespuestapericial" class="formulario" action="images/fondolindo1500-1000.jpg">
+																	<p class="formulariotexto">Se preparan los documentos necesarios para presentar una respuesta a un informe pericial, basándose en argumentos y enmiendas preparados con antelación o propienéndolos por nuestra parte a un costo razonable. </p>
+																	<label for="filerespuestapericial"><p class="formulariotexto">Selecciona los archivos necesarios en tu gestión (argumentos, enmiendas, informe pericial, texto reglamentario, traducción, etc.):</p></label>
+																	<input type="file" multiple name="filerespuestapericial" id="filerespuestapericial" onchange="javascript:updateListrespuestapericial()">
+																			<p>Archivos seleccionados:</p>
+																				<div id="fileListrespuestapericial"></div>
+																	<label for="fecharespuestapericial">Elije una fecha para el plazo de entrega de los documentos:</label>
+																	<input type="date" name="fecharespuestapericial" id="fecharespuestapericial"><br><br>
+																	Selecciona el idioma que deseas para tus documentos: <br>
+																	<input type="radio" id="espanolrespuestapericial" name="idioma" value="espanol" checked>
+																	<label for="espanolrespuestapericial">Español</label><br>
+																	<input type="radio" id="inglesrespuestapericial" name="idioma" value="ingles" >
+																	<label for="inglesrespuestapericial">Inglés</label><br>
+																	<input type="radio" id="francesrespuestapericial" name="idioma" value="frances">
+																	<label for="francesrespuestapericial">Francés </label><br>
+																	<label for="cotizarespuestapericial">Deseo recibir una cotización antes de confirmar mi requerimiento:</label>
+																	<input type="checkbox" name="cotizarespuestapericial" id="cotizarespuestapericial"> <br>
+																	<label for="mensajerespuestapericial"> Indica algún comentario que debamos considerar:</label>
+																	<textarea class="form-control" id="mensajerespuestapericial" rows="6" name="mensajerespuestapericial"></textarea><br>
+																	<label for="enviarrespuestapericial"> Confirme su envío: </label>
+																	<input type="submit" id="enviarrespuestapericial">
+																	<input type="button" onClick="volverpanelrequerimientos()" name="botonvolver" class="botonvolver" value="<<"/><br>
+
+														  </form>
+					 										<form id="formulariobea" class="formulario" action="images/fondolindo1500-1000.jpg">
+																	<p class="formulariotexto">Se prepara una búsqueda del estado del arte para una definición propuesta en base a la documentación recibida que ilustra un proyecto innovador, esta documentación puede incluir un formulario propio, notas producidas en reunión u otros medios de presentación, una reunión por videoconferencia es recomentada para presentar la innovación así como para discutir las conclusiones del informe. En el informe entregado se envalúa finalmente la patentabilidad y los mecanismos de protección del proyecto.</p>
+																	<label for="filebea">Selecciona los archivos necesarios en tu gestión (formulario de búsqueda, planos o esquemas preliminares, ingenería conceptual, presentaciones power point, etc.):</label>
+																	<input type="file" multiple name="filebea" id="filebea" onchange="javascript:updateListbea()">
+																			<p>Archivos seleccionados:</p>
+																				<div id="fileListbea"></div>
+																	<label for="fechabea">Elije una fecha para el plazo de entrega de los documentos:</label>
+																	<input type="date" name="fechabea" id="fechabea"><br><br>
+																	Selecciona el idioma que deseas para tus documentos: <br>
+																	<input type="radio" id="espanolbea" name="idioma" value="espanol" checked>
+																	<label for="espanolbea">Español</label><br>
+																	<input type="radio" id="inglesbea" name="idioma" value="ingles" >
+																	<label for="inglesbea">Inglés</label><br>
+																	<input type="radio" id="francesbea" name="idioma" value="frances">
+																	<label for="francesbea">Francés </label><br>
+																	<label for="cotizabea">Deseo recibir una cotización antes de confirmar mi requerimiento:</label>
+																	<input type="checkbox" name="cotizabea" id="cotizabea"> <br>
+																	<label for="mensajebea"> Indica algún comentario que debamos considerar:</label>
+																	<textarea class="form-control" id="mensajebea" rows="6" name="mensajebea"></textarea><br>
+																	<label for="enviarbea"> Confirme su envío: </label>
+																	<input type="submit" id="enviarbea">
+																	<input type="button" onClick="volverpanelrequerimientos()" name="botonvolver" class="botonvolver" value="<<"/><br>
+
+														  </form>
+															<form id="formularioredaccion" class="formulario"  action="images/fondolindo1500-1000.jpg">
+																<p class="formulariotexto">Se prepara el texto reglamentario completo de una solicitud de Patente de Invención, Modelo de Utilidad o Diseño Industrial,  en base a una estrategia planteada con antelación para optimizar recursos y oportunidades. Se requiere una búsqueda del arte previo y su correspondiente análisis, el cual puede ser enconmendado acá o provisto directamente. Luego este análisis es discutido en reunión por videoconferencia, para establecer el campo de aplicación a abordar, los documentos necesarios para producir el texto reglamentario con su Memoria Descriptiva y Pliego de Reivindicaciones. También las figuras pueden ser preparadas a partir de esquemas o imágenes del invento, no obstante, planos técnicos originales y preparados especialmente para esta ocasión es lo más recomendado.</p>		
+																<label for="fecharedaccion">Elije una fecha y hora (GMT-4: Santiago de Chile) para concertar una reunión y discutir la redacción de tu patente:</label>
+																<input type="datetime-local" name="fecharedaccion" id="fecharedaccion"><br><br>
+																 <label for="mensajeredaccion">Puedes agregar algún comentario en tu solicitud:</label>
+																  <textarea class="form-control" id="mensajeredaccion" rows="6" name="mensajeredaccion"></textarea>
+																   Selecciona una opción: <br>
+																			<small><input type="radio" id="invitadoredaccionusuario" name="invitador" value="invitadoredaccionusuario" checked>
+																			<label for="invitadoredaccionusuario">Tu te encargas de invitar y administrar la sesión de videoconferencia.</label><br>
+																			<input type="radio" id="invitaredaccionlocal" name="invitador" value="invitaredaccionlocal">
+																			<label for="invitaredaccionlocal">Nosotros te enviamos las invitaciones para la sesión de videoconferencia. </label><br>
+																			</small><br>
+																  <div id="participantesredaccionadicionales">
+																			<label for="participanteredaccion1">Indica el correo electrónico de los participantes que desees agregar a la sesión:</label><br>
+																			<input type="email" name="participanteredaccion1" id="participanteredaccion1" class="participante">
+																	  		<div id="emailListredaccion"></div></div>
+																	 		<input type="button" id="agregaemailredaccion" class="agregador" onClick="agregaparticipanteredaccion()" value="+"><small><span> Agrega más participantes</span></small><br>
+																Confirme su solicitud de reunión:
+																	<label for="solicitaredaccion">  </label>
+																<input type="submit" id="solicitaredaccion"><input type="button" onClick="volverpanelrequerimientos()" name="botonvolver" class="botonvolver" value="<<"/><br>
+
+																</form>
+															<form id="formulariocorreccionpliego" class="formulario" action="images/fondolindo1500-1000.jpg">
+																	<p class="formulariotexto">Se suele corregir el Pliego de Reivindicaciones antes de entrar en fases nacionales, también lo tendrías que hacer para andelantarte a informe periciales negativos, acá puedes solicitar una revisión de tu solicitud, considerando las objecciones que le han sido formuladas o que pudiesen aparecer durante su examinación y corregir tu Pliego de Reivindicaciones para aumentar tus posibilidades de concesión.</p>
+																	<label for="filecorreccionpliego">Selecciona los archivos necesarios en tu gestión (informe(s) de búsqueda, informe(s) pericial(es), texto reglamentario, traducción, etc.):</label>
+																	<input type="file" multiple name="filecorreccionpliego" id="filecorreccionpliego" onchange="javascript:updateListcorreccionpliego()">
+																			<p>Archivos seleccionados:</p>
+																				<div id="fileListcorreccionpliego"></div>
+																	<label for="fechacorreccionpliego">Elije una fecha para el plazo de entrega de los documentos:</label>
+																	<input type="date" name="fechacorreccionpliego" id="fechacorreccionpliego"><br><br>
+																	Selecciona el idioma que deseas para tus documentos: <br>
+																	<input type="radio" id="espanolcorreccionpliego" name="idioma" value="espanol" checked>
+																	<label for="espanolcorreccionpliego">Español</label><br>
+																	<input type="radio" id="inglescorreccionpliego" name="idioma" value="ingles" >
+																	<label for="inglescorreccionpliego">Inglés</label><br>
+																	<input type="radio" id="francescorreccionpliego" name="idioma" value="frances">
+																	<label for="francescorreccionpliego">Francés </label><br>
+																	<label for="cotizacorreccionpliego">Deseo recibir una cotización antes de confirmar mi requerimiento:</label>
+																	<input type="checkbox" name="cotizacorreccionpliego" id="cotizacorreccionpliego"> <br>
+																	<label for="mensajecorreccionpliego" class="formulariotexto"> Indica algún comentario que debamos considerar, también puedes solicitar que consigamos los documentos necesarios en base al número de solicitud y detalle del estado administrativo a considerar:</label>
+																	<textarea class="form-control" id="mensajecorreccionpliego" rows="6" name="mensajecorreccionpliego"></textarea><br>
+																	<label for="enviarcorreccionpliego"> Confirme su envío: </label>
+																	<input type="submit" id="enviarcorreccionpliego">
+																	<input type="button" onClick="volverpanelrequerimientos()" name="botonvolver" class="botonvolver" value="<<"/><br>
+
+														  </form>
+															<form id="formularioinfraccion" class="formulario" action="images/fondolindo1500-1000.jpg">
+																	<p class="formulariotexto">Se entrega un estudio que evalúa si un producto o la descripción de un proceso industrial existente se encuentra dentro del alcance de protección de una patente o solicitud de patente junto con el análisis de la patente o solicitud en una determinada juridicción, por ejemplo en Chile.</p>
+																	<label for="fileinfraccion">Selecciona los archivos necesarios en tu gestión (folleto comercial o brochure del producto, planos de un producto o descripción operativa de un proceso industrial e información de la solicitud de patente o patente registrada a revisar):</label>
+																	<input type="file" multiple name="fileinfraccion" id="fileinfraccion" onchange="javascript:updateListinfraccion()">
+																			<p>Archivos seleccionados:</p>
+																				<div id="fileListinfraccion"></div>
+																	<label for="fechainfraccion">Elije una fecha para el plazo de entrega de los documentos:</label>
+																	<input type="date" name="fechainfraccion" id="fechainfraccion"><br><br>
+																	Selecciona el idioma que deseas para tus documentos: <br>
+																	<input type="radio" id="espanolinfraccion" name="idioma" value="espanol" checked>
+																	<label for="espanolinfraccion">Español</label><br>
+																	<input type="radio" id="inglesinfraccion" name="idioma" value="ingles" >
+																	<label for="inglesinfraccion">Inglés</label><br>
+																	<input type="radio" id="francesinfraccion" name="idioma" value="frances">
+																	<label for="francesinfraccion">Francés </label><br>
+																	<label for="cotizainfraccion">Deseo recibir una cotización antes de confirmar mi requerimiento:</label>
+																	<input type="checkbox" name="cotizainfraccion" id="cotizainfraccion"> <br>
+																	<label for="mensajeinfraccion" class="formulariotexto"> Indica algún comentario que debamos considerar y la información de la patente a analizar:</label>
+																	<textarea class="form-control" id="mensajeinfraccion" rows="6" name="mensajeinfraccion"></textarea><br>
+																	<label for="enviarinfraccion"> Confirme su envío: </label>
+																	<input type="submit" id="enviarinfraccion">
+																	<input type="button" onClick="volverpanelrequerimientos()" name="botonvolver" class="botonvolver" value="<<"/><br>
+
+														  </form>
+					  										<form id="formularioelo" class="formulario" action="images/fondolindo1500-1000.jpg">
+																	<p class="formulariotexto">Se entrega un estudio de libertad de operación, esto es un informe que te analysa las patentes o solicitudes de patentes vigentes en un país o jurisdicción relevantes para explotar un producto o proceso comercialmente, respaldándose frente a posibles acciones de titulares de propiedad industrial.</p>
+																	<label for="fileelo">Selecciona los archivos necesarios en tu gestión (folleto comercial o brochure del producto, planos del producto o descripción operativa del proceso industrial e país o jurisdicción a analyzar):</label>
+																	<input type="file" multiple name="fileelo" id="fileelo" onchange="javascript:updateListelo()">
+																			<p>Archivos seleccionados:</p>
+																				<div id="fileListelo"></div>
+																	<label for="fechaelo">Elije una fecha para el plazo de entrega de los documentos:</label>
+																	<input type="date" name="fechaelo" id="fechaelo"><br><br>
+																	Selecciona el idioma que deseas para tus documentos: <br>
+																	<input type="radio" id="espanolelo" name="idioma" value="espanol" checked>
+																	<label for="espanolelo">Español</label><br>
+																	<input type="radio" id="ingleselo" name="idioma" value="ingles" >
+																	<label for="ingleselo">Inglés</label><br>
+																	<input type="radio" id="franceselo" name="idioma" value="frances">
+																	<label for="franceselo">Francés </label><br>
+																	<label for="cotizaelo">Deseo recibir una cotización antes de confirmar mi requerimiento:</label>
+																	<input type="checkbox" name="cotizaelo" id="cotizaelo"> <br>
+																	<label for="mensajeelo" class="formulariotexto"> Indica algún comentario que debamos considerar:</label>
+																	<textarea class="form-control" id="mensajeelo" rows="6" name="mensajeelo"></textarea><br>
+																	<label for="enviarelo"> Confirme su envío: </label>
+																	<input type="submit" id="enviarelo">
+																	<input type="button" onClick="volverpanelrequerimientos()" name="botonvolver" class="botonvolver" value="<<"/><br>
+
+														  </form>
+													    	<form id="formularionulidad" class="formulario" action="images/fondolindo1500-1000.jpg">
+																	<p class="formulariotexto">Se entrega un estudio que evalúa si una patente o solicitud presentada en Chile puede ser anulada frente a una tramitación defectuosa o los argumentos necesarios para presentar una oposición durante la tramitación de la solicitud.</p>
+																	<label for="fechanulidad">Elije una fecha para el plazo de entrega de los documentos:</label>
+																	<input type="date" name="fechanulidad" id="fechanulidad"><br><br>
+																	Selecciona el idioma que deseas para tus documentos: <br>
+																	<input type="radio" id="espanolnulidad" name="idioma" value="espanol" checked>
+																	<label for="espanolnulidad">Español</label><br>
+																	<input type="radio" id="inglesnulidad" name="idioma" value="ingles" >
+																	<label for="inglesnulidad">Inglés</label><br>
+																	<input type="radio" id="francesnulidad" name="idioma" value="frances">
+																	<label for="francesnulidad">Francés </label><br>
+																	<label for="cotizanulidad">Deseo recibir una cotización antes de confirmar mi requerimiento:</label>
+																	<input type="checkbox" name="cotizanulidad" id="cotizanulidad"> <br>
+																	<label for="mensajenulidad" class="formulariotexto"> Indica algún comentario que debamos considerar y la información de la patente a analizar:</label>
+																	<textarea class="form-control" id="mensajenulidad" rows="6" name="mensajenulidad"></textarea><br>
+																	<label for="enviarnulidad"> Confirme su envío: </label>
+																	<input type="submit" id="enviarnulidad">
+																	<input type="button" onClick="volverpanelrequerimientos()" name="botonvolver" class="botonvolver" value="<<"/><br>
+
+														  </form>			 
+					</div>
+					<div id="panelarchivos" class="paneldesplegado">
+						 <input type="button" onClick="cierrepanelarchivos()" class="botoncierre" value="x"/>
+					  	<h1>Revisa tus expedientes:</h1>
+						<div class="ventanatabla">
+							<div class="filamenuarchivos">
+								<div class="columnamenuarchivos">
+								  <p class="celdamenuarchivos" id="tabmensajes" onClick="muestratablamensajeria()">Mensajería </p>
+								  </div>
+								<div class="columnamenuarchivos">
+								  <p class="celdamenuarchivos" id="tabreuniones" onClick="muestratablareuniones()">Reuniones </p> </div>
+								 <div class="columnamenuarchivos">
+								  <p class="celdamenuarchivos" id="tabrequerimientos" onClick="muestratablarequerimientos()">Requerimientos</p>
+								</div>
+								<div class="columnamenuarchivos">
+								  <p class="celdamenuarchivos" id="tabdocumentos" onClick="muestratabladocumentos()">Documentos </p>
+								 </div>
+							 </div>
+							<table class="tablaarchivos" id="mensajeriaarchivostabla">
+								<thead>
+									<tr>
+										<th>Mensajería</th>
+										<th>Fecha:</th>
+										<th>Acceder contenido</th>
+										<th>¿Documentos adjuntos presentes?</th>
+									</tr>
+								</thead>
+								<tbody class="tbodyarchivos" id="archivosmensajeriatbody">
+									<tr class="filaarchivos">
+										<td class="celdaarchivos" onClick="archivosmensajeria()" id="archivosmensajeria">mensaje#</td>
+										<td class="celdaarchivos" onClick="archivosmensajeriafecha()" id="archivosmensajeriafecha">mm/dd/aaaa</td>
+										<td class="celdaarchivos" onClick="archivosmensajeriaacceso()" id="archivosmensajeriaacceso">Revisa tu mensaje</td>
+										<td class="celdaarchivos" onClick="archivosmensajeriadocumentos()" id="archivosmensajeriadocumentos">si/no</td>
+									</tr>
+								</tbody>
+							</table><br>
+							<table class="tablaarchivos" id="reunionesarchivostabla">
+								<thead>
+									<tr>
+										<th>Reuniones</th>
+										<th>Fecha:</th>
+										<th>Duración</th>
+									</tr>
+								</thead>
+								<tbody class="tbodyarchivos" id="reunionesarchivostbody">
+									<tr class="filaarchivos">
+										<td class="celdaarchivos" onClick="archivosreuniones()" id="archivosreuniones">reunión#</td>
+										<td class="celdaarchivos" onClick="archivosreunionesfecha()" id="archivosreunionesfecha">mm/dd/aaaa</td>
+										<td class="celdaarchivos" onClick="archivosreunionesduracion()" id="archivosreunionesduracion">hh:mm</td>
+										</tr>
+							
+								</tbody>
+							</table><br>
+							<table class="tablaarchivos" id="requerimientosarchivostabla">
+								<thead>
+									<tr>
+										<th>Requerimientos</th>
+										<th>Tipo</th>
+										<th>Fecha de encargo</th>
+										<th>Fecha de entrega</th>
+										<th>Cotización</th>
+										<th>Documentos finales entregados</th>
+									</tr>
+								</thead>
+									<tbody class="tbodyarchivos" id="requerimientosarchivostbody">
+									<tr class="filaarchivos">
+										<td class="celdaarchivos" onClick="archivosrequerimientos()" id="archivosrequerimientos">requerimiento#</td>
+										<td class="celdaarchivos" onClick="archivosrequerimientostipo()" id="archivosrequerimientostipo">gestión</td>
+										<td class="celdaarchivos" onClick="archivosrequerimientosfechaencargo()" id="archivosrequerimientosfechaencargo">mm/dd/aaaa</td>
+										<td class="celdaarchivos" onClick="archivosrequerimientosfechaentrega()" id="archivosrequerimientosfechaentrega">mm/dd/aaaa</td>
+										<td class="celdaarchivos" onClick="archivosrequerimientoscotizacion()" id="archivosrequerimientoscotizacion">UF/$/€</td>
+										<td class="celdaarchivos" onClick="archivosrequerimientosdocumentos()" id="archivosrequerimientosdocumentos">si/no</td>
+									</tr>
+								</tbody>
+							</table><br>
+							<table class="tablaarchivos" id="documentosarchivostabla">
+								<thead>
+									<tr>
+										<th>Documentos</th>
+										<th>Fecha</th>
+										<th>Gestión</th>
+										<th>Cantidad</th>
+										<th>Descargar</th>
+									</tr>
+								</thead>
+								<tbody class="tbodyarchivos" id="documentosarchivostbody">
+									<tr class="filaarchivos">
+										<td class="celdaarchivos" onClick="archivosdocumentos()" id="archivosdocumentos">documentos#</td>
+										<td class="celdaarchivos" onClick="archivosdocumentosfecha()" id="archivosdocumentosfecha">mm/dd/aaaa</td>
+										<td class="celdaarchivos" onClick="archivosdocumentosgestion()" id="archivosdocumentosgestion">gestion encargada</td>
+										<td class="celdaarchivos" onClick="archivosdocumentoscantidad()" id="archivosdocumentoscantidad">## - ##,# Mb</td>
+										<td class="celdaarchivos" onClick="archivosdocumentosdescargar()" id="archivosdocumentosdescargar">iniciar descarga</td>
+									</tr>
+									</tbody>
+							</table><br>
+						</div>
+					</div>	
+			
+				</aside>
+				<footer class="panelusuarioinferior">
+				</footer>
+			</div>
+		</div>
+	</main>
+	<section id="franjainferior">
+	<div class="row">
+    <div class="columns">
+      <p class="thumbnail_align"> <img src="images/manos2.png" alt="" class="thumbnail"/> </p>
+      <h4 class="titulosocial">Empresas especializadas en Propiedad Industrial y abogados</h4>
+      <p class="textsocial">Aumente su capacidad de manejo y tramitación de expedientes, con toda seguridad y confianza en los cumplimientos de plazos. Escale sin costos fijos y satisfazga su creciente demanda frente a los desafíos de las grandes y muy grandes empresas.&nbsp;</p>
+    </div>
+    <div class="columns">
+      <p class="thumbnail_align"> <img src="images/industrias1.png" alt="" class="thumbnail"/> </p>
+      <h4 class="titulosocial">Empresas con actividad industrial</h4>
+      <p class="textsocial"><br>
+		  Consulte directamente con un especialista para un refuerzo de su equipo de inovación y desarrollo. Se ofrecen los estudios preparatorios y asesoría para la gestión y defensa de su propiedad industrial.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+    </div>
+    <div class="columns">
+      <p class="thumbnail_align"> <img src="images/academia1.png" alt="" class="thumbnail"/> </p>
+      <h4 class="titulosocial">Universidades y centros tecnológicos</h4>
+      <p class="textsocial"><br>
+		  Se ofrecen búsquedas del estado del arte, redacciones de patente en el área de ingeniería civil mecánica, preparación de diseños industriales y modelos de utilidad y apoyo a las respuestas de acciones oficiales antes las Oficinas estatales de Propiedad Industrial en el mundo.</p>
+    </div>
+    <div class="columns">
+      <p class="thumbnail_align"> <img src="images/inversiones2.png" alt="" class="thumbnail"/> </p>
+      <h4 class="titulosocial">Inversionistas y gestión de activos</h4>
+      <p class="textsocial"><br>
+		  Apoyo en su cartera de inversiones, analice el estado de sus activos de Propiedad Industrial. Conozca el estado actualizado de sus registros, su capacidad innovadora y la libertad de operar sin infringer patente de invención en algún mercado de interés.</p>
+    </div>
+  </div>
+		 <footer class="footerregistro">
+      </footer>
+  <div class="row blockDisplay">
+    <div class="column_half left_half">
+      <h2 class="column_title">PROGRAME SU REQUERIMIENTO <br>
+       VIDEOCONFERENCIA&nbsp;</h2>
+    </div>
+    <div class="column_half right_half">
+      <h2 class="column_title">PLAZOS BREVES&nbsp;&nbsp;<br>
+       DOCUMENTOS PROFESIONALES</h2>
+    </div>
+  </div>
+
+		  <div class="social">
+    <p class="social_icon"><img src="images/bkg_06.jpg" width="100" alt="" class="thumbnail"/></p>
+    <p class="social_icon"><img src="images/bkg_06.jpg" width="100" alt="" class="thumbnail"/></p>
+    <p class="social_icon"><img src="images/bkg_06.jpg" width="100" alt="" class="thumbnail"/></p>
+    <p class="social_icon"><img src="images/bkg_06.jpg" width="100" alt="" class="thumbnail"/></p>
+  </div>
+  <footer class="final_header footer">
+    <div class="copyright">&copy;2021 - <strong>SANTIAGO - CHILE</strong></div>
+  </footer>
+	</section>
+	
+		<!-- se carga el codigo de los paneles de usuario al final de cargar toda la página-->
+<!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+ 	<!-- update the version number as needed -->
+<script src="/__/firebase/8.6.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+<script src="/__/firebase/8.6.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-firestore.js"></script>
+	  <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+<script src="/__/firebase/init.js?useEmulator=false"></script>
+<script src="/__/firebase/init.js"></script>
+<script id="logincorreo" type="application/javascript">
+	//script para el boton de logout en panelgeneral
+	 function logout() {
+      if (firebase.auth().currentUser) {
+        firebase.auth().signOut();
+      }} 
+    /**
+	* Handles the sign in button press.
+     */
+		 
+    function toggleSignIn() {
+      if (firebase.auth().currentUser) {
+        firebase.auth().signOut();
+      } else {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        if (email.length < 4) {
+          alert('Por favor ingrese un correo electrónico');
+          return;
+        }
+        if (password.length < 4) {
+          alert('Por favor ingrese una clave secreta.');
+          return;
+        }
+        // Sign in with email and pass.
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+          // Handle Errors here.
+          var errorCode = error.code;
+          var errorMessage = error.message;
+          if (errorCode === 'auth/wrong-password') {
+            alert('Clave secreta incorrecta.');
+          } else {
+            alert(errorMessage);
+          }
+          console.log(error);
+          document.getElementById('quickstart-sign-in').disabled = false;
+        });
+      }
+      document.getElementById('quickstart-sign-in').disabled = true;
+    }
+
+    /**
+     * Handles the sign up button press.
+     */
+    function handleSignUp() {
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      if (email.length < 4) {
+        alert('Por favor ingrese un correo electrónico');
+        return;
+      }
+      if (password.length < 4) {
+        alert('Por favor ingrese una clave secreta.');
+        return;
+      }
+      // Create user with email and pass.
+      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        if (errorCode == 'auth/weak-password') {
+          alert('La clave secreta es muy débil.');
+        } else {
+          alert(errorMessage);
+        }
+        console.log(error);
+      });
+    }
+
+    /**
+     * Sends an email verification to the user.
+     */
+    function sendEmailVerification() {
+      firebase.auth().currentUser.sendEmailVerification().then(function() {
+        // Email Verification sent!
+        alert('¡Correo de verificación enviado!');
+      });
+    }
+
+    function sendPasswordReset() {
+      var email = document.getElementById('email').value;
+      firebase.auth().sendPasswordResetEmail(email).then(function() {
+        // Password Reset Email Sent!
+        alert('¡Correo de reseteo de clave secreta enviado!');
+      }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        if (errorCode == 'auth/invalid-email') {
+          alert(errorMessage);
+        } else if (errorCode == 'auth/user-not-found') {
+          alert(errorMessage);
+        }
+        console.log(error);
+      });
+    }
+
+    /**
+     * initApp handles setting up UI event listeners and registering Firebase auth listeners:
+     *  - firebase.auth().onAuthStateChanged: This listener is called when the user is signed in or
+     *    out, and that is where we update the UI.
+     */
+    function initApp() {
+      // Listening for auth state changes.
+      firebase.auth().onAuthStateChanged(function(user) {
+      document.getElementById('quickstart-verify-email').disabled = true;
+	  const panelaccesofuera = document.getElementById("panelaccesofuera");
+	  const panelaccesodentro = document.getElementById("panelaccesodentro");
+		  if (user) {
+          // User is signed in.
+			panelaccesodentro.style.display="block";
+  			panelaccesofuera.style.display="none";
+          var displayName = user.displayName;
+          var email = user.email;
+          var emailVerified = user.emailVerified;
+          var photoURL = user.photoURL;
+          var isAnonymous = user.isAnonymous;
+          var uid = user.uid;
+          var providerData = user.providerData;
+          document.getElementById('quickstart-sign-in-status').textContent = 'Ingresado al sitio';
+          document.getElementById('quickstart-sign-in').textContent = 'Salir';
+          document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
+          if (!emailVerified) {
+            document.getElementById('quickstart-verify-email').disabled = false;
+			            }
+        } else {
+          // User is signed out.
+			panelaccesodentro.style.display="none";
+  			panelaccesofuera.style.display="block";
+          document.getElementById('quickstart-sign-in-status').textContent = 'Egresado del sitio';
+          document.getElementById('quickstart-sign-in').textContent = 'Ingresar';
+          document.getElementById('quickstart-account-details').textContent = 'null';
+        }
+        document.getElementById('quickstart-sign-in').disabled = false;
+      });
+
+      document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
+      document.getElementById('quickstart-sign-up').addEventListener('click', handleSignUp, false);
+      document.getElementById('quickstart-verify-email').addEventListener('click', sendEmailVerification, false);
+      document.getElementById('quickstart-password-reset').addEventListener('click', sendPasswordReset, false);
+    }
+
+    window.onload = function() {
+      initApp();
+    };
+  </script>
+	
+<script script id="userapp" type="application/javascript">
+	
+	
+	<!--//ESTO HACE PARTE DESPUES DEL SCRIPT GENERAL DEL PANEL CONTROl-->
+					
+						//programando mouse over los botones controles
+						let botonmensaje=document.getElementById("botonmensajeria");
+						const panel1 = document.getElementById("panelboton1");
+						botonmensaje.addEventListener('mouseover', ()=>{panel1.style.display='block';} );
+						botonmensaje.addEventListener('mouseleave', ()=>{panel1.style.display='none';} );
+						
+						let botonreuniones=document.getElementById("botonreuniones");
+						const panel2 = document.getElementById("panelboton2");
+						botonreuniones.addEventListener('mouseover', ()=>{panel2.style.display='block';} );
+						botonreuniones.addEventListener('mouseleave', ()=>{panel2.style.display='none';} );
+						let botonrequerimientos=document.getElementById("botonrequerimientos");
+						const panel3 = document.getElementById("panelboton3");
+						botonrequerimientos.addEventListener('mouseover', ()=>{panel3.style.display='block';} );
+						botonrequerimientos.addEventListener('mouseleave', ()=>{panel3.style.display='none';} );
+						let botonarchivo=document.getElementById("botonarchivos");
+						const panel4 = document.getElementById("panelboton4");
+						botonarchivos.addEventListener('mouseover', ()=>{panel4.style.display='block';} );
+						botonarchivos.addEventListener('mouseleave', ()=>{panel4.style.display='none';} );
+											
+					
+			// A continuación el despliegue y cierre de los paneles laterales
+	 
+		
+				const panelmensajeria = document.getElementById("panelmensajeria");
+				const panelreuniones = document.getElementById("panelreuniones");
+				const panelrequerimientos = document.getElementById("panelrequerimientos");
+				const panelarchivos = document.getElementById("panelarchivos");
+				const mensajeria=document.getElementById('mensajeria');
+				const reuniones=document.getElementById('reuniones');
+			function desplieguemsj(){
+						panelreuniones.style.display="none";
+						panelrequerimientos.style.display="none";
+						panelarchivos.style.display="none";
+						panelmensajeria.style.display="block";
+						panelmensajeria.style.width="90%";}	;
+			function desplieguereuniones(){
+						panelmensajeria.style.display="none";
+						panelrequerimientos.style.display="none";
+						panelarchivos.style.display="none";
+						panelreuniones.style.display="block";
+						panelreuniones.style.width="90%";}	;
+			function desplieguerequerimientos(){
+						panelreuniones.style.display="none";
+						panelmensajeria.style.display="none";
+						panelarchivos.style.display="none";
+						panelrequerimientos.style.display="block";
+						panelrequerimientos.style.width="90%";}	;
+			function desplieguearchivos(){
+						panelreuniones.style.display="none";
+						panelrequerimientos.style.display="none";
+						panelmensajeria.style.display="none";
+						panelarchivos.style.display="block";
+						panelarchivos.style.width="90%";}	;
+			
+			function cierrepanelmsj(){
+						mensajeria[1,2].form.reset();
+						panelmensajeria.style.display="none";
+						var output = document.getElementById('fileList');
+						output.innerHTML = "";
+						panelreuniones.style.display="none";
+						panelrequerimientos.style.display="none";
+						panelarchivos.style.display="none";}
+			function cierrepanelreuniones(){
+						panelmensajeria.style.display="none";
+						panelreuniones.style.display="none";
+						panelrequerimientos.style.display="none";
+						panelarchivos.style.display="none";
+						reuniones[1,2,3].form.reset();
+						const emailList=document.getElementById("emailList");
+						emailList.remove();
+						const participantesadicionales=document.getElementById('participantesadicionales');
+						const div = document.createElement("div");
+						div.id="emailList";
+						participantesadicionales.append(div);
+						iparticipante=1}
+			function volverpanelrequerimientos(){
+						var formulariotraduccion = document.getElementById('formulariotraduccion')
+						var formularioinformepericial = document.getElementById('formularioinformepericial')
+						var formulariorespuestapericial = document.getElementById('formulariorespuestapericial')
+						var formulariobea = document.getElementById('formulariobea')
+						var formularioredaccion = document.getElementById('formularioredaccion')
+						var formulariocorreccionpliego = document.getElementById('formulariocorreccionpliego')
+						var formularioinfraccion = document.getElementById('formularioinfraccion')
+						var formularioelo = document.getElementById('formularioelo')
+						var formularionulidad = document.getElementById('formularionulidad')
+						formulariotraduccion.style.display="none";
+						formularioinformepericial.style.display="none";
+						formulariorespuestapericial.style.display="none";
+						formulariobea.style.display="none"
+						formularioredaccion.style.display="none";
+						formulariocorreccionpliego.style.display="none";
+						formularioinfraccion.style.display="none";
+						formularioelo.style.display="none";
+						formularionulidad.style.display="none";
+						requerimientos=document.getElementById('requerimientos');
+						requerimientos.style.display="block";}
+			function cierrepanelrequerimientos(){				
+						var formulariotraduccion = document.getElementById('formulariotraduccion')
+						formulariotraduccion[1,2,3,4,5].form.reset();
+						var formularioinformepericial = document.getElementById('formularioinformepericial')
+						formularioinformepericial[1,2,3,4,5].form.reset();
+						var formulariorespuestapericial = document.getElementById('formulariorespuestapericial')
+						formulariorespuestapericial[1,2,3,4,5].form.reset();
+						var formulariobea = document.getElementById('formulariobea')
+						formulariobea[1,2,3,4,5].form.reset();
+						var formularioredaccion = document.getElementById('formularioredaccion')
+						formularioredaccion[1,2,3,4,5].form.reset();
+						const emailListredaccion=document.getElementById("emailListredaccion");
+						emailListredaccion.remove();
+						const participantesredaccionadicionales=document.getElementById('participantesredaccionadicionales');
+						const div = document.createElement("div");
+						div.id="emailListredaccion";
+						participantesredaccionadicionales.append(div);
+						iparticipanteredaccion=1
+						var formulariocorreccionpliego = document.getElementById('formulariocorreccionpliego')
+						formulariocorreccionpliego[1,2,3,4,5].form.reset();
+						var formularioinfraccion = document.getElementById('formularioinfraccion')
+						formularioinfraccion[1,2,3,4,5].form.reset();
+						var formularioelo = document.getElementById('formularioelo')
+						formularioelo[1,2,3,4,5].form.reset();
+						var formularionulidad = document.getElementById('formularionulidad')
+						formularionulidad[1,2,3,4].form.reset();
+						var output2 = document.getElementById('fileListtraduccion');
+						output2.innerHTML = "";
+						var output3 = document.getElementById('fileListinformepericial');
+						output3.innerHTML = "";
+						var output4 = document.getElementById('fileListrespuestapericial');
+						output4.innerHTML = "";
+						var output5 = document.getElementById('fileListbea');
+						output5.innerHTML = "";
+						var output6 = document.getElementById('fileListcorreccionpliego');
+						output6.innerHTML = "";
+						var output7 = document.getElementById('fileListinfraccion');
+						output7.innerHTML = "";
+						var output8 = document.getElementById('fileListelo');
+						output8.innerHTML = "";
+						formulariotraduccion.style.display="none";
+						formularioinformepericial.style.display="none";
+						formulariorespuestapericial.style.display="none";
+						formulariobea.style.display="none";
+						formularioredaccion.style.display="none";
+						formulariocorreccionpliego.style.display="none";
+						formularioinfraccion.style.display="none";
+						formularioelo.style.display="none";
+						formularionulidad.style.display="none";
+						panelmensajeria.style.display="none";
+						panelreuniones.style.display="none";
+						panelrequerimientos.style.display="none";
+						panelarchivos.style.display="none";
+						requerimientos=document.getElementById('requerimientos');
+						requerimientos.style.display="block";	
+			}
+			function cierrepanelarchivos(){
+						panelmensajeria.style.display="none";
+						panelreuniones.style.display="none";
+						panelrequerimientos.style.display="none";
+						panelarchivos.style.display="none";
+						var mensajeriaarchivostabla = document.getElementById("mensajeriaarchivostabla");
+						mensajeriaarchivostabla.style.display="none";
+						var reunionesarchivostabla = document.getElementById("reunionesarchivostabla");
+						reunionesarchivostabla.style.display="none";
+						var requerimientosarchivostabla = document.getElementById("requerimientosarchivostabla");
+						requerimientosarchivostabla.style.display="none";
+						var documentosarchivostabla = document.getElementById("documentosarchivostabla");
+						documentosarchivostabla.style.display="none";
+						var tabmensajes = document.getElementById("tabmensajes");
+						tabmensajes.style.opacity=1;
+						var tabreuniones = document.getElementById("tabreuniones");
+						tabreuniones.style.opacity=1;
+						var tabrequerimientos = document.getElementById("tabrequerimientos");
+						tabrequerimientos.style.opacity=1;
+						var tabdocumentos = document.getElementById("tabdocumentos");
+						tabdocumentos.style.opacity=1;}
+					
+					//A continuación un script para listar documentos múltiples cargados en un input "file" 
+					updateList = function() {
+								var input = document.getElementById('file');
+								var output = document.getElementById('fileList');
+								var children = "";
+								for (var i = 0; i < input.files.length; ++i) {
+											children += '<li>' + input.files.item(i).name + '</li>';
+													}
+								output.innerHTML = '<ul>'+children+'</ul>';
+								}
+			  //A continuación un script para listar email múltiples cargados en un input "email" 
+					 let iparticipante=1;
+							function agregaparticipante() {
+						 iparticipante++;
+						 const emailList=document.getElementById('emailList');
+						 const input = document.createElement("input");
+						input.type="email";input.className="participante";input.id="participante"+iparticipante;
+						 emailList.append(input);
+								}
+								//A continuación un script para listar documentos múltiples cargados en un input "file" 
+					updateListtraduccion = function() {
+								var input2 = document.getElementById('filetraduccion');
+								var output2 = document.getElementById('fileListtraduccion');
+								var children2 = "";
+								for (var i = 0; i < input2.files.length; ++i) {
+											children2 += '<li>' + input2.files.item(i).name + '</li>';
+													}
+								output2.innerHTML = '<ul>'+children2+'</ul>';
+								}
+		//A continuación un script para listar documentos múltiples cargados en un input "fileinformepericial" 
+					updateListinformepericial = function() {
+								var input3 = document.getElementById('fileinformepericial');
+								var output3 = document.getElementById('fileListinformepericial');
+								var children3 = "";
+								for (var i = 0; i < input3.files.length; ++i) {
+											children3 += '<li>' + input3.files.item(i).name + '</li>';
+													}
+								output3.innerHTML = '<ul>'+children3+'</ul>';}
+						//A continuación un script para listar documentos múltiples cargados en un input "fileinformepericial" 
+					updateListrespuestapericial = function() {
+								var input4 = document.getElementById('filerespuestapericial');
+								var output4 = document.getElementById('fileListrespuestapericial');
+								var children4 = "";
+								for (var i = 0; i < input4.files.length; ++i) {
+											children4 += '<li>' + input4.files.item(i).name + '</li>';
+													}
+								output4.innerHTML = '<ul>'+children4+'</ul>';
+								}
+						//A continuación un script para listar documentos múltiples cargados en un input "filebea" 
+						updateListbea = function() {
+								var input5 = document.getElementById('filebea');
+								var output5 = document.getElementById('fileListbea');
+								var children5 = "";
+								for (var i = 0; i < input5.files.length; ++i) {
+											children5 += '<li>' + input5.files.item(i).name + '</li>';
+													}
+								output5.innerHTML = '<ul>'+children5+'</ul>';
+								}
+						//A continuación un script para listar email múltiples cargados en un input "emailredaccion" 
+							let iparticipanteredaccion=1;
+							function agregaparticipanteredaccion() {
+						 iparticipanteredaccion++;
+						 const emailListredaccion=document.getElementById('emailListredaccion');
+						 const input = document.createElement("input");
+						input.type="email";input.className="participante";input.id="participanteredaccion"+iparticipante;
+						 emailListredaccion.append(input);
+								}
+						//A continuación un script para listar documentos múltiples cargados en un input "filecorreccionpliego" 
+						updateListcorreccionpliego = function() {
+								var input6 = document.getElementById('filecorreccionpliego');
+								var output6 = document.getElementById('fileListcorreccionpliego');
+								var children6 = "";
+								for (var i = 0; i < input6.files.length; ++i) {
+											children6 += '<li>' + input6.files.item(i).name + '</li>';
+													}
+								output6.innerHTML = '<ul>'+children6+'</ul>';
+								}
+						//A continuación un script para listar documentos múltiples cargados en un input "fileinfraccion" 
+						updateListinfraccion = function() {
+								var input7 = document.getElementById('fileinfraccion');
+								var output7 = document.getElementById('fileListinfraccion');
+								var children7 = "";
+								for (var i = 0; i < input7.files.length; ++i) {
+											children7 += '<li>' + input7.files.item(i).name + '</li>';
+													}
+								output7.innerHTML = '<ul>'+children7+'</ul>';
+								}
+						//A continuación un script para listar documentos múltiples cargados en un input "fileelo" 
+						updateListelo = function() {
+								var input8 = document.getElementById('fileelo');
+								var output8 = document.getElementById('fileListelo');
+								var children8 = "";
+								for (var i = 0; i < input8.files.length; ++i) {
+											children8 += '<li>' + input8.files.item(i).name + '</li>';
+													}
+								output8.innerHTML = '<ul>'+children8+'</ul>';
+								}
+	// a continuación las funciones de los requerimientos-
+	
+		function nuevatraduccion(){
+			
+			requerimientos=document.getElementById('requerimientos');
+			requerimientos.style.display="none";			
+			formulariotraduccion=document.getElementById('formulariotraduccion');
+			formulariotraduccion.style.display="block";			
+
+		}
+		function nuevabusqueda(){
+			requerimientos=document.getElementById('requerimientos');
+			requerimientos.style.display="none";
+			formulariobea=document.getElementById('formulariobea');
+			formulariobea.style.display="block";
+		}
+		function nuevaestudioinfraccion(){			
+			requerimientos=document.getElementById('requerimientos');
+			requerimientos.style.display="none";
+			formularioinfraccion=document.getElementById('formularioinfraccion');
+			formularioinfraccion.style.display="block";	}
+		function nuevainformepericial(){			
+			requerimientos=document.getElementById('requerimientos');
+			requerimientos.style.display="none";
+		    formularioinformepericial=document.getElementById('formularioinformepericial');
+			formularioinformepericial.style.display="block";	
+		
+		}
+		function nuevaredaccion(){			
+			requerimientos=document.getElementById('requerimientos');
+			requerimientos.style.display="none";
+			formularioredaccion=document.getElementById('formularioredaccion');
+			formularioredaccion.style.display="block";
+		}
+ 		function nuevaelo(){
+			requerimientos=document.getElementById('requerimientos');
+			requerimientos.style.display="none";
+			formularioelo=document.getElementById('formularioelo');
+			formularioelo.style.display="block";	}
+		function nuevarespuestapericial(){			
+			requerimientos=document.getElementById('requerimientos');
+			requerimientos.style.display="none";
+		    formulariorespuestapericial=document.getElementById('formulariorespuestapericial');
+			formulariorespuestapericial.style.display="block";	}
+		function nuevarevision(){			
+			requerimientos=document.getElementById('requerimientos');
+			requerimientos.style.display="none";
+			formulariocorreccionpliego=document.getElementById('formulariocorreccionpliego');
+			formulariocorreccionpliego.style.display="block";	}
+ 		function nuevanulidad(){			
+			requerimientos=document.getElementById('requerimientos');
+			requerimientos.style.display="none";
+			formularionulidad=document.getElementById('formularionulidad');
+			formularionulidad.style.display="block";}
+	</script>
+
+	<script>
+	/*este script hace las funciones del panel de archivo y muestra las tablas*/
+		function muestratablamensajeria(){
+			var mensajeriaarchivostabla = document.getElementById("mensajeriaarchivostabla");
+			mensajeriaarchivostabla.style.display="block";
+			var reunionesarchivostabla = document.getElementById("reunionesarchivostabla");
+			reunionesarchivostabla.style.display="none";
+			var requerimientosarchivostabla = document.getElementById("requerimientosarchivostabla");
+			requerimientosarchivostabla.style.display="none";
+			var documentosarchivostabla = document.getElementById("documentosarchivostabla");
+			documentosarchivostabla.style.display="none";
+			var tabmensajes = document.getElementById("tabmensajes");
+			tabmensajes.style.opacity=1;
+			var tabreuniones = document.getElementById("tabreuniones");
+			tabreuniones.style.opacity=0.3;
+			var tabrequerimientos = document.getElementById("tabrequerimientos");
+			tabrequerimientos.style.opacity=0.3;
+			var tabdocumentos = document.getElementById("tabdocumentos");
+			tabdocumentos.style.opacity=0.3;};
+		function muestratablareuniones(){
+			var mensajeriaarchivostabla = document.getElementById("mensajeriaarchivostabla");
+			mensajeriaarchivostabla.style.display="none";
+			var reunionesarchivostabla = document.getElementById("reunionesarchivostabla");
+			reunionesarchivostabla.style.display="block";
+			var requerimientosarchivostabla = document.getElementById("requerimientosarchivostabla");
+			requerimientosarchivostabla.style.display="none";
+			var documentosarchivostabla = document.getElementById("documentosarchivostabla");
+			documentosarchivostabla.style.display="none";
+			tabmensajes.style.opacity=0.3;
+			var tabreuniones = document.getElementById("tabreuniones");
+			tabreuniones.style.opacity=1;
+			var tabrequerimientos = document.getElementById("tabrequerimientos");
+			tabrequerimientos.style.opacity=0.3;
+			var tabdocumentos = document.getElementById("tabdocumentos");
+			tabdocumentos.style.opacity=0.3;};
+		function muestratablarequerimientos(){
+			var mensajeriaarchivostabla = document.getElementById("mensajeriaarchivostabla");
+			mensajeriaarchivostabla.style.display="none";
+			var reunionesarchivostabla = document.getElementById("reunionesarchivostabla");
+			reunionesarchivostabla.style.display="none";
+			var requerimientosarchivostabla = document.getElementById("requerimientosarchivostabla");
+			requerimientosarchivostabla.style.display="block";
+			var documentosarchivostabla = document.getElementById("documentosarchivostabla");
+			documentosarchivostabla.style.display="none";
+			tabmensajes.style.opacity=0.3;
+			var tabreuniones = document.getElementById("tabreuniones");
+			tabreuniones.style.opacity=0.3;
+			var tabrequerimientos = document.getElementById("tabrequerimientos");
+			tabrequerimientos.style.opacity=1;
+			var tabdocumentos = document.getElementById("tabdocumentos");
+			tabdocumentos.style.opacity=0.3;
+		};
+		function muestratabladocumentos(){
+			var mensajeriaarchivostabla = document.getElementById("mensajeriaarchivostabla");
+			mensajeriaarchivostabla.style.display="none";
+			var reunionesarchivostabla = document.getElementById("reunionesarchivostabla");
+			reunionesarchivostabla.style.display="none";
+			var requerimientosarchivostabla = document.getElementById("requerimientosarchivostabla");
+			requerimientosarchivostabla.style.display="none";
+			var documentosarchivostabla = document.getElementById("documentosarchivostabla");
+			documentosarchivostabla.style.display="block";
+			tabmensajes.style.opacity=0.3;
+			var tabreuniones = document.getElementById("tabreuniones");
+			tabreuniones.style.opacity=0.3;
+			var tabrequerimientos = document.getElementById("tabrequerimientos");
+			tabrequerimientos.style.opacity=0.3;
+			var tabdocumentos = document.getElementById("tabdocumentos");
+			tabdocumentos.style.opacity=1;
+		};
+		
+		
+		
+	</script>
+	</body>
+</html>

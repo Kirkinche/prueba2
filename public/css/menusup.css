@@ -1,0 +1,60 @@
+@charset "utf-8";
+.secondary_header ul li:hover {
+	color: #A2D4F2;
+}
+.secondary_header ul li {
+	list-style: none;
+	float: left;
+	margin-right: auto;
+	margin-top: 0rem;
+	font-family: cardo;
+	font-weight: 700;
+	color: #593E2E;
+	letter-spacing: 1px;
+	margin-left: auto;
+	text-align: center;
+	width: 16%;
+	transition: all 0.3s linear;
+	font-style: normal;
+	font-size: large;
+}
+.container .secondary_header ul {
+	margin-top: 0%;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+.primary_header {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	clear: left;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	background-color: #403939;
+}
+
+
+.secondary_header {
+	background-color: #BFB3A4;
+	clear: left;
+	height: 100px;
+	padding-top: 40px;
+	width: 100%;
+	padding-right: 8px;
+}
+
+.title {
+	font-weight: 700;
+	font-style: normal;
+	font-family: cardo;
+	text-align: center;
+	color: #8C6E5D;
+	letter-spacing: 2px;
+}
+.secondary_headerdoblelinea {
+	top: -1rem;
+	position: relative;
+
+
+}
