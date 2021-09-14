@@ -9,8 +9,7 @@
 
 <link href="css/templateglobaljm.css" rel="stylesheet" type="text/css">
 <link href="css/estiloregistro2.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-</style>
+<style type="text/css"></style>
 <link href="css/estiloappusuario.css" rel="stylesheet" type="text/css">
 <link href="css/estiloappadmin.css" rel="stylesheet" type="text/css">
 </head>
@@ -64,15 +63,12 @@
    			 </div>
   			</section>
 		</div>
-	
-	
 	<div id="panelaccesodentro">
 			<div id="panelgeneral">
 				<section id="panelcontrol">
 				<input class="botonsimple" type="button" onClick="despliegedatosusuariofrom()" value="Completar datos" id="botondatos"/>
-				<img alt="logo de cliente" src="images/fondolindo1500-1000.jpg" class="thumbnail thumbnail_align" id="logocliente">
-					<aside id="datosusuario"> <h1> Panel de control de usuario</h1> <p id="nombreusuariopanel"></p><p id="organizacionusuariopanel"> </p><p id="cargousuariopanel"> </p> <p id="correousuariopanel"></p>					
-					</aside>
+			<div id="datosusuario"> <h1> Panel de control de usuario</h1> <p id="nombreusuariopanel"></p><p id="organizacionusuariopanel"> </p><p id="cargousuariopanel"> </p> <p id="correousuariopanel">Nombre usuario</p>					
+					</div>
 				<button onClick="salirdelsistema()" class="signout" name="signout" >Salir del sistema</button>
 				<div  id="franja1">
 				<!-- cambiar el intercambio de indicaciones con un intercambio de imágenes con animación.-->
@@ -422,8 +418,8 @@
 					  			<form id="formularioelo" class="formulario" action="javascript:reqelosubmit(this);">
 																	<label for="refclienteelo">Puedes incluir tu referencia: </label>
 															  		<input type="text" id="refclienteelo" name="refclienteelo"><br>
-																	<p class="formulariotexto">Se entrega un estudio de libertad de operación, esto es un informe que te analysa las patentes o solicitudes de patentes vigentes en un país o jurisdicción relevantes para explotar un producto o proceso comercialmente, respaldándose frente a posibles acciones de titulares de propiedad industrial.</p>
-																	<label for="fileelo">Selecciona los archivos necesarios en tu gestión (folleto comercial o brochure del producto, planos del producto o descripción operativa del proceso industrial e país o jurisdicción a analyzar):</label>
+																	<p class="formulariotexto">Se entrega un estudio de libertad de operación, esto es un informe que analisa las patentes o solicitudes de patentes vigentes en un país o jurisdicción relevantes para explotar un producto o proceso comercialmente, respaldándose frente a posibles acciones de titulares de propiedad industrial.</p>
+																	<label for="fileelo">Selecciona los archivos necesarios en tu gestión (folleto comercial o brochure del producto, planos del producto o descripción operativa del proceso industrial e país o jurisdicción a analizar):</label>
 																	<input type="file" multiple name="fileelo" id="fileelo" onchange="javascript:updateListelo()">
 																			<p>Archivos seleccionados:</p>
 																				<div id="fileListelo"></div>
@@ -470,12 +466,11 @@
 					</div>
 				  <div id="panelarchivos" class="paneldesplegado">
 						 <input type="button" onClick="cierrepanelarchivos()" class="botoncierre" value="x"/>
-					  	<h1>Revisa tus expedientes:</h1>
-						<div class="ventanatabla">
+					  	<h1>Revisa tus expedientes:</h1><div class="ventanatabla">
 							<div class="filamenuarchivos">
 								<div class="columnamenuarchivos" id="tabmensajes" onClick="muestratablamensajeria()">
 								  <p class="celdamenuarchivos">Mensajería </p>
-								  </div>
+							  </div>
 								<div class="columnamenuarchivos" id="tabreuniones" onClick="muestratablareuniones()">
 								  <p class="celdamenuarchivos">Reuniones </p> </div>
 								 <div class="columnamenuarchivos" id="tabrequerimientos" onClick="muestratablarequerimientos()">
@@ -483,8 +478,8 @@
 								</div>
 								<div class="columnamenuarchivos" id="tabdocumentos" onClick="muestratabladocumentos()">
 								  <p class="celdamenuarchivos">Documentos </p>
-								 </div>
-							 </div>
+							  </div>
+						  </div>
 							<table class="tablaarchivos" id="mensajeriaarchivostabla">
 								<thead>
 									<tr>
@@ -522,7 +517,7 @@
 										<td class="columnatablaarchivosreuniones" >Fecha de reunión</td>
 										<td class="columnatablaarchivosreuniones" >Ver mensajes</td>
 										<td class="columnatablaarchivosreuniones" >## y @@@@</td>
-										</tr>
+								  </tr>
 							
 								</tbody>
 							</table><br>
@@ -568,9 +563,15 @@
 										<td class="columnatablaarchivosdocumentos" >#####,# Mb</td>
 										<td class="columnatablaarchivosdocumentos" >iniciar descarga</td>
 									</tr>
-									</tbody>
+							  </tbody>
 							</table><br>
 						</div>
+					  <br>
+							<button class="boton2" onClick="muestratodoslosdatosusuario()">Ver todos los casos</button>
+							<button class="boton2" onClick="muestratodoslosdatosnuevosusuario()">Ver casos nuevos</button>
+					<button class="boton2" onClick="muestratodoslosdatospendientesusuario()">Ver casos pendientes</button>
+					<button class="boton2" onClick="muestratodoslosdatosfinalizadosusuario()">Ver casos finalizados</button>
+					<button class="boton2" onClick="muestraarchivosusuario()">Ver los archivos</button>
 					</div>		
 									
 				</aside>
@@ -578,13 +579,12 @@
 				</footer>
 			</div>
 		</div>
-	
 	<div id="paneladministrador" class="paneladmindesplegado">
-	<button onClick="salirdelsistema()" name="signout" >Salir del sistema</button>
-	<button onClick="todoslosnuevosdatos()" name="botontodoslosnuevosdatos" id="botontodoslosnuevosdatos">Mostrar los nuevos datos</button>
-	<button onClick="todoslospendientes()" name="botontodoslospendientes" id="botontodoslospendientes">Mostrar los casos pendientes</button>
-	<button onClick="todoslosfinalizados()" name="botontodoslosfinalizados" id="botontodoslosfinalizados">Mostrar los casos finalizados</button>
-	<button onClick="todoslosfallados()" name="botontodoslosfallados" id="botontodoslosfallados">Mostrar los casos fallados</button>
+	<button onClick="salirdelsistema()"  class="boton4" name="signout" >Salir del sistema</button>
+	<button onClick="todoslosnuevosdatos()" name="botontodoslosnuevosdatos" class="boton3" id="botontodoslosnuevosdatos">Mostrar los nuevos datos</button>
+	<button onClick="todoslospendientes()" name="botontodoslospendientes"  class="boton3" id="botontodoslospendientes">Mostrar los casos pendientes</button>
+	<button onClick="todoslosfinalizados()" name="botontodoslosfinalizados" class="boton3" id="botontodoslosfinalizados">Mostrar los casos finalizados</button>
+	<button onClick="todoslosfallados()" name="botontodoslosfallados" class="boton3" id="botontodoslosfallados">Mostrar los casos fallados</button>
 		<section id="paneltodoslosdatos" >
 				<h1>Revisa los expedientes de: <span id="usuarioactivo"></span> 
 			  <div class="dropdown">
@@ -693,9 +693,26 @@
 								</tbody>
 							</table><br>
 							</div>
+			<div id="ultimoelemento">
+			</div>
 					</section>
-		
-		<section id="paneltodoslosnuevosdatos">
+		<section id="panelagregadatos">
+		<p>Agrega mensajes, reuniones o requerimientos para el usuario seleccionado con los siguientes botones:
+			</p>
+			<button onClick="datosusuarioadmin()" name="botondatosusuarioadmin" class="boton1" id="botondatosusuarioadmin">Editar usuario</button>
+			<button onClick="mensajeriaadmin()" name="botonmensajeriaadmin" class="boton1" id="botonmensajeriaadmin">Crear mensaje</button>
+			<button onClick="reunionesadmin()" name="botonreunionesadmin" class="boton1" id="botonreunionesadmin">Crear reunión</button>
+			<button onClick="traduccionadmin()" name="botontraduccionadmin" class="boton1" id="botontraduccionadmin">Crear traducción</button>
+			<button onClick="informepericialadmin()" name="botoninformepericialadmin" class="boton1" id="botoninformepericialadmin">Crear informe pericial</button>
+			<button onClick="respuestapericialadmin()" name="botonrespuestapericialadmin" class="boton1" id="botonrespuestapericialadmin">Crear respuesta pericial</button>
+			<button onClick="beaadmin()" name="botonbeaadmin" class="boton1" id="botonbeaadmin">Crear búsqueda</button>
+			<button onClick="redaccionadmin()" name="botonredaccionadmin" class="boton1" id="botonredaccionadmin">Crear redacción</button>
+			<button onClick="correccionpliegoadmin()" name="botoncorreccionpliegoadmin" class="boton1" id="botoncorreccionpliegoadmin">Crear corrección pliego</button>
+			<button onClick="infraccionadmin()" name="botoninfraccionadmin" class="boton1" id="botoninfraccionadmin">Crear estudio infracción</button>
+			<button onClick="eloadmin()" name="botoneloadmin" class="boton1" id="botoneloadmin">Crear libertad operación</button>
+			<button onClick="nulidadadmin()" name="botonnulidadadmin" class="boton1" id="botonnulidadadmin">Crear nulidad patente</button>
+	  </section>	
+		<section id="paneltodoslosnuevosdatos" class="paneldatosglobales">
 			<h1>Revisa los expedientes nuevos:  <span id="cantidaddecasosnuevos"></span> </h1>
 			<div class="ventanatablatodoslosnuevosdatos">
 							<div class="filamenutodoslosnuevosdatos">
@@ -774,8 +791,7 @@
 							<br>
 			</div>
 		</section>
-	 
-		<section id="paneltodoslospendientes">
+	 	<section id="paneltodoslospendientes" class="paneldatosglobales">
 			<h1>Revisa los expedientes pendientes: <span id="cantidaddecasospendientes"></span></h1>
 			<div class="ventanatablatodoslospendientes">
 							<div class="filamenutodoslospendientes">
@@ -854,8 +870,7 @@
 							<br>
 			</div>
 		</section>
-		
-		<section id="paneltodoslosfinalizados">
+		<section id="paneltodoslosfinalizados" class="paneldatosglobales">
 			<h1>Revisa los expedientes finalizados: <span id="cantidaddecasosfinalizados"></span></h1>
 			<div class="ventanatablatodoslosfinalizados">
 							<div class="filamenutodoslosfinalizados">
@@ -934,8 +949,7 @@
 							<br>
 			</div>
 		</section>
-		
-		<section id="paneltodoslosfallados">
+		<section id="paneltodoslosfallados" class="paneldatosglobales">
 			<h1>Revisa los expedientes fallados: <span id="cantidaddecasosfallados"></span></h1>
 			<div class="ventanatablatodoslosfallados">
 							<div class="filamenutodoslosfallados">
@@ -1014,8 +1028,298 @@
 							<br>
 			</div>
 		</section>
+		<aside id="panelformulariosadmin">
+			<div>			<form class="paneldesplegadoadmin" id="formulariodatosusuarioformadmin" action="javascript:datosusuariosubmitadmin(this)" method="post">
+			<input type="button" onClick="cierrepanelformulariosadmin()" class="botoncierre" value="x"/>
+				<h1>Completar datos de usuario activo</h1> 
+						  <label for="nombreusuarioadmin">Nombre de usuario:</label>
+					      <input type="text" class="form-control" id="nombreusuarioadmin" name="nombreusuarioadmin"/><br>
+						<label for="organizacionusuarioadmin">Nombre de organización:</label>
+					      <input type="text" class="form-control" id="organizacionusuarioadmin" name="organizacionusuarioadmin"/><br>
+							<label for="cargousuarioadmin">Cargo en organización:</label>
+					      <input type="text" class="form-control" id="cargousuarioadmin" name="cargousuarioadmin"/><br><br>
+						  <label for="enviardatosusuariosadmin"> Confirma tu envío: </label>
+						<input type="submit" id="enviardatosusuariosadmin"><br>
+					  </form>
+			</div>
+				<div><form id="formulariomensajeriaadmin" class="paneldesplegadoadmin"  action="javascript:mensajeriasubmitadmin(this)" method="post">
+					<input type="button" onClick="cierrepanelformulariosadmin()" class="botoncierre" value="x">			
+					<h1>Completar datos para el usuario activo en requerimiento de Mensaje</h1> 
+				  <label for="refclientemensajeriaadmin">Referencia de cliente: </label>
+						  <input type="text" id="refclientemensajeriaadmin" name="refclientemensajeriaadmin"><br>
+						  <label for="mensajeusuarioadmin">Mensaje a cliente:</label>
+					      <textarea class="form-control" id="mensajeusuarioadmin" rows="6" name="mensajeusuarioadmin"></textarea><br>
+						  <label for="file">Archivos cliente:  </label>
+						<input type="file" multiple name="fileadmin" id="fileadmin" onchange="javascript:updateListadmin()">
+								<p>Archivos seleccionados:</p>
+								<div id="fileListadmin"></div>
+						  <label for="enviarmsjadmin"> Confirma tu envío: </label>
+						<input type="submit" id="enviarmsjadmin"><br>
+					  </form></div>
+				<div><form class="paneldesplegadoadmin" id="formularioreunionesadmin" action="javascript:reunionessubmitadmin(this)" method="post">
+							<input type="button" onClick="cierrepanelformulariosadmin()" class="botoncierre" value="x">
+						  	<h1>Completar datos para el usuario activo en requerimiento de Reunión</h1> 
+				  <label for="refclientereunionesadmin">Referencia de cliente: </label>
+						 	<input type="text" id="refclientereunionesadmin" name="refclientereunionesadmin"><br>
+							<label for="fechareunionadmin">Fecha y hora (GMT-4: Santiago de Chile):</label>
+							<input type="datetime-local" name="fechareunionadmin" id="fechareunionadmin" required><br><br>
+							<label for="mensajereunionadmin">Comentario  solicitud:</label>
+					      	<textarea class="form-control" id="mensajereunionadmin" rows="6" name="mensajereunionadmin"></textarea>
+						   Selecciona una opción: <br>
+								  	<small><input type="radio" id="invitausuarioadmin" name="invitador" value="invitausuario" checked>
+								  	<label for="invitausuario">Cliente administra la sesión de videoconferencia.</label><br>
+									<input type="radio" id="invitalocaladmin" name="invitador" value="invitalocal">
+  									<label for="invitalocal">Nosotros enviamos las invitaciones para la sesión de videoconferencia. </label><br>
+									</small><br>
+						  <div id="participantesadicionalesadmin">
+									<label for="participanteadmin1">Indica el correo electrónico de los participantes que desees agregar a la sesión:</label><br>
+									<input type="email" name="participanteadmin1" id="participanteadmin1" class="participante" required> 
+  						
+							<div id="emailListadmin"></div></div>
+							 <input type="button" id="agregaemailadmin" class="agregador" onClick="agregaparticipanteadmin()" value="+"><small><span> Agrega más participantes</span></small><br>
+  						Confirma reunión:
+				  <label for="solicitareunion">  </label>
+						<input type="submit" id="solicitareunionadmin"><br>
+							<input type="text" id="cantidadparticipanteadmin" hidden>
+						</form></div>
+				<div><form id="formulariotraduccionadmin" class="paneldesplegadoadmin" action="javascript:reqtraduccionsubmitadmin(this);">
+								<input type="button" onClick="cierrepanelformulariosadmin()" class="botoncierre" value="x">
+								<h1>Completar datos para el usuario activo en requerimiento de Traducción</h1> 
+				  <label for="refclientetraduccionadmin">Referencia de cliente: </label>
+								<input type="text" id="refclientetraduccionadmin" name="refclientetraduccionadmin"><br>
+								<label for="filetraduccionadmin"> Agregua los documentos a traducir (puedes seleccionar varios archivos simultáneamente): </label>
+								<input type="file" multiple name="filetraduccionadmin" id="filetraduccionadmin" onchange="javascript:updateListtraduccionadmin()">
+								<p>Archivos seleccionados:</p>
+								<div id="fileListtraduccionadmin"></div>
+								<label for="fechatraduccionadmin">Elije una fecha para el plazo de entrega de la traducción:</label>
+								<input type="date" name="fechatraduccionadmin" id="fechatraduccionadmin"><br><br>
+								Selecciona el idioma al cual deseas traducir: <br>
+								<input type="radio" id="espanoladmin" name="idioma" value="espanol" >
+								<label for="espanoladmin">Español</label><br>
+								<input type="radio" id="inglesadmin" name="idioma" value="ingles" checked>
+								<label for="inglesadmin">Inglés</label><br>
+								<input type="radio" id="francesadmin" name="idioma" value="frances">
+								<label for="francesadmin">Francés </label><br>
+								<label for="cotizatraduccionadmin">Cotización antes de confirmar mi requerimiento:</label>
+								<input type="checkbox" name="cotizatraduccionadmin" id="cotizatraduccionadmin"> <br>
+								<label for="mensajetraduccionadmin" class="formulariotexto">Comentario y/o detalle:</label>
+								<textarea class="form-control" id="mensajetraduccionadmin" rows="6" name="mensajetraduccionadmin"></textarea><br>
+								<label for="enviartraduccionadmin"> Confirme su envío: </label>
+								<input type="submit" id="enviartraduccionadmin">
+								<br>
+						</form></div>		
+				<div><form id="formularioinformepericialadmin" class="paneldesplegadoadmin" action="javascript:reqinformepericialsubmitadmin(this);">
+								<input type="button" onClick="cierrepanelformulariosadmin()" class="botoncierre" value="x">
+								<h1>Completar datos para el usuario activo en requerimiento de Informe pericial</h1> 
+								<label for="refclienteinformepericialadmin">Referencia de cliente: </label>
+								<input type="text" id="refclienteinformepericialadmin" name="refclienteinformepericialadmin"><br>
+								<label for="fileinformepericialadmin">Selecciona los archivos necesarios en la gestión:</label>
+								<input type="file" multiple name="fileinformepericialadmin" id="fileinformepericialadmin" onchange="javascript:updateListinformepericialadmin()">
+								<p>Archivos seleccionados:</p>
+								<div id="fileListinformepericialadmin"></div>
+								<label for="fechainformepericialadmin">Elije una fecha para el plazo de entrega de los documentos:</label>
+								<input type="date" name="fechainformepericialadmin" id="fechainformepericialadmin"><br><br>
+								Selecciona el idioma que deseas para tus documentos: <br>
+								<input type="radio" id="espanolinformepericialadmin" name="idioma" value="espanol" checked>
+								<label for="espanolinformepericial">Español</label><br>
+								<input type="radio" id="inglesinformepericialadmin" name="idioma" value="ingles" >
+								<label for="inglesinformepericial">Inglés</label><br>
+								<input type="radio" id="francesinformepericialadmin" name="idioma" value="frances">
+								<label for="francesinformepericialadmin">Francés </label><br>
+								<label for="cotizainformepericialadmin">Deseo recibir una cotización antes de confirmar mi requerimiento:</label>
+								<input type="checkbox" name="cotizainformepericialadmin" id="cotizainformepericialadmin"> <br>
+								<label for="mensajeinformepericialadmin" class="formulariotexto">Comentario a considerar:</label>
+								<textarea class="form-control" id="mensajeinformepericialadmin" rows="6" name="mensajeinformepericialadmin"></textarea><br>
+								<label for="enviarinformepericialadmin"> Confirme su envío: </label>
+								<input type="submit" id="enviarinformepericialadmin">
+		  </form></div>
+				<div><form id="formulariorespuestapericialadmin" class="paneldesplegadoadmin" action="javascript:reqrespuestapericialsubmitadmin(this);">
+					<input type="button" onClick="cierrepanelformulariosadmin()" class="botoncierre" value="x">
+					<h1>Completar datos para el usuario activo en requerimiento de Respuesta pericial</h1> 
+					<label for="refclienterespuestapericialadmin">Referencia de cliente: </label>
+					<input type="text" id="refclienterespuestapericialadmin" name="refclienterespuestapericialadmin"><br>
+					<label for="filerespuestapericialadmin"><p class="formulariotexto">Selecciona los archivos necesarios en la gestión:</p></label>
+					<input type="file" multiple name="filerespuestapericialadmin" id="filerespuestapericialadmin" onchange="javascript:updateListrespuestapericialadmin()">
+					<p>Archivos seleccionados (puedes seleccionar varios archivos simultáneamente):</p>
+					<div id="fileListrespuestapericialadmin"></div>
+					<label for="fecharespuestapericialadmin">Elije una fecha para el plazo de entrega de los documentos:</label>
+					<input type="date" name="fecharespuestapericialadmin" id="fecharespuestapericialadmin" required><br><br>
+					Selecciona el idioma que deseas para tus documentos: <br>
+					<input type="radio" id="espanolrespuestapericialadmin" name="idioma" value="espanol" checked>
+					<label for="espanolrespuestapericialadmin">Español</label><br>
+					<input type="radio" id="inglesrespuestapericialadmin" name="idioma" value="ingles" >
+					<label for="inglesrespuestapericialadmin">Inglés</label><br>
+					<input type="radio" id="francesrespuestapericialadmin" name="idioma" value="frances">
+					<label for="francesrespuestapericialadmin">Francés </label><br>
+					<label for="cotizarespuestapericialadmin">Cotización antes de confirmar mi requerimiento:</label>
+					<input type="checkbox" name="cotizarespuestapericialadmin" id="cotizarespuestapericialadmin"> <br>
+					<label for="mensajerespuestapericialadmin"> Indica algún comentario que debamos considerar:</label>
+					<textarea class="form-control" id="mensajerespuestapericialadmin" rows="6" name="mensajerespuestapericialadmin"></textarea><br>
+					<label for="enviarrespuestapericialadmin"> Confirme su envío: </label>
+					<input type="submit" id="enviarrespuestapericialadmin">
+					<br>
+		  </form></div>
+				<div><form id="formulariobeaadmin" class="paneldesplegadoadmin" action="javascript:reqbeasubmitadmin(this);">
+					<input type="button" onClick="cierrepanelformulariosadmin()" class="botoncierre" value="x">
+					<h1>Completar datos para el usuario activo en requerimiento de Búsqueda</h1> 
+					<label for="refclientebeaadmin">Referencia de cliente: </label>
+				  <input type="text" id="refclientebeaadmin" name="refclientebeaadmin"><br>
+				  <label for="filebeaadmin">Selecciona los archivos necesarios en la gestión:</label>
+					<input type="file" multiple name="filebeaadmin" id="filebeaadmin" onchange="javascript:updateListbeaadmin()">
+					<p>Archivos seleccionados (puedes seleccionar varios archivos simultáneamente):</p>
+					<div id="fileListbeaadmin"></div>
+					<label for="fechabeaadmin">Elije una fecha para el plazo de entrega de los documentos:</label>
+					<input type="date" name="fechabeaadmin" id="fechabeaadmin"><br><br>
+					Selecciona el idioma que deseas para tus documentos: <br>
+					<input type="radio" id="espanolbeaadmin" name="idioma" value="espanol" checked>
+					<label for="espanolbeaadmin">Español</label><br>
+					<input type="radio" id="inglesbeaadmin" name="idioma" value="ingles" >
+					<label for="inglesbeaadmin">Inglés</label><br>
+					<input type="radio" id="francesbeaadmin" name="idioma" value="frances">
+					<label for="francesbeaadmin">Francés </label><br>
+					<label for="cotizabeaadmin">Deseo recibir una cotización antes de confirmar mi requerimiento:</label>
+					<input type="checkbox" name="cotizabeaadmin" id="cotizabeaadmin"> <br>
+					<label for="mensajebeaadmin"> Indica algún comentario que debamos considerar:</label>
+					<textarea class="form-control" id="mensajebeaadmin" rows="6" name="mensajebeaadmin"></textarea><br>
+					<label for="enviarbeaadmin"> Confirme su envío: </label>
+					<input type="submit" id="enviarbeaadmin">
+					<br>
+		  </form></div>
+				<div><form id="formularioredaccionadmin" class="paneldesplegadoadmin"  action="javascript:reqredaccionsubmitadmin(this);">
+					<input type="button" onClick="cierrepanelformulariosadmin()" class="botoncierre" value="x">
+					<h1>Completar datos para el usuario activo en requerimiento de Redacción</h1> 
+				  <label for="refclienteredaccionadmin">Referencia de cliente: </label>
+					<input type="text" id="refclienteredaccionadmin" name="refclienteredaccionadmin"><br>
+					<input type="file" multiple name="fileredaccionadmin" id="fileredaccionadmin" onchange="javascript:updateListredaccionadmin()" required>
+					<p>Archivos seleccionados (puedes seleccionar varios archivos simultáneamente):</p>
+					<div id="fileListredaccionadmin"></div>
+					<label for="fecharedaccionadmin">Elije una fecha para el plazo de entrega del primer borrador:</label>
+					<input type="date" name="fecharedaccionadmin" id="fecharedaccionadmin" required><br><br>
+					<label for="cotizaredaccionadmin">Deseo recibir una cotización antes de confirmar mi requerimiento:</label>
+					<input type="checkbox" name="cotizaredaccionadmin" id="cotizaredaccionadmin"> <br>							 
+					<label for="mensajeredaccionadmin">Comentario de la solicitud:</label>
+					<textarea class="form-control" id="mensajeredaccionadmin" rows="6" name="mensajeredaccionadmin" required></textarea>
+					<label for="fecharedaccionadmin">Elije una fecha y hora (GMT-4: Santiago de Chile) para concertar una reunión y discutir la redacción de tu patente:</label>
+					<input type="datetime-local" name="fechareunionredaccionadmin" id="fechareunionredaccionadmin"><br><br>
+					Selecciona una opción: <br>
+					<small><input type="radio" id="invitaredaccionusuarioadmin" name="invitador" value="invitaredaccionusuario" checked>
+					<label for="invitaredaccionusuarioadmin">Tu te encargas de invitar y administrar la sesión de videoconferencia.</label><br>
+					<input type="radio" id="invitaredaccionlocaladmin" name="invitador" value="invitaredaccionlocal">
+					<label for="invitaredaccionlocaladmin">Nosotros te enviamos las invitaciones para la sesión de videoconferencia. </label><br>
+					</small><br>
+					<div id="participantesredaccionadicionalesadmin">
+					<label for="participanteredaccionadmin1">Indica el correo electrónico de los participantes que desees agregar a la sesión:</label><br>
+					<input type="email" name="participanteredaccionadmin1" id="participanteredaccionadmin1" class="participante">
+					<div id="emailListredaccionadmin"></div></div>
+					<input type="button" id="agregaemailredaccionadmin" class="agregador" onClick="agregaparticipanteredaccionadmin()" value="+"><small><span> Agrega más participantes</span></small><br>
+					Confirme su solicitud de reunión:
+					<label for="solicitaredaccionadmin">  </label>
+					<input type="submit" id="solicitaredaccionadmin">
+					<br>
+		  </form></div>
+				<div><form id="formulariocorreccionpliegoadmin" class="paneldesplegadoadmin" action="javascript:reqcorreccionpliegosubmitadmin(this);">
+					<input type="button" onClick="cierrepanelformulariosadmin()" class="botoncierre" value="x">
+					<h1>Completar datos para el usuario activo en requerimiento de Corrección de pliego</h1> 
+				  <label for="refclientecorreccionpliegoadmin">Referencia de cliente: </label>
+					<input type="text" id="refclientecorreccionpliegoadmin" name="refclientecorreccionpliegoadmin"><br>
+					<label for="filecorreccionpliegoadmin">Selecciona los archivos necesarios en la gestión:</label>
+					<input type="file" multiple name="filecorreccionpliegoadmin" id="filecorreccionpliegoadmin" onchange="javascript:updateListcorreccionpliegoadmin()">
+					<p>Archivos seleccionados:</p>
+					<div id="fileListcorreccionpliegoadmin"></div>
+					<label for="fechacorreccionpliegoadmin">Elije una fecha para el plazo de entrega de los documentos:</label>
+					<input type="date" name="fechacorreccionpliegoadmin" id="fechacorreccionpliegoadmin"><br><br>
+					Selecciona el idioma que deseas para tus documentos: <br>
+					<input type="radio" id="espanolcorreccionpliegoadmin" name="idioma" value="espanol" checked>
+					<label for="espanolcorreccionpliegoadmin">Español</label><br>
+					<input type="radio" id="inglescorreccionpliegoadmin" name="idioma" value="ingles" >
+					<label for="inglescorreccionpliegoadmin">Inglés</label><br>
+					<input type="radio" id="francescorreccionpliegoadmin" name="idioma" value="frances">
+					<label for="francescorreccionpliegoadmin">Francés </label><br>
+					<label for="cotizacorreccionpliegoadmin">Deseo recibir una cotización antes de confirmar mi requerimiento:</label>
+					<input type="checkbox" name="cotizacorreccionpliegoadmin" id="cotizacorreccionpliegoadmin"> <br>
+					<label for="mensajecorreccionpliegoadmin" class="formulariotexto"> Comentario a considerar:</label>
+					<textarea class="form-control" id="mensajecorreccionpliegoadmin" rows="6" name="mensajecorreccionpliegoadmin"></textarea><br>
+					<label for="enviarcorreccionpliegoadmin"> Confirme su envío: </label>
+					<input type="submit" id="enviarcorreccionpliegoadmin">
+					<br>
+		  </form></div>
+				<div><form id="formularioinfraccionadmin" class="paneldesplegadoadmin" action="javascript:reqinfraccionsubmitadmin(this);">
+					<input type="button" onClick="cierrepanelformulariosadmin()" class="botoncierre" value="x">
+					<h1>Completar datos para el usuario activo en requerimiento de Infracción</h1> 
+				  <label for="refclienteinfraccionadmin">Referencia de cliente: </label>
+					<input type="text" id="refclienteinfraccionadmin" name="refclienteinfraccionadmin"><br>
+					<label for="fileinfraccionadmin">Selecciona los archivos necesarios en la gestión:</label>
+					<input type="file" multiple name="fileinfraccionadmin" id="fileinfraccionadmin" onchange="javascript:updateListinfraccionadmin()">
+					<p>Archivos seleccionados:</p>
+					<div id="fileListinfraccionadmin"></div>
+					<label for="fechainfraccionadmin">Elije una fecha para el plazo de entrega de los documentos:</label>
+					<input type="date" name="fechainfraccionadmin" id="fechainfraccionadmin"><br><br>
+					Selecciona el idioma que deseas para tus documentos: <br>
+					<input type="radio" id="espanolinfraccionadmin" name="idioma" value="espanol" checked>
+					<label for="espanolinfraccionadmin">Español</label><br>
+					<input type="radio" id="inglesinfraccionadmin" name="idioma" value="ingles" >
+					<label for="inglesinfraccionadmin">Inglés</label><br>
+					<input type="radio" id="francesinfraccionadmin" name="idioma" value="frances">
+					<label for="francesinfraccionadmin">Francés </label><br>
+					<label for="cotizainfraccionadmin">Deseo recibir una cotización antes de confirmar mi requerimiento:</label>
+					<input type="checkbox" name="cotizainfraccionadmin" id="cotizainfraccionadmin"> <br>
+					<label for="mensajeinfraccionadmin" class="formulariotexto"> Indica algún comentario que debamos considerar y la información de la patente a analizar:</label>
+					<textarea class="form-control" id="mensajeinfraccionadmin" rows="6" name="mensajeinfraccionadmin"></textarea><br>
+					<label for="enviarinfraccionadmin"> Confirme su envío: </label>
+					<input type="submit" id="enviarinfraccionadmin">
+					<br>
+		  </form></div>
+				<div><form id="formularioeloadmin" class="paneldesplegadoadmin" action="javascript:reqelosubmitadmin(this);">
+					<input type="button" onClick="cierrepanelformulariosadmin()" class="botoncierre" value="x">
+					<h1>Completar datos para el usuario activo en requerimiento de Estudio de Libertad de Operación</h1> 
+				  <label for="refclienteeloadmin">Referencia de cliente: </label>
+					<input type="text" id="refclienteeloadmin" name="refclienteeloadmin"><br>
+					<label for="fileeloadmin">Selecciona los archivos necesarios en la gestión:</label>
+					<input type="file" multiple name="fileeloadmin" id="fileeloadmin" onchange="javascript:updateListeloadmin()">
+					<p>Archivos seleccionados:</p>
+					<div id="fileListeloadmin"></div>
+					<label for="fechaeloadmin">Elije una fecha para el plazo de entrega de los documentos:</label>
+					<input type="date" name="fechaeloadmin" id="fechaeloadmin"><br><br>
+					Selecciona el idioma que deseas para tus documentos: <br>
+					<input type="radio" id="espanoleloadmin" name="idioma" value="espanol" checked>
+					<label for="espanoleloadmin">Español</label><br>
+					<input type="radio" id="ingleseloadmin" name="idioma" value="ingles" >
+					<label for="ingleseloadmin">Inglés</label><br>
+					<input type="radio" id="franceseloadmin" name="idioma" value="frances">
+					<label for="franceseloadmin">Francés </label><br>
+					<label for="cotizaeloadmin">Deseo recibir una cotización antes de confirmar mi requerimiento:</label>
+					<input type="checkbox" name="cotizaeloadmin" id="cotizaeloadmin"> <br>
+					<label for="mensajeeloadmin" class="formulariotexto"> Indica algún comentario que debamos considerar:</label>
+					<textarea class="form-control" id="mensajeeloadmin" rows="6" name="mensajeeloadmin"></textarea><br>
+					<label for="enviareloadmin"> Confirme su envío: </label>
+					<input type="submit" id="enviareloadmin">
+					<br>
+		  </form></div>
+				<div><form id="formularionulidadadmin" class="paneldesplegadoadmin" action="javascript:reqnulidadsubmitadmin(this);">
+					<input type="button" onClick="cierrepanelformulariosadmin()" class="botoncierre" value="x">
+					<h1>Completar datos para el usuario activo en requerimiento de Nulidad</h1> 
+				  <label for="refclientenulidadadmin">Referencia de cliente: </label>
+					<input type="text" id="refclientenulidadadmin" name="refclientenulidadadmin"><br>
+					<label for="fechanulidadadmin">Elije una fecha para el plazo de entrega de los documentos:</label>
+					<input type="date" name="fechanulidadadmin" id="fechanulidadadmin"><br><br>
+					Selecciona el idioma que deseas para tus documentos: <br>
+					<input type="radio" id="espanolnulidadadmin" name="idioma" value="espanol" checked>
+					<label for="espanolnulidadadmin">Español</label><br>
+					<input type="radio" id="inglesnulidadadmin" name="idioma" value="ingles" >
+					<label for="inglesnulidadadmin">Inglés</label><br>
+					<input type="radio" id="francesnulidadadmin" name="idioma" value="frances">
+					<label for="francesnulidadadmin">Francés </label><br>
+					<label for="cotizanulidadadmin">Deseo recibir una cotización antes de confirmar mi requerimiento:</label>
+					<input type="checkbox" name="cotizanulidadadmin" id="cotizanulidadadmin"> <br>
+					<label for="mensajenulidadadmin" class="formulariotexto"> Indica algún comentario que debamos considerar y la información de la patente a analizar:</label>
+					<textarea class="form-control" id="mensajenulidadadmin" rows="6" name="mensajenulidadadmin" required></textarea><br>
+					<label for="enviarnulidadadmin"> Confirme su envío: </label>
+					<input type="submit" id="enviarnulidadadmin">
+					<br>
+		  </form></div>
+		</aside>
+	
 	</div>
-
 	</main>
 
 	<section id="franjainferior">
@@ -1448,7 +1752,7 @@ const panellateral=$("panellateral");
 						panelrequerimientos.style.width="90%";}	;
 			function desplieguearchivos(){
 						limpiapanelarchivos();
-				while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();}
+						while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();}
 						panelbienvenido.style.display="none";
 						panelagradecimiento.style.display="none";
 						paneldatosusuario.style.display="none";
@@ -1492,7 +1796,7 @@ const panellateral=$("panellateral");
 						panelreuniones.style.display="none";
 						panelrequerimientos.style.display="none";
 						panelarchivos.style.display="none";
-						reuniones[1,2,3,4].form.reset();
+						reuniones[1,2,3,4,5].form.reset();
 						const emailList=document.getElementById("emailList");
 						emailList.remove();
 						const participantesadicionales=document.getElementById('participantesadicionales');
@@ -1779,18 +2083,18 @@ let iparticipante=1;
 		var year=timeStamp.getFullYear();
 		var mescompleto="";
 		var fechacompleta="";
-		if (mes==1){mescompleto="enero";};
-		if (mes==2){mescompleto="febrero";};
-		if (mes==3){mescompleto="marzo";};
-		if (mes==4){mescompleto="abril";};
-		if (mes==5){mescompleto="mayo";};
-		if (mes==6){mescompleto="junio";};
-		if (mes==7){mescompleto="julio";};
-		if (mes==8){mescompleto="agosto";};
-		if (mes==9){mescompleto="septiembre";};
-		if (mes==10){mescompleto="octubre";};
-		if (mes==11){mescompleto="noviembre";};
-		if (mes==12){mescompleto="diciembre";};
+		if (mes==0){mescompleto="enero";};
+		if (mes==1){mescompleto="febrero";};
+		if (mes==2){mescompleto="marzo";};
+		if (mes==3){mescompleto="abril";};
+		if (mes==4){mescompleto="mayo";};
+		if (mes==5){mescompleto="junio";};
+		if (mes==6){mescompleto="julio";};
+		if (mes==7){mescompleto="agosto";};
+		if (mes==8){mescompleto="septiembre";};
+		if (mes==9){mescompleto="octubre";};
+		if (mes==10){mescompleto="noviembre";};
+		if (mes==11){mescompleto="diciembre";};
 		fechacompleta=dia+" de "+mescompleto+" "+year;
 		return fechacompleta;
 	}
@@ -1849,19 +2153,22 @@ let iparticipante=1;
 			var mensaje=form.mensajeusuario.value;
 			var refcliente=form.refclientemensajeria.value;
 			var refinterna="pendiente";
-			var fileList = form.file.files;
-			var numFiles = fileList.length;
 			var filepath="";
 			var filename="";
 			var filesize=0;
 			var fechamensaje = new Date();
-			if (form.file.value){
+			var fileList = [];
+			var numFiles = [];
+			var proceder=false;
+			if (form.file.value){ 
+			fileList = form.file.files;
+			numFiles =	fileList.length;
 			filepath=rutaarchivos(form.file);}else{
 				console.log("No se enviaron archivos.");
-			}
+				proceder=true;
+			};
 			var idusuario=obteneridusuariolocalStorage();
 			let emailusuario=obteneremailusuariolocalStorage();
-			var proceder=false;
 			let detallearchivos="";
 			var urlarchivos= [];
 			var subiendoarchivos=[];
@@ -1989,18 +2296,21 @@ let iparticipante=1;
 			var mensajetraduccion=form.mensajetraduccion.value;
 			var refcliente=form.refclientetraduccion.value;
 			var refinterna="pendiente";
-			var fileList = form.filetraduccion.files;
-			var numFiles = fileList.length;
 			var filepath="";
 			var filename="";
 			var filesize=0;
-			if (form.filetraduccion.value){
+			var fileList = [];
+			var numFiles = [];
+			var proceder=false;
+			if (form.filetraduccion.value){ 
+			fileList = form.filetraduccion.files;
+			numFiles =	fileList.length;
 			filepath=rutaarchivos(form.filetraduccion);}else{
 				console.log("No se enviaron archivos.");
+				proceder=true;
 			}
 			let idusuario=obteneridusuariolocalStorage();
 			let emailusuario=obteneremailusuariolocalStorage();
-			var proceder=false;
 			let detallearchivos="";
 			var nombrearchivos=[];
 			var tamañoarchivos=[];
@@ -2094,18 +2404,21 @@ let iparticipante=1;
 			var mensajeinformepericial=form.mensajeinformepericial.value;
 			var refcliente=form.refclienteinformepericial.value;
 			var refinterna="pendiente";
-			var fileList = form.fileinformepericial.files;
-			var numFiles = fileList.length;
 			var filepath="";
 			var filename="";
 			var filesize=0;
-			if (form.fileinformepericial.value){
+			var fileList = [];
+			var numFiles = [];
+			var proceder=false;
+			if (form.fileinformepericial.value){ 
+			fileList = form.fileinformepericial.files;
+			numFiles =	fileList.length;
 			filepath=rutaarchivos(form.fileinformepericial);}else{
 				console.log("No se enviaron archivos.");
-			}
+				proceder=true;
+			};
 			let idusuario=obteneridusuariolocalStorage();
 			let emailusuario=obteneremailusuariolocalStorage();
-			var proceder=false;
 			let detallearchivos="";
 			var nombrearchivos=[];
 			var tamañoarchivos=[];
@@ -2185,8 +2498,7 @@ let iparticipante=1;
 					refinterna:	refinterna,
 					estado:	"nuevo"}).then((doc)=>{localStorage.setItem("docidnow",doc.id);console.log("¡Escritura exitosa!")}).catch((error) =>{console.error("Error al escritura: ", error);});
 			cierrepanelrequerimientos();panelagradecimiento.style.display="block";}
-		}
-			
+		}			
 		function reqrespuestapericialsubmit(form){
 			var fechadesolicitud = new Date();
 			var fecharespuestapericial=form.fecharespuestapericial.value;
@@ -2197,18 +2509,21 @@ let iparticipante=1;
 			var mensajerespuestapericial=form.mensajerespuestapericial.value;			
 			var refcliente=form.refclienterespuestapericial.value;
 			var refinterna="pendiente";
-			var fileList = form.filerespuestapericial.files;
-			var numFiles = fileList.length;
 			var filepath="";
 			var filename="";
 			var filesize=0;
-			if (form.filerespuestapericial.value){
+			var fileList = [];
+			var numFiles = [];
+			var proceder=false;
+			if (form.filerespuestapericial.value){ 
+			fileList = form.filerespuestapericial.files;
+			numFiles =	fileList.length;
 			filepath=rutaarchivos(form.filerespuestapericial);}else{
 				console.log("No se enviaron archivos.");
-			}
+				proceder=true;
+			};
 			let idusuario=obteneridusuariolocalStorage();
 			let emailusuario=obteneremailusuariolocalStorage();
-			var proceder=false;
 			let detallearchivos="";
 			var urlarchivos= [];
 			var subiendoarchivos=[];
@@ -2298,18 +2613,21 @@ let iparticipante=1;
 			var mensajebea=form.mensajebea.value;
 			var refcliente=form.refclientebea.value;
 			var refinterna="pendiente";
-			var fileList = form.filebea.files;
-			var numFiles = fileList.length;
 			var filepath="";
 			var filename="";
 			var filesize=0;
-			if (form.filebea.value){
+			var fileList = [];
+			var numFiles = [];
+			var proceder=false;
+			if (form.filebea.value){ 
+			fileList = form.filebea.files;
+			numFiles =	fileList.length;
 			filepath=rutaarchivos(form.filebea);}else{
 				console.log("No se enviaron archivos.");
-			}
+				proceder=true;
+			};
 			let idusuario=obteneridusuariolocalStorage();
 			let emailusuario=obteneremailusuariolocalStorage();
-			var proceder=false;
 			let detallearchivos="";
 			var urlarchivos= [];
 			var subiendoarchivos=[];
@@ -2419,16 +2737,19 @@ let iparticipante=1;
 				}
 			let idusuario=obteneridusuariolocalStorage();
 			let emailusuario=obteneremailusuariolocalStorage();
-			var fileList = form.fileredaccion.files;
-			var numFiles = fileList.length;
 			var filepath="";
 			var filename="";
 			var filesize=0;
-			if (form.fileredaccion.value){
+			var fileList = [];
+			var numFiles = [];
+			var proceder=false;
+			if (form.fileredaccion.value){ 
+			fileList = form.fileredaccion.files;
+			numFiles =	fileList.length;
 			filepath=rutaarchivos(form.fileredaccion);}else{
 				console.log("No se enviaron archivos.");
-			}
-			var proceder=false;
+				proceder=true;
+			};
 			let detallearchivos="";
 			var urlarchivos= [];
 			var subiendoarchivos=[];
@@ -2519,18 +2840,21 @@ let iparticipante=1;
 			var mensajecorreccionpliego=form.mensajecorreccionpliego.value;
 			var refcliente=form.refclientecorreccionpliego.value;
 			var refinterna="pendiente";
-			var fileList = form.filecorreccionpliego.files;
-			var numFiles = fileList.length;
 			var filepath="";
 			var filename="";
 			var filesize=0;
-			if (form.filecorreccionpliego.value){
+			var fileList = [];
+			var numFiles = [];
+			var proceder=false;
+			if (form.filecorreccionpliego.value){ 
+			fileList = form.filecorreccionpliego.files;
+			numFiles =	fileList.length;
 			filepath=rutaarchivos(form.filecorreccionpliego);}else{
 				console.log("No se enviaron archivos.");
-			}
+				proceder=true;
+			};
 			let idusuario=obteneridusuariolocalStorage();
 			let emailusuario=obteneremailusuariolocalStorage();
-			var proceder=false;
 			let detallearchivos="";
 			var urlarchivos= [];
 			var subiendoarchivos=[];
@@ -2621,18 +2945,21 @@ let iparticipante=1;
 			var mensajeinfraccion=form.mensajeinfraccion.value;
 			var refcliente=form.refclienteinfraccion.value;
 			var refinterna="pendiente";
-			var fileList = form.fileinfraccion.files;
-			var numFiles = fileList.length;
 			var filepath="";
 			var filename="";
 			var filesize=0;
-			if (form.fileinfraccion.value){
+			var fileList = [];
+			var numFiles = [];
+			var proceder=false;
+			if (form.fileinfraccion.value){ 
+			fileList = form.fileinfraccion.files;
+			numFiles =	fileList.length;
 			filepath=rutaarchivos(form.fileinfraccion);}else{
 				console.log("No se enviaron archivos.");
-			}
+				proceder=true;
+			};
 			let idusuario=obteneridusuariolocalStorage();
 			let emailusuario=obteneremailusuariolocalStorage();
-			var proceder=false;
 			let detallearchivos="";
 			var urlarchivos= [];
 			var subiendoarchivos=[];
@@ -2713,7 +3040,6 @@ let iparticipante=1;
 					estado:	"nuevo"}).then((doc)=>{localStorage.setItem("docidnow",doc.id);console.log("¡Escritura exitosa!")}).catch((error) =>{console.error("Error al escritura: ", error);});
 			cierrepanelrequerimientos();panelagradecimiento.style.display="block";}
 		}
-	
 		function reqelosubmit(form){
 			var fechadesolicitud = new Date();
 			var fechaelo=form.fechaelo.value;
@@ -2724,18 +3050,21 @@ let iparticipante=1;
 			var mensajeelo=form.mensajeelo.value;
 			var refcliente=form.refclienteelo.value;
 			var refinterna="pendiente";
-			var fileList = form.fileelo.files;
-			var numFiles = fileList.length;
 			var filepath="";
 			var filename="";
 			var filesize=0;
-			if (form.fileelo.value){
+			var fileList = [];
+			var numFiles = [];
+			var proceder=false;
+			if (form.fileelo.value){ 
+			fileList = form.fileelo.files;
+			numFiles =	fileList.length;
 			filepath=rutaarchivos(form.fileelo);}else{
 				console.log("No se enviaron archivos.");
-			}
+				proceder=true;
+			};
 			let idusuario=obteneridusuariolocalStorage();
 			let emailusuario=obteneremailusuariolocalStorage();
-			var proceder=false;
 			let detallearchivos="";
 			var urlarchivos= [];
 			var subiendoarchivos=[];
@@ -3020,7 +3349,7 @@ let iparticipante=1;
 			var tabreuniones = document.getElementById("tabreuniones");
 			var tabrequerimientos = document.getElementById("tabrequerimientos");
 			var tabdocumentos = document.getElementById("tabdocumentos");
-
+			
 	
 		function muestratablamensajeria(){
 			while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();}
@@ -3031,39 +3360,7 @@ let iparticipante=1;
 			tabmensajes.style.opacity=1;
 			tabreuniones.style.opacity=0.3;
 			tabrequerimientos.style.opacity=0.3;
-			tabdocumentos.style.opacity=0.3;
-			/*llenar la tabla con datos*/	
-			let idusuario=obteneridusuariolocalStorage();
-			db.collection("usuarios").doc(idusuario).collection("mensajes").get().then((querysnapshot)=>{
-			/* pero primero vaciar la tabla de los datos previos*/
-			var archivosmensajeriatbody =document.getElementById("archivosmensajeriatbody");
-				while (archivosmensajeriatbody.rows.length>0){
-					let i=0;
-					archivosmensajeriatbody.rows[i].remove();
-					i++;
-				};
-			/* ahora si se llena la tabla */
-				let fila=0;
-				querysnapshot.forEach((doc)=>{
-					renderdatosmensajeriaenfila(doc);
-					const archivosmensajeriatbody=document.getElementById("archivosmensajeriatbody");
-					var span=archivosmensajeriatbody.rows[fila].cells[2].firstElementChild;
-					var span2=archivosmensajeriatbody.rows[fila].cells[4].firstElementChild;
-					var tdcontenido=archivosmensajeriatbody.rows[fila].cells[2];
-					var tdnombrearchivos=archivosmensajeriatbody.rows[fila].cells[4];
-					var tdreferencias=archivosmensajeriatbody.rows[fila].cells[0];
-					fila++
-					tdcontenido.addEventListener('click',()=>{if (span.style.display!="block"){muestraspan(span);}else{escondespan(span)};});
-					tdnombrearchivos.addEventListener('click',()=>{if (span2.style.display!="block"){muestraspan(span2);}else{escondespan(span2)};});
-					var botonref1=document.createElement("button");
-					botonref1.setAttribute("class","botonref");
-					botonref1.textContent="editar";
-					botonref1.addEventListener('click', () =>{let panel=editarreferencia(fila,doc.id,1);while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();}let br=document.createElement("br");panellateral.appendChild(br);panellateral.appendChild(panel);});
-					let br=document.createElement("br");
-					tdreferencias.appendChild(br);
-					tdreferencias.appendChild(botonref1);
-				})}).catch((error) =>{console.error("Error al acceder la base de datos: ", error);});
-			}
+			tabdocumentos.style.opacity=0.3;};
 		function muestratablareuniones(){
 			while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();}
 			mensajeriaarchivostabla.style.display="none";
@@ -3074,38 +3371,7 @@ let iparticipante=1;
 			tabreuniones.style.opacity=1;
 			tabrequerimientos.style.opacity=0.3;
 			tabdocumentos.style.opacity=0.3;
-			/*llenar la tabla con datos*/	
-			let idusuario=obteneridusuariolocalStorage();
-			db.collection("usuarios").doc(idusuario).collection("reuniones").get().then((querysnapshot)=>{
-			/* pero primero vaciar la tabla de los datos previos*/
-				var reunionesarchivostbody =document.getElementById("reunionesarchivostbody");
-				while (reunionesarchivostbody.rows.length>0){
-					let i=0;
-					reunionesarchivostbody.rows[i].remove();
-					i++;
-				};
-			/* ahora si se llena la tabla */
-				let fila=0;
-				querysnapshot.forEach((doc)=>{
-					renderdatosreunionesenfila(doc);
-					const reunionesarchivostbody=document.getElementById("reunionesarchivostbody");
-					var span=reunionesarchivostbody.rows[fila].cells[3].firstElementChild;
-					var span2=reunionesarchivostbody.rows[fila].cells[4].firstElementChild;
-					var tdcontenidomensaje=reunionesarchivostbody.rows[fila].cells[3];
-					var tdparticipantes=reunionesarchivostbody.rows[fila].cells[4];
-					var tdreferencias=reunionesarchivostbody.rows[fila].cells[0];
-					fila++
-					tdcontenidomensaje.addEventListener('click',()=>{if (span.style.display!="block"){muestraspan(span);}else{escondespan(span)};});
-					tdparticipantes.addEventListener('click',()=>{if (span2.style.display!="block"){muestraspan(span2);}else{escondespan(span2)};});
-					var botonref2=document.createElement("button");
-					botonref2.setAttribute("class","botonref");
-					botonref2.textContent="editar";
-					botonref2.addEventListener('click', () =>{let panel=editarreferencia(fila,doc.id,2);while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();};let br=document.createElement("br");panellateral.appendChild(br);panellateral.appendChild(panel);});
-					let br=document.createElement("br");
-					tdreferencias.appendChild(br);
-					tdreferencias.appendChild(botonref2);
-				})}).catch((error) =>{console.error("Error al acceder la base de datos: ", error);});
-				};
+		};
 		function muestratablarequerimientos(){
 			while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();}
 			mensajeriaarchivostabla.style.display="none";
@@ -3116,46 +3382,8 @@ let iparticipante=1;
 			tabreuniones.style.opacity=0.3;
 			tabrequerimientos.style.opacity=1;
 			tabdocumentos.style.opacity=0.3;
-			/*llenar la tabla con datos*/	
-			let idusuario=obteneridusuariolocalStorage();
-			db.collection("usuarios").doc(idusuario).collection("requerimientos").get().then((querysnapshot)=>{
-			/* pero primero vaciar la tabla de los datos previos*/
-				var requerimientosarchivostbody =document.getElementById("requerimientosarchivostbody");
-				while (requerimientosarchivostbody.rows.length>0){
-					let i=0;
-					requerimientosarchivostbody.rows[i].remove();
-					i++;
-				};
-			/* ahora si se llena la tabla */
-				let fila=0;
-				querysnapshot.forEach((doc)=>{
-					renderdatosrequerimientosenfila(doc);
-					const requerimientosarchivostbody=document.getElementById("requerimientosarchivostbody");
-					var span=requerimientosarchivostbody.rows[fila].cells[4].firstElementChild;
-					var span2=requerimientosarchivostbody.rows[fila].cells[5].firstElementChild;
-					var tdcontenidomensaje=requerimientosarchivostbody.rows[fila].cells[4];
-					var tdcotizacion=requerimientosarchivostbody.rows[fila].cells[5];
-					var tdreferencias=requerimientosarchivostbody.rows[fila].cells[0];
-					fila++
-					tdcontenidomensaje.addEventListener('click',()=>{if (span.style.display!="block"){muestraspan(span);}else{escondespan(span)};});
-					tdcotizacion.addEventListener('click',()=>{if (span2.style.display!="block"){muestraspan(span2);}else{escondespan(span2)};});
-					var botonref3=document.createElement("button");
-					botonref3.setAttribute("class","botonref");
-					botonref3.textContent="editar";
-					botonref3.addEventListener('click', () =>{let panel=editarreferencia(fila,doc.id,3);while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();};let br=document.createElement("br");panellateral.appendChild(br);panellateral.appendChild(panel);});
-					let br=document.createElement("br");
-					tdreferencias.appendChild(br);
-					tdreferencias.appendChild(botonref3);
-				})}).catch((error) =>{console.error("Error al acceder la base de datos: ", error);});
 		};
 		function muestratabladocumentos(){
-			/*primero vaciar la tabla de los datos previos*/
-			var documentosarchivostbody = $("documentosarchivostbody");
-				while (documentosarchivostbody.rows.length>0){
-					let i=0;
-					documentosarchivostbody.rows[i].remove();
-					i++;
-				};
 			mensajeriaarchivostabla.style.display="none";
 			reunionesarchivostabla.style.display="none";
 			requerimientosarchivostabla.style.display="none";
@@ -3164,8 +3392,15 @@ let iparticipante=1;
 			tabreuniones.style.opacity=0.3;
 			tabrequerimientos.style.opacity=0.3;
 			tabdocumentos.style.opacity=1;
-			/*llenar la tabla con datos*/	
-			let idusuario=obteneridusuariolocalStorage();
+		};
+		function muestraarchivosusuario(){
+			const idusuario=obteneridusuariolocalStorage();
+			var documentosarchivostbody = $("documentosarchivostbody");
+				while (documentosarchivostbody.rows.length>0){
+					let i=0;
+					documentosarchivostbody.rows[i].remove();
+					i++;
+				};
 			var usuariobucketRef = storageRef.child("usuarios/"+idusuario);
 			usuariobucketRef.listAll().then((result)=>{
 				result.items.forEach((fileRef)=>{
@@ -3203,7 +3438,8 @@ let iparticipante=1;
 									tdsize.textContent=tamañoarchivos[index]+" KB";
 									if (urlarchivos[index].length>5)
 									{adescargar.setAttribute("href",urlarchivos[index]);
-									adescargar.setAttribute("download",fileRef.name);}
+									adescargar.setAttribute("download",fileRef.name);
+									adescargar.setAttribute("target","_blank");}
 								}
 							}
 						})}).catch((error)=>{console.error("error al leer base de datos en mensajes: "+error);});
@@ -3224,7 +3460,8 @@ let iparticipante=1;
 									tdsize.textContent=tamañoarchivos[index2]+" KB";
 									if (urlarchivos[index2].length>5)
 									{adescargar.setAttribute("href",urlarchivos[index2]);
-									adescargar.setAttribute("download",fileRef.name);}
+									adescargar.setAttribute("download",fileRef.name);
+									adescargar.setAttribute("target","_blank")}
 								}
 							}
 						})}).catch((error)=>{console.error("error al leer base de datos en requerimientos: "+error);});
@@ -3236,13 +3473,380 @@ let iparticipante=1;
 						tr.appendChild(tddescargar);
 						documentosarchivostbody.appendChild(tr);
 				})}).catch((error)=>{console.error("error al leer servidor de archivos: "+error);});
-		}
+		};
+		function muestratodoslosdatosusuario(){
+			/*Primero los mensajes*/
+			let idusuario=obteneridusuariolocalStorage();
+			db.collection("usuarios").doc(idusuario).collection("mensajes").get().then((querysnapshot)=>{
+			/* pero primero vaciar la tabla de los datos previos*/
+			var archivosmensajeriatbody =document.getElementById("archivosmensajeriatbody");
+				while (archivosmensajeriatbody.rows.length>0){
+					let i=0;
+					archivosmensajeriatbody.rows[i].remove();
+					i++;
+				};
+			/* ahora si se llena la tabla */
+				let fila=0;
+				querysnapshot.forEach((doc)=>{
+					renderdatosmensajeriaenfila(doc);
+					const archivosmensajeriatbody=document.getElementById("archivosmensajeriatbody");
+					var span=archivosmensajeriatbody.rows[fila].cells[2].firstElementChild;
+					var span2=archivosmensajeriatbody.rows[fila].cells[4].firstElementChild;
+					var tdcontenido=archivosmensajeriatbody.rows[fila].cells[2];
+					var tdnombrearchivos=archivosmensajeriatbody.rows[fila].cells[4];
+					var tdreferencias=archivosmensajeriatbody.rows[fila].cells[0];
+					fila++
+					tdcontenido.addEventListener('click',()=>{if (span.style.display!="block"){muestraspan(span);}else{escondespan(span)};});
+					tdnombrearchivos.addEventListener('click',()=>{if (span2.style.display!="block"){muestraspan(span2);}else{escondespan(span2)};});
+					var botonref1=document.createElement("button");
+					botonref1.setAttribute("class","botonref");
+					botonref1.textContent="editar";
+					botonref1.addEventListener('click', () =>{let panel=editarreferencia(fila,doc.id,1);while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();}let br=document.createElement("br");panellateral.appendChild(br);panellateral.appendChild(panel);});
+					let br=document.createElement("br");
+					tdreferencias.appendChild(br);
+					tdreferencias.appendChild(botonref1);
+				})}).catch((error) =>{console.error("Error al acceder la base de datos: ", error);});
+			db.collection("usuarios").doc(idusuario).collection("reuniones").get().then((querysnapshot)=>{
+			/* pero primero vaciar la tabla de los datos previos*/
+				var reunionesarchivostbody =document.getElementById("reunionesarchivostbody");
+				while (reunionesarchivostbody.rows.length>0){
+					let i=0;
+					reunionesarchivostbody.rows[i].remove();
+					i++;
+				};
+			/* ahora si se llena la tabla */
+				let fila=0;
+				querysnapshot.forEach((doc)=>{
+					renderdatosreunionesenfila(doc);
+					const reunionesarchivostbody=document.getElementById("reunionesarchivostbody");
+					var span=reunionesarchivostbody.rows[fila].cells[3].firstElementChild;
+					var span2=reunionesarchivostbody.rows[fila].cells[4].firstElementChild;
+					var tdcontenidomensaje=reunionesarchivostbody.rows[fila].cells[3];
+					var tdparticipantes=reunionesarchivostbody.rows[fila].cells[4];
+					var tdreferencias=reunionesarchivostbody.rows[fila].cells[0];
+					fila++
+					tdcontenidomensaje.addEventListener('click',()=>{if (span.style.display!="block"){muestraspan(span);}else{escondespan(span)};});
+					tdparticipantes.addEventListener('click',()=>{if (span2.style.display!="block"){muestraspan(span2);}else{escondespan(span2)};});
+					var botonref2=document.createElement("button");
+					botonref2.setAttribute("class","botonref");
+					botonref2.textContent="editar";
+					botonref2.addEventListener('click', () =>{let panel=editarreferencia(fila,doc.id,2);while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();};let br=document.createElement("br");panellateral.appendChild(br);panellateral.appendChild(panel);});
+					let br=document.createElement("br");
+					tdreferencias.appendChild(br);
+					tdreferencias.appendChild(botonref2);
+				})}).catch((error) =>{console.error("Error al acceder la base de datos: ", error);});
+			db.collection("usuarios").doc(idusuario).collection("requerimientos").get().then((querysnapshot)=>{
+			/* pero primero vaciar la tabla de los datos previos*/
+				var requerimientosarchivostbody =document.getElementById("requerimientosarchivostbody");
+				while (requerimientosarchivostbody.rows.length>0){
+					let i=0;
+					requerimientosarchivostbody.rows[i].remove();
+					i++;
+				};
+			/* ahora si se llena la tabla */
+				let fila=0;
+				querysnapshot.forEach((doc)=>{
+					renderdatosrequerimientosenfila(doc);
+					const requerimientosarchivostbody=document.getElementById("requerimientosarchivostbody");
+					var span=requerimientosarchivostbody.rows[fila].cells[4].firstElementChild;
+					var span2=requerimientosarchivostbody.rows[fila].cells[5].firstElementChild;
+					var tdcontenidomensaje=requerimientosarchivostbody.rows[fila].cells[4];
+					var tdcotizacion=requerimientosarchivostbody.rows[fila].cells[5];
+					var tdreferencias=requerimientosarchivostbody.rows[fila].cells[0];
+					fila++
+					tdcontenidomensaje.addEventListener('click',()=>{if (span.style.display!="block"){muestraspan(span);}else{escondespan(span)};});
+					tdcotizacion.addEventListener('click',()=>{if (span2.style.display!="block"){muestraspan(span2);}else{escondespan(span2)};});
+					var botonref3=document.createElement("button");
+					botonref3.setAttribute("class","botonref");
+					botonref3.textContent="editar";
+					botonref3.addEventListener('click', () =>{let panel=editarreferencia(fila,doc.id,3);while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();};let br=document.createElement("br");panellateral.appendChild(br);panellateral.appendChild(panel);});
+					let br=document.createElement("br");
+					tdreferencias.appendChild(br);
+					tdreferencias.appendChild(botonref3);
+				})}).catch((error) =>{console.error("Error al acceder la base de datos: ", error);});
+		};
+		function muestratodoslosdatosnuevosusuario(){
+			/*Primero los mensajes*/
+			let idusuario=obteneridusuariolocalStorage();
+			db.collection("usuarios").doc(idusuario).collection("mensajes").where("estado","==","nuevo").get().then((querysnapshot)=>{
+			/* pero primero vaciar la tabla de los datos previos*/
+			var archivosmensajeriatbody =document.getElementById("archivosmensajeriatbody");
+				while (archivosmensajeriatbody.rows.length>0){
+					let i=0;
+					archivosmensajeriatbody.rows[i].remove();
+					i++;
+				};
+			/* ahora si se llena la tabla */
+				let fila=0;
+				querysnapshot.forEach((doc)=>{
+					renderdatosmensajeriaenfila(doc);
+					const archivosmensajeriatbody=document.getElementById("archivosmensajeriatbody");
+					var span=archivosmensajeriatbody.rows[fila].cells[2].firstElementChild;
+					var span2=archivosmensajeriatbody.rows[fila].cells[4].firstElementChild;
+					var tdcontenido=archivosmensajeriatbody.rows[fila].cells[2];
+					var tdnombrearchivos=archivosmensajeriatbody.rows[fila].cells[4];
+					var tdreferencias=archivosmensajeriatbody.rows[fila].cells[0];
+					fila++
+					tdcontenido.addEventListener('click',()=>{if (span.style.display!="block"){muestraspan(span);}else{escondespan(span)};});
+					tdnombrearchivos.addEventListener('click',()=>{if (span2.style.display!="block"){muestraspan(span2);}else{escondespan(span2)};});
+					var botonref1=document.createElement("button");
+					botonref1.setAttribute("class","botonref");
+					botonref1.textContent="editar";
+					botonref1.addEventListener('click', () =>{let panel=editarreferencia(fila,doc.id,1);while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();}let br=document.createElement("br");panellateral.appendChild(br);panellateral.appendChild(panel);});
+					let br=document.createElement("br");
+					tdreferencias.appendChild(br);
+					tdreferencias.appendChild(botonref1);
+				})}).catch((error) =>{console.error("Error al acceder la base de datos: ", error);});
+			db.collection("usuarios").doc(idusuario).collection("reuniones").where("estado","==","nuevo").get().then((querysnapshot)=>{
+			/* pero primero vaciar la tabla de los datos previos*/
+				var reunionesarchivostbody =document.getElementById("reunionesarchivostbody");
+				while (reunionesarchivostbody.rows.length>0){
+					let i=0;
+					reunionesarchivostbody.rows[i].remove();
+					i++;
+				};
+			/* ahora si se llena la tabla */
+				let fila=0;
+				querysnapshot.forEach((doc)=>{
+					renderdatosreunionesenfila(doc);
+					const reunionesarchivostbody=document.getElementById("reunionesarchivostbody");
+					var span=reunionesarchivostbody.rows[fila].cells[3].firstElementChild;
+					var span2=reunionesarchivostbody.rows[fila].cells[4].firstElementChild;
+					var tdcontenidomensaje=reunionesarchivostbody.rows[fila].cells[3];
+					var tdparticipantes=reunionesarchivostbody.rows[fila].cells[4];
+					var tdreferencias=reunionesarchivostbody.rows[fila].cells[0];
+					fila++
+					tdcontenidomensaje.addEventListener('click',()=>{if (span.style.display!="block"){muestraspan(span);}else{escondespan(span)};});
+					tdparticipantes.addEventListener('click',()=>{if (span2.style.display!="block"){muestraspan(span2);}else{escondespan(span2)};});
+					var botonref2=document.createElement("button");
+					botonref2.setAttribute("class","botonref");
+					botonref2.textContent="editar";
+					botonref2.addEventListener('click', () =>{let panel=editarreferencia(fila,doc.id,2);while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();};let br=document.createElement("br");panellateral.appendChild(br);panellateral.appendChild(panel);});
+					let br=document.createElement("br");
+					tdreferencias.appendChild(br);
+					tdreferencias.appendChild(botonref2);
+				})}).catch((error) =>{console.error("Error al acceder la base de datos: ", error);});
+			db.collection("usuarios").doc(idusuario).collection("requerimientos").where("estado","==","nuevo").get().then((querysnapshot)=>{
+			/* pero primero vaciar la tabla de los datos previos*/
+				var requerimientosarchivostbody =document.getElementById("requerimientosarchivostbody");
+				while (requerimientosarchivostbody.rows.length>0){
+					let i=0;
+					requerimientosarchivostbody.rows[i].remove();
+					i++;
+				};
+			/* ahora si se llena la tabla */
+				let fila=0;
+				querysnapshot.forEach((doc)=>{
+					renderdatosrequerimientosenfila(doc);
+					const requerimientosarchivostbody=document.getElementById("requerimientosarchivostbody");
+					var span=requerimientosarchivostbody.rows[fila].cells[4].firstElementChild;
+					var span2=requerimientosarchivostbody.rows[fila].cells[5].firstElementChild;
+					var tdcontenidomensaje=requerimientosarchivostbody.rows[fila].cells[4];
+					var tdcotizacion=requerimientosarchivostbody.rows[fila].cells[5];
+					var tdreferencias=requerimientosarchivostbody.rows[fila].cells[0];
+					fila++
+					tdcontenidomensaje.addEventListener('click',()=>{if (span.style.display!="block"){muestraspan(span);}else{escondespan(span)};});
+					tdcotizacion.addEventListener('click',()=>{if (span2.style.display!="block"){muestraspan(span2);}else{escondespan(span2)};});
+					var botonref3=document.createElement("button");
+					botonref3.setAttribute("class","botonref");
+					botonref3.textContent="editar";
+					botonref3.addEventListener('click', () =>{let panel=editarreferencia(fila,doc.id,3);while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();};let br=document.createElement("br");panellateral.appendChild(br);panellateral.appendChild(panel);});
+					let br=document.createElement("br");
+					tdreferencias.appendChild(br);
+					tdreferencias.appendChild(botonref3);
+				})}).catch((error) =>{console.error("Error al acceder la base de datos: ", error);});
+		};
+		function muestratodoslosdatospendientesusuario(){
+			/*Primero los mensajes*/
+			let idusuario=obteneridusuariolocalStorage();
+			db.collection("usuarios").doc(idusuario).collection("mensajes").where("estado","==","pendiente").get().then((querysnapshot)=>{
+			/* pero primero vaciar la tabla de los datos previos*/
+			var archivosmensajeriatbody =document.getElementById("archivosmensajeriatbody");
+				while (archivosmensajeriatbody.rows.length>0){
+					let i=0;
+					archivosmensajeriatbody.rows[i].remove();
+					i++;
+				};
+			/* ahora si se llena la tabla */
+				let fila=0;
+				querysnapshot.forEach((doc)=>{
+					renderdatosmensajeriaenfila(doc);
+					const archivosmensajeriatbody=document.getElementById("archivosmensajeriatbody");
+					var span=archivosmensajeriatbody.rows[fila].cells[2].firstElementChild;
+					var span2=archivosmensajeriatbody.rows[fila].cells[4].firstElementChild;
+					var tdcontenido=archivosmensajeriatbody.rows[fila].cells[2];
+					var tdnombrearchivos=archivosmensajeriatbody.rows[fila].cells[4];
+					var tdreferencias=archivosmensajeriatbody.rows[fila].cells[0];
+					fila++
+					tdcontenido.addEventListener('click',()=>{if (span.style.display!="block"){muestraspan(span);}else{escondespan(span)};});
+					tdnombrearchivos.addEventListener('click',()=>{if (span2.style.display!="block"){muestraspan(span2);}else{escondespan(span2)};});
+					var botonref1=document.createElement("button");
+					botonref1.setAttribute("class","botonref");
+					botonref1.textContent="editar";
+					botonref1.addEventListener('click', () =>{let panel=editarreferencia(fila,doc.id,1);while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();}let br=document.createElement("br");panellateral.appendChild(br);panellateral.appendChild(panel);});
+					let br=document.createElement("br");
+					tdreferencias.appendChild(br);
+					tdreferencias.appendChild(botonref1);
+				})}).catch((error) =>{console.error("Error al acceder la base de datos: ", error);});
+			db.collection("usuarios").doc(idusuario).collection("reuniones").where("estado","==","pendiente").get().then((querysnapshot)=>{
+			/* pero primero vaciar la tabla de los datos previos*/
+				var reunionesarchivostbody =document.getElementById("reunionesarchivostbody");
+				while (reunionesarchivostbody.rows.length>0){
+					let i=0;
+					reunionesarchivostbody.rows[i].remove();
+					i++;
+				};
+			/* ahora si se llena la tabla */
+				let fila=0;
+				querysnapshot.forEach((doc)=>{
+					renderdatosreunionesenfila(doc);
+					const reunionesarchivostbody=document.getElementById("reunionesarchivostbody");
+					var span=reunionesarchivostbody.rows[fila].cells[3].firstElementChild;
+					var span2=reunionesarchivostbody.rows[fila].cells[4].firstElementChild;
+					var tdcontenidomensaje=reunionesarchivostbody.rows[fila].cells[3];
+					var tdparticipantes=reunionesarchivostbody.rows[fila].cells[4];
+					var tdreferencias=reunionesarchivostbody.rows[fila].cells[0];
+					fila++
+					tdcontenidomensaje.addEventListener('click',()=>{if (span.style.display!="block"){muestraspan(span);}else{escondespan(span)};});
+					tdparticipantes.addEventListener('click',()=>{if (span2.style.display!="block"){muestraspan(span2);}else{escondespan(span2)};});
+					var botonref2=document.createElement("button");
+					botonref2.setAttribute("class","botonref");
+					botonref2.textContent="editar";
+					botonref2.addEventListener('click', () =>{let panel=editarreferencia(fila,doc.id,2);while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();};let br=document.createElement("br");panellateral.appendChild(br);panellateral.appendChild(panel);});
+					let br=document.createElement("br");
+					tdreferencias.appendChild(br);
+					tdreferencias.appendChild(botonref2);
+				})}).catch((error) =>{console.error("Error al acceder la base de datos: ", error);});
+			db.collection("usuarios").doc(idusuario).collection("requerimientos").where("estado","==","pendiente").get().then((querysnapshot)=>{
+			/* pero primero vaciar la tabla de los datos previos*/
+				var requerimientosarchivostbody =document.getElementById("requerimientosarchivostbody");
+				while (requerimientosarchivostbody.rows.length>0){
+					let i=0;
+					requerimientosarchivostbody.rows[i].remove();
+					i++;
+				};
+			/* ahora si se llena la tabla */
+				let fila=0;
+				querysnapshot.forEach((doc)=>{
+					renderdatosrequerimientosenfila(doc);
+					const requerimientosarchivostbody=document.getElementById("requerimientosarchivostbody");
+					var span=requerimientosarchivostbody.rows[fila].cells[4].firstElementChild;
+					var span2=requerimientosarchivostbody.rows[fila].cells[5].firstElementChild;
+					var tdcontenidomensaje=requerimientosarchivostbody.rows[fila].cells[4];
+					var tdcotizacion=requerimientosarchivostbody.rows[fila].cells[5];
+					var tdreferencias=requerimientosarchivostbody.rows[fila].cells[0];
+					fila++
+					tdcontenidomensaje.addEventListener('click',()=>{if (span.style.display!="block"){muestraspan(span);}else{escondespan(span)};});
+					tdcotizacion.addEventListener('click',()=>{if (span2.style.display!="block"){muestraspan(span2);}else{escondespan(span2)};});
+					var botonref3=document.createElement("button");
+					botonref3.setAttribute("class","botonref");
+					botonref3.textContent="editar";
+					botonref3.addEventListener('click', () =>{let panel=editarreferencia(fila,doc.id,3);while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();};let br=document.createElement("br");panellateral.appendChild(br);panellateral.appendChild(panel);});
+					let br=document.createElement("br");
+					tdreferencias.appendChild(br);
+					tdreferencias.appendChild(botonref3);
+				})}).catch((error) =>{console.error("Error al acceder la base de datos: ", error);});
+		};
+		function muestratodoslosdatosfinalizadosusuario(){
+			/*Primero los mensajes*/
+			let idusuario=obteneridusuariolocalStorage();
+			db.collection("usuarios").doc(idusuario).collection("mensajes").where("estado","==","finalizado").get().then((querysnapshot)=>{
+			/* pero primero vaciar la tabla de los datos previos*/
+			var archivosmensajeriatbody =document.getElementById("archivosmensajeriatbody");
+				while (archivosmensajeriatbody.rows.length>0){
+					let i=0;
+					archivosmensajeriatbody.rows[i].remove();
+					i++;
+				};
+			/* ahora si se llena la tabla */
+				let fila=0;
+				querysnapshot.forEach((doc)=>{
+					renderdatosmensajeriaenfila(doc);
+					const archivosmensajeriatbody=document.getElementById("archivosmensajeriatbody");
+					var span=archivosmensajeriatbody.rows[fila].cells[2].firstElementChild;
+					var span2=archivosmensajeriatbody.rows[fila].cells[4].firstElementChild;
+					var tdcontenido=archivosmensajeriatbody.rows[fila].cells[2];
+					var tdnombrearchivos=archivosmensajeriatbody.rows[fila].cells[4];
+					var tdreferencias=archivosmensajeriatbody.rows[fila].cells[0];
+					fila++
+					tdcontenido.addEventListener('click',()=>{if (span.style.display!="block"){muestraspan(span);}else{escondespan(span)};});
+					tdnombrearchivos.addEventListener('click',()=>{if (span2.style.display!="block"){muestraspan(span2);}else{escondespan(span2)};});
+					var botonref1=document.createElement("button");
+					botonref1.setAttribute("class","botonref");
+					botonref1.textContent="editar";
+					botonref1.addEventListener('click', () =>{let panel=editarreferencia(fila,doc.id,1);while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();}let br=document.createElement("br");panellateral.appendChild(br);panellateral.appendChild(panel);});
+					let br=document.createElement("br");
+					tdreferencias.appendChild(br);
+					tdreferencias.appendChild(botonref1);
+				})}).catch((error) =>{console.error("Error al acceder la base de datos: ", error);});
+			db.collection("usuarios").doc(idusuario).collection("reuniones").where("estado","==","finalizado").get().then((querysnapshot)=>{
+			/* pero primero vaciar la tabla de los datos previos*/
+				var reunionesarchivostbody =document.getElementById("reunionesarchivostbody");
+				while (reunionesarchivostbody.rows.length>0){
+					let i=0;
+					reunionesarchivostbody.rows[i].remove();
+					i++;
+				};
+			/* ahora si se llena la tabla */
+				let fila=0;
+				querysnapshot.forEach((doc)=>{
+					renderdatosreunionesenfila(doc);
+					const reunionesarchivostbody=document.getElementById("reunionesarchivostbody");
+					var span=reunionesarchivostbody.rows[fila].cells[3].firstElementChild;
+					var span2=reunionesarchivostbody.rows[fila].cells[4].firstElementChild;
+					var tdcontenidomensaje=reunionesarchivostbody.rows[fila].cells[3];
+					var tdparticipantes=reunionesarchivostbody.rows[fila].cells[4];
+					var tdreferencias=reunionesarchivostbody.rows[fila].cells[0];
+					fila++
+					tdcontenidomensaje.addEventListener('click',()=>{if (span.style.display!="block"){muestraspan(span);}else{escondespan(span)};});
+					tdparticipantes.addEventListener('click',()=>{if (span2.style.display!="block"){muestraspan(span2);}else{escondespan(span2)};});
+					var botonref2=document.createElement("button");
+					botonref2.setAttribute("class","botonref");
+					botonref2.textContent="editar";
+					botonref2.addEventListener('click', () =>{let panel=editarreferencia(fila,doc.id,2);while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();};let br=document.createElement("br");panellateral.appendChild(br);panellateral.appendChild(panel);});
+					let br=document.createElement("br");
+					tdreferencias.appendChild(br);
+					tdreferencias.appendChild(botonref2);
+				})}).catch((error) =>{console.error("Error al acceder la base de datos: ", error);});
+			db.collection("usuarios").doc(idusuario).collection("requerimientos").where("estado","==","finalizado").get().then((querysnapshot)=>{
+			/* pero primero vaciar la tabla de los datos previos*/
+				var requerimientosarchivostbody =document.getElementById("requerimientosarchivostbody");
+				while (requerimientosarchivostbody.rows.length>0){
+					let i=0;
+					requerimientosarchivostbody.rows[i].remove();
+					i++;
+				};
+			/* ahora si se llena la tabla */
+				let fila=0;
+				querysnapshot.forEach((doc)=>{
+					renderdatosrequerimientosenfila(doc);
+					const requerimientosarchivostbody=document.getElementById("requerimientosarchivostbody");
+					var span=requerimientosarchivostbody.rows[fila].cells[4].firstElementChild;
+					var span2=requerimientosarchivostbody.rows[fila].cells[5].firstElementChild;
+					var tdcontenidomensaje=requerimientosarchivostbody.rows[fila].cells[4];
+					var tdcotizacion=requerimientosarchivostbody.rows[fila].cells[5];
+					var tdreferencias=requerimientosarchivostbody.rows[fila].cells[0];
+					fila++
+					tdcontenidomensaje.addEventListener('click',()=>{if (span.style.display!="block"){muestraspan(span);}else{escondespan(span)};});
+					tdcotizacion.addEventListener('click',()=>{if (span2.style.display!="block"){muestraspan(span2);}else{escondespan(span2)};});
+					var botonref3=document.createElement("button");
+					botonref3.setAttribute("class","botonref");
+					botonref3.textContent="editar";
+					botonref3.addEventListener('click', () =>{let panel=editarreferencia(fila,doc.id,3);while(panellateral.lastElementChild.id!="panelarchivos"){panellateral.lastElementChild.remove();};let br=document.createElement("br");panellateral.appendChild(br);panellateral.appendChild(panel);});
+					let br=document.createElement("br");
+					tdreferencias.appendChild(br);
+					tdreferencias.appendChild(botonref3);
+				})}).catch((error) =>{console.error("Error al acceder la base de datos: ", error);});
+		};
 	
-					</script>
+</script>
 <script id="adminapp">
 		const subcollection1="mensajes";
 		const subcollection2="reuniones";
 		const subcollection3="requerimientos";
+		const todoslosdatosmensajeriatbody =$("todoslosdatosmensajeriatbody");
+		const paneltodoslosdatos =$("paneltodoslosdatos");
+		const ultimoelemento =$("ultimoelemento");
 		/*función admin, leer una línea de mensajeria en una id usuario preseleccionada*/
 		function rendertodoslosdatosmensajeriaenfila(doc){
 						let tr = document.createElement('tr');
@@ -3252,6 +3856,9 @@ let iparticipante=1;
 						let tdcontenido = document.createElement('td');
 						let tdcantidadarchivos = document.createElement('td');
 						let tdnombrearchivos = document.createElement('td');
+						let tdreferencias = document.createElement('td');
+						tdreferencias.textContent=doc.data().refcliente+" / "+doc.data().refinterna;
+						tdreferencias.setAttribute("class","celdaarchivos");
 						var fecha=doc.data().fechamensaje.toDate();
 						tdcontenido.setAttribute("class","celdaarchivos");
 						tdnombrearchivos.setAttribute("class","celdaarchivos");
@@ -3289,6 +3896,7 @@ let iparticipante=1;
 						dropdown.appendChild(dropbtn);
 						tdestado.appendChild(dropdown);
 						/* se anexan los childs en el orden correspondiente*/
+						tr.appendChild(tdreferencias);
 						tr.appendChild(tdfecha);
 						tr.appendChild(tdcontenido);
 						tr.appendChild(tdcantidadarchivos);
@@ -3306,6 +3914,9 @@ let iparticipante=1;
 						let tdcontenidomensaje = document.createElement('td');
 						let tdparticipantes = document.createElement('td');
 						var fechasolicitud=doc.data().fechadesolicitud.toDate();
+						let tdreferencias = document.createElement('td');
+						tdreferencias.textContent=doc.data().refcliente+" / "+doc.data().refinterna;
+						tdreferencias.setAttribute("class","celdaarchivos");
 						tdcontenidomensaje.setAttribute("class","celdaarchivos");
 						tdparticipantes.setAttribute("class","celdaarchivos");
 						tdfechasolicitud.textContent=traducefecha(fechasolicitud);
@@ -3350,6 +3961,7 @@ let iparticipante=1;
 						dropdown.appendChild(dropbtn);
 						tdestado.appendChild(dropdown);
 						/* se anexan los childs en el orden correspondiente*/
+						tr.appendChild(tdreferencias);
 						tr.appendChild(tdfechasolicitud);
 						tr.appendChild(tdfechareunion);
 						tr.appendChild(tdcontenidomensaje);
@@ -3368,6 +3980,9 @@ let iparticipante=1;
 						let tdcontenidomensaje = document.createElement('td');
 						let tdcotizacion = document.createElement('td');
 						var fechasolicitud=doc.data().fechadesolicitud.toDate();
+						let tdreferencias = document.createElement('td');
+						tdreferencias.textContent=doc.data().refcliente+" / "+doc.data().refinterna;
+						tdreferencias.setAttribute("class","celdaarchivos");
 						tdcontenidomensaje.setAttribute("class","celdaarchivos");
 						tdfechasolicitud.textContent=traducefecha(fechasolicitud);
 						var fecharequerimiento=doc.data().fecha;
@@ -3409,6 +4024,7 @@ let iparticipante=1;
 						dropdown.appendChild(dropbtn);
 						tdestado.appendChild(dropdown);
 						/* se anexan los childs en el orden correspondiente*/
+						tr.appendChild(tdreferencias);
 						tr.appendChild(tdfechasolicitud);
 						tr.appendChild(tdtipoderequerimiento);
 						tr.appendChild(tdfecharequerimiento);
@@ -3581,19 +4197,75 @@ let iparticipante=1;
 		}
 		/*función para llenar scrollselector con todos los emails de usuarios, habría que hacer aparecer el usuario activo en el panel y obligar a seleccionar para ver contenido de la tabla*/
 			
+		function obteneridusuarioactivolocalStorage(){
+		if (localStorage.getItem("idusuarioactivo")){
+		let idusuarioactivo = localStorage.getItem("idusuarioactivo");
+			return idusuarioactivo;
+		}else{
+			alert("No hay entradas en el localStorage, pruebe seleccionando un cliente");
+			}
+		}
+		function obteneremailusuarioactivolocalStorage(){
+			if (localStorage.getItem("emailusuarioactivo")){
+		let emailusuarioactivo = localStorage.getItem("emailusuarioactivo");
+			return emailusuarioactivo;
+		}else{
+			alert("No hay entradas en el localStorage, pruebe seleccionando un cliente");
+			}
+		}
+	
+	async function escribirrefrenciaadmin(fila,subcollection){
+		try{
+			var form=paneltodoslosdatos.lastElementChild.firstElementChild;
+			let docidnow=localStorage.getItem("docidnow");
+			let idusuario=localStorage.getItem("idusuarioactivo");
+			var referenciaadmin=form[0].value;
+			db.collection("usuarios").doc(idusuario).collection(subcollection).doc(docidnow).update({refinterna: referenciaadmin});
+			paneltodoslosdatos.lastElementChild.remove();
+		}catch(error){console.error("error en escrbirreferenciaadmin : "+error.message);}
+	}
+	
+		 function editarreferenciaadmin(fila,docid,subcollection){
+			let subcoleccion="";
+			if(subcollection==1){subcoleccion="subcollection1"}
+			if(subcollection==2){subcoleccion="subcollection2"}
+			if(subcollection==3){subcoleccion="subcollection3"}
+			var panel=document.createElement("div");
+			panel.setAttribute("class","paneldesplegado2");
+			panel.setAttribute("width","90%");
+			var form=document.createElement("form");
+			form.setAttribute("class","formulario");
+			form.setAttribute("action","javascript:escribirrefrenciaadmin("+fila+","+subcoleccion+")");
+			var p=document.createElement("p");
+			p.textContent="Ingresa tu referencia:"
+			var input=document.createElement("input");
+      	    input.setAttribute("type","text");
+			var send=document.createElement("input");
+			send.setAttribute("type","submit");
+			send.setAttribute("value","enviar");
+			form.appendChild(p);
+			form.appendChild(input);
+			form.appendChild(send);
+			localStorage.setItem("docidnow",docid); 
+			panel.appendChild(form);
+			return panel;
+			 }
+	
 		async function selectorcliente(i){
 			try{
 				var todoslosusuarios= await db.collection("usuarios").get();
 				var idusuarioactivo= todoslosusuarios.docs[i].id;
+				var emailusuarioactivo=todoslosusuarios.docs[i].data().email;
 				localStorage.setItem("idusuarioactivo",idusuarioactivo);
-				console.log("el usuario N°"+i+" es #"+idusuarioactivo);
+				localStorage.setItem("emailusuarioactivo",emailusuarioactivo);
+				console.log("el usuario N°"+i+" es #"+idusuarioactivo+" y su correo es: "+emailusuarioactivo);
 				/*hacer script para llenar la tabla con el usuario activo */
 				var mensajesusuario= await obtenermensajes(idusuarioactivo);
 				var reunionesusuario= await obtenerreuniones(idusuarioactivo);
 				var requerimientosusuario=await obtenerrequerimientos(idusuarioactivo);
 				/*llenar la tabla con datos*/
 				/* pero primero vaciar las 3 tablas de los datos previos*/
-				var todoslosdatosmensajeriatbody =document.getElementById("todoslosdatosmensajeriatbody");
+
 				while (todoslosdatosmensajeriatbody.rows.length>0){
 					let i=0;
 					todoslosdatosmensajeriatbody.rows[i].remove();
@@ -3626,11 +4298,11 @@ let iparticipante=1;
 				var  docidrequerimientos= new Array();
 				mensajesusuario.forEach((doc)=>{
 					rendertodoslosdatosmensajeriaenfila(doc);
-					var span=todoslosdatosmensajeriatbody.rows[fila].cells[1].firstElementChild;
-					var span2=todoslosdatosmensajeriatbody.rows[fila].cells[3].firstElementChild;
-					var tdcontenido=todoslosdatosmensajeriatbody.rows[fila].cells[1];
-					var tdnombrearchivos=todoslosdatosmensajeriatbody.rows[fila].cells[3];
-					var tdestado=todoslosdatosmensajeriatbody.rows[fila].cells[4];
+					var span=todoslosdatosmensajeriatbody.rows[fila].cells[2].firstElementChild;
+					var span2=todoslosdatosmensajeriatbody.rows[fila].cells[4].firstElementChild;
+					var tdcontenido=todoslosdatosmensajeriatbody.rows[fila].cells[2];
+					var tdnombrearchivos=todoslosdatosmensajeriatbody.rows[fila].cells[4];
+					var tdestado=todoslosdatosmensajeriatbody.rows[fila].cells[5];
 					let anuevo= tdestado.firstElementChild.firstElementChild.firstElementChild.childNodes[0];
 					let apendiente= tdestado.firstElementChild.firstElementChild.firstElementChild.childNodes[1];
 					let afinalizado= tdestado.firstElementChild.firstElementChild.firstElementChild.childNodes[2];
@@ -3638,19 +4310,27 @@ let iparticipante=1;
 					anuevo.setAttribute("href","javascript:cambiaestadonuevo(subcollection1,"+fila+")");
 					apendiente.setAttribute("href","javascript:cambiaestadopendiente(subcollection1,"+fila+")");
 					afinalizado.setAttribute("href","javascript:cambiaestadofinalizado(subcollection1,"+fila+")");
-					fila++;
+					var tdreferencias=todoslosdatosmensajeriatbody.rows[fila].cells[0];
+					var botonref1=document.createElement("button");
+					botonref1.setAttribute("class","botonref");
+					botonref1.textContent="editar";
+					botonref1.addEventListener('click', () =>{let panel=editarreferenciaadmin(fila,doc.id,1);while(paneltodoslosdatos.lastElementChild.id!="ultimoelemento"){paneltodoslosdatos.lastElementChild.remove();}let br=document.createElement("br");paneltodoslosdatos.appendChild(br);paneltodoslosdatos.appendChild(panel);});
+					let br=document.createElement("br");
+					tdreferencias.appendChild(br);
+					tdreferencias.appendChild(botonref1);
 					tdcontenido.addEventListener('click',()=>{if (span.style.display!="block"){muestraspan(span);}else{escondespan(span)};});
 					tdnombrearchivos.addEventListener('click',()=>{if (span2.style.display!="block"){muestraspan(span2);}else{escondespan(span2)};});
+					fila++;
 				});
 				/* ahora se llena la tabla reuniones*/
 				let filareuniones=0;
 				reunionesusuario.forEach((doc)=>{
 					rendertodoslosdatosreunionesenfila(doc);
-					var span=reunionestodoslosdatostbody.rows[filareuniones].cells[2].firstElementChild;
-					var span2=reunionestodoslosdatostbody.rows[filareuniones].cells[3].firstElementChild;
-					var tdcontenido=reunionestodoslosdatostbody.rows[filareuniones].cells[2];
-					var tdnombrearchivos=reunionestodoslosdatostbody.rows[filareuniones].cells[3];
-					var tdestado=reunionestodoslosdatostbody.rows[filareuniones].cells[4];
+					var span=reunionestodoslosdatostbody.rows[filareuniones].cells[3].firstElementChild;
+					var span2=reunionestodoslosdatostbody.rows[filareuniones].cells[4].firstElementChild;
+					var tdcontenido=reunionestodoslosdatostbody.rows[filareuniones].cells[3];
+					var tdnombrearchivos=reunionestodoslosdatostbody.rows[filareuniones].cells[4];
+					var tdestado=reunionestodoslosdatostbody.rows[filareuniones].cells[5];
 					let anuevo= tdestado.firstElementChild.firstElementChild.firstElementChild.childNodes[0];
 					let apendiente= tdestado.firstElementChild.firstElementChild.firstElementChild.childNodes[1];
 					let afinalizado= tdestado.firstElementChild.firstElementChild.firstElementChild.childNodes[2];
@@ -3658,6 +4338,14 @@ let iparticipante=1;
 					anuevo.setAttribute("href","javascript:cambiaestadonuevo(subcollection2,"+filareuniones+")");
 					apendiente.setAttribute("href","javascript:cambiaestadopendiente(subcollection2,"+filareuniones+")");
 					afinalizado.setAttribute("href","javascript:cambiaestadofinalizado(subcollection2,"+filareuniones+")");
+					var tdreferencias=reunionestodoslosdatostbody.rows[filareuniones].cells[0];
+					var botonref2=document.createElement("button");
+					botonref2.setAttribute("class","botonref");
+					botonref2.textContent="editar";
+					botonref2.addEventListener('click', () =>{let panel=editarreferenciaadmin(filareuniones,doc.id,2);while(paneltodoslosdatos.lastElementChild.id!="ultimoelemento"){paneltodoslosdatos.lastElementChild.remove();}let br=document.createElement("br");paneltodoslosdatos.appendChild(br);paneltodoslosdatos.appendChild(panel);});
+					let br=document.createElement("br");
+					tdreferencias.appendChild(br);
+					tdreferencias.appendChild(botonref2);
 					filareuniones++;
 					tdcontenido.addEventListener('click',()=>{if (span.style.display!="block"){muestraspan(span);}else{escondespan(span)};});
 					tdnombrearchivos.addEventListener('click',()=>{if (span2.style.display!="block"){muestraspan(span2);}else{escondespan(span2)};});
@@ -3666,9 +4354,9 @@ let iparticipante=1;
 				let filarequerimientos=0;
 				requerimientosusuario.forEach((doc)=>{
 					rendertodoslosdatosrequerimientosenfila(doc);
-					var span=requerimientostodoslosdatostbody.rows[filarequerimientos].cells[3].firstElementChild;
-					var tdcontenido=requerimientostodoslosdatostbody.rows[filarequerimientos].cells[3];
-					var tdestado=requerimientostodoslosdatostbody.rows[filarequerimientos].cells[5];
+					var span=requerimientostodoslosdatostbody.rows[filarequerimientos].cells[4].firstElementChild;
+					var tdcontenido=requerimientostodoslosdatostbody.rows[filarequerimientos].cells[4];
+					var tdestado=requerimientostodoslosdatostbody.rows[filarequerimientos].cells[6];
 					let anuevo= tdestado.firstElementChild.firstElementChild.firstElementChild.childNodes[0];
 					let apendiente= tdestado.firstElementChild.firstElementChild.firstElementChild.childNodes[1];
 					let afinalizado= tdestado.firstElementChild.firstElementChild.firstElementChild.childNodes[2];
@@ -3676,7 +4364,7 @@ let iparticipante=1;
 					anuevo.setAttribute("href","javascript:cambiaestadonuevo(subcollection3,"+filarequerimientos+")");
 					apendiente.setAttribute("href","javascript:cambiaestadopendiente(subcollection3,"+filarequerimientos+")");
 					afinalizado.setAttribute("href","javascript:cambiaestadofinalizado(subcollection3,"+filarequerimientos+")");
-					var tdcotizacion=requerimientostodoslosdatostbody.rows[filarequerimientos].cells[4];
+					var tdcotizacion=requerimientostodoslosdatostbody.rows[filarequerimientos].cells[5];
 					var boton=document.createElement("button");
 					boton.innerText="Cambiar valores";
 					boton.setAttribute("onClick","mostrarcotizadorenfila("+filarequerimientos+");");
@@ -3684,6 +4372,14 @@ let iparticipante=1;
 					tdcotizacion.appendChild(boton);
 					tdcotizacion.appendChild(document.createElement('br'));
 					renderformulariocotizacionenfila(tdcotizacion,filarequerimientos);
+					var tdreferencias=requerimientostodoslosdatostbody.rows[filarequerimientos].cells[0];
+					var botonref3=document.createElement("button");
+					botonref3.setAttribute("class","botonref");
+					botonref3.textContent="editar";
+					botonref3.addEventListener('click', () =>{let panel=editarreferenciaadmin(filarequerimientos,doc.id,3);while(paneltodoslosdatos.lastElementChild.id!="ultimoelemento"){paneltodoslosdatos.lastElementChild.remove();}let br=document.createElement("br");paneltodoslosdatos.appendChild(br);paneltodoslosdatos.appendChild(panel);});
+					let br=document.createElement("br");
+					tdreferencias.appendChild(br);
+					tdreferencias.appendChild(botonref3);
 					filarequerimientos++;
 					tdcontenido.addEventListener('click',()=>{if (span.style.display!="block"){muestraspan(span);}else{escondespan(span)};});
 					})
@@ -3713,15 +4409,6 @@ let iparticipante=1;
 				localStorage.setItem("reunionesidactivo",JSON.stringify(docidreuniones));
 				localStorage.setItem("requerimientosidactivo",JSON.stringify(docidrequerimientos));
 			}catch(error){console.error("error en el selectorcliente: "+error.message);};
-		}
-		
-		function obteneridusuarioactivolocalStorage(){
-		if (localStorage.getItem("idusuarioactivo")){
-		let idusuarioactivo = localStorage.getItem("idusuarioactivo");
-			return idusuarioactivo;
-		}else{
-			console.log("No hay entradas en el localStorage")
-			}
 		}
 		
 	
@@ -3799,14 +4486,14 @@ let iparticipante=1;
 			}catch(error){console.error("error de todoslosemailsusuarios: "+error.message);}
 		}
 		/*funciones para admin*/
-		var mensajeriatodoslosdatostabla = document.getElementById("mensajeriatodoslosdatostabla");
-		var reunionestodoslosdatostabla = document.getElementById("reunionestodoslosdatostabla");
-		var requerimientostodoslosdatostabla = document.getElementById("requerimientostodoslosdatostabla");
-		var perfilusuariotodoslosdatostabla= document.getElementById("perfilusuariotodoslosdatostabla");
-		var tabtodoslosdatosmensajes = document.getElementById("tabtodoslosdatosmensajes");
-		var tabtodoslosdatosreuniones = document.getElementById("tabtodoslosdatosreuniones");
-		var tabtodoslosdatosrequerimientos = document.getElementById("tabtodoslosdatosrequerimientos");
-		var tabtodoslosdatosperfilusario= document.getElementById("tabtodoslosdatosperfilusario");
+		const mensajeriatodoslosdatostabla = document.getElementById("mensajeriatodoslosdatostabla");
+		const reunionestodoslosdatostabla = document.getElementById("reunionestodoslosdatostabla");
+		const requerimientostodoslosdatostabla = document.getElementById("requerimientostodoslosdatostabla");
+		const perfilusuariotodoslosdatostabla= document.getElementById("perfilusuariotodoslosdatostabla");
+		const tabtodoslosdatosmensajes = document.getElementById("tabtodoslosdatosmensajes");
+		const tabtodoslosdatosreuniones = document.getElementById("tabtodoslosdatosreuniones");
+		const tabtodoslosdatosrequerimientos = document.getElementById("tabtodoslosdatosrequerimientos");
+		const tabtodoslosdatosperfilusario= document.getElementById("tabtodoslosdatosperfilusario");
 										
 		function muestratablatodoslosdatosmensajes(){
 			mensajeriatodoslosdatostabla.style.display="block";
@@ -3849,12 +4536,12 @@ let iparticipante=1;
 			tabtodoslosdatosperfilusario.style.opacity=1;
 			}
 	
-		var mensajeriatodoslosnuevosdatostabla = document.getElementById("mensajeriatodoslosnuevosdatostabla");
-		var reunionestodoslosnuevosdatostabla = document.getElementById("reunionestodoslosnuevosdatostabla");
-		var requerimientostodoslosnuevosdatostabla = document.getElementById("requerimientostodoslosnuevosdatostabla");
-		var tabtodoslosnuevosdatosmensajes = document.getElementById("tabtodoslosnuevosdatosmensajes");
-		var tabtodoslosnuevosdatosreuniones = document.getElementById("tabtodoslosnuevosdatosreuniones");
-		var tabtodoslosnuevosdatosrequerimientos = document.getElementById("tabtodoslosnuevosdatosrequerimientos");
+		const mensajeriatodoslosnuevosdatostabla = document.getElementById("mensajeriatodoslosnuevosdatostabla");
+		const reunionestodoslosnuevosdatostabla = document.getElementById("reunionestodoslosnuevosdatostabla");
+		const requerimientostodoslosnuevosdatostabla = document.getElementById("requerimientostodoslosnuevosdatostabla");
+		const tabtodoslosnuevosdatosmensajes = document.getElementById("tabtodoslosnuevosdatosmensajes");
+		const tabtodoslosnuevosdatosreuniones = document.getElementById("tabtodoslosnuevosdatosreuniones");
+		const tabtodoslosnuevosdatosrequerimientos = document.getElementById("tabtodoslosnuevosdatosrequerimientos");
 
 		/*función admin, leer una línea de mensajeria en un doc y publica en todoslosnuevosdatos*/
 		function rendertodoslosnuevosdatosmensajeriaenfila(doc){
@@ -3996,13 +4683,13 @@ let iparticipante=1;
 			tabtodoslosnuevosdatosrequerimientos.style.opacity=1;
 			}
 
-		var paneltodoslosnuevosdatos=document.getElementById("paneltodoslosnuevosdatos");
-		var botontodoslosnuevosdatos=document.getElementById("botontodoslosnuevosdatos");
+		const paneltodoslosnuevosdatos=document.getElementById("paneltodoslosnuevosdatos");
+		const botontodoslosnuevosdatos=document.getElementById("botontodoslosnuevosdatos");
 		paneltodoslosnuevosdatos.style.display="none";
-		cantidaddecasosnuevos=$("cantidaddecasosnuevos");
-		cantidaddecasospendientes=$("cantidaddecasospendientes");
-		cantidaddecasosfinalizados=$("cantidaddecasosfinalizados");
-		cantidaddecasosfallados=$("cantidaddecasosfallados");
+		const cantidaddecasosnuevos=$("cantidaddecasosnuevos");
+		const cantidaddecasospendientes=$("cantidaddecasospendientes");
+		const cantidaddecasosfinalizados=$("cantidaddecasosfinalizados");
+		const cantidaddecasosfallados=$("cantidaddecasosfallados");
 
 		async function obtenerlosnuevosmensajes(){
 			var losnuevosmensajes = await db.collectionGroup("mensajes").where("estado","==","nuevo").get();
@@ -4088,8 +4775,8 @@ let iparticipante=1;
 				cantidaddecasosnuevos.textContent=casosnuevos+" casos.";});
 			}
 		
-		var paneltodoslospendientes=$("paneltodoslospendientes");
-		var botontodoslospendientes=$("botontodoslospendientes");
+		const paneltodoslospendientes=$("paneltodoslospendientes");
+		const botontodoslospendientes=$("botontodoslospendientes");
 		paneltodoslospendientes.style.display="none";
 	
 		function muestratablatodoslospendientesmensajes(){
@@ -4315,8 +5002,8 @@ let iparticipante=1;
 						requerimientostodoslospendientestbody.appendChild(tr);		
 			}
 
-		var paneltodoslosfinalizados=$("paneltodoslosfinalizados");
-		var botontodoslosfinalizados=$("botontodoslosfinalizados");
+		const paneltodoslosfinalizados=$("paneltodoslosfinalizados");
+		const botontodoslosfinalizados=$("botontodoslosfinalizados");
 		paneltodoslosfinalizados.style.display="none";
 
 	
@@ -4545,8 +5232,8 @@ let iparticipante=1;
 			}
 		
 	
-		var paneltodoslosfallados=$("paneltodoslosfallados");
-		var botontodoslosfallados=$("botontodoslosfallados");
+		const paneltodoslosfallados=$("paneltodoslosfallados");
+		const botontodoslosfallados=$("botontodoslosfallados");
 		paneltodoslosfallados.style.display="none";
 
 	
@@ -4773,10 +5460,1301 @@ let iparticipante=1;
 					return nada;	
 						}
 		}
+</script>
+<script id="formulariosadminapp">
+	const formulariodatosusuarioformadmin=$("formulariodatosusuarioformadmin");
+	const formulariomensajeriaadmin=$("formulariomensajeriaadmin");
+	const formularioreunionesadmin=$("formularioreunionesadmin");
+	const formulariotraduccionadmin=$("formulariotraduccionadmin");
+	const formularioinformepericialadmin=$("formularioinformepericialadmin");
+	const formulariorespuestapericialadmin=$("formulariorespuestapericialadmin");
+	const formulariobeaadmin=$("formulariobeaadmin");
+	const formularioredaccionadmin=$("formularioredaccionadmin");
+	const formulariocorreccionpliegoadmin=$("formulariocorreccionpliegoadmin");
+	const formularioinfraccionadmin=$("formularioinfraccionadmin");
+	const formularioeloadmin=$("formularioeloadmin");
+	const formularionulidadadmin=$("formularionulidadadmin");
+	const panelformulariosadmin=$("panelformulariosadmin");
+	
+	function cierrepanelformulariosadmin(){
+		for(let i=0;i<panelformulariosadmin.childElementCount;i++){
+			let panel =panelformulariosadmin.children[i];
+			panel.style.display="none";}
+		paneltodoslosnuevosdatos.setAttribute("class","paneldatosglobales100");
+		paneltodoslospendientes.setAttribute("class","paneldatosglobales100");
+		paneltodoslosfinalizados.setAttribute("class","paneldatosglobales100");
+		paneltodoslosfallados.setAttribute("class","paneldatosglobales100");
+		formulariodatosusuarioformadmin[1,2,3].form.reset();
+		formulariomensajeriaadmin[1,2,3].form.reset();
+		formularioreunionesadmin[1,2,3,4,5].form.reset();
+		formulariotraduccionadmin[1,2,3,4,5,6].form.reset();
+		formularioinformepericialadmin[1,2,3,4,5,6].form.reset();
+		formulariorespuestapericialadmin[1,2,3,4,5,6].form.reset();
+		formulariobeaadmin[1,2,3,4,5,6].form.reset();
+		formularioredaccionadmin[1,2,3,4,5,6,7,8].form.reset();
+		formulariocorreccionpliegoadmin[1,2,3,4,5,6].form.reset();
+		formularioinfraccionadmin[1,2,3,4,5,6].form.reset();
+		formularioeloadmin[1,2,3,4,5,6].form.reset();
+		formularionulidadadmin[1,2,3,4,5].form.reset();
+		var output = $('fileListadmin');
+		output.innerHTML = "";
+		var output2 = $('fileListtraduccionadmin');
+		output2.innerHTML = "";
+		var output3 = $('fileListinformepericialadmin');
+		output3.innerHTML = "";
+		var output4 = $('fileListrespuestapericialadmin');
+		output4.innerHTML = "";
+		var output5 = $('fileListbeaadmin');
+		output5.innerHTML = "";
+		var output6 = $('fileListcorreccionpliegoadmin');
+		output6.innerHTML = "";
+		var output7 = $('fileListinfraccionadmin');
+		output7.innerHTML = "";
+		var output8 = $('fileListeloadmin');
+		output8.innerHTML = "";
+		var output9 = $('fileListredaccionadmin');
+		output9.innerHTML = "";
+		const emailListadmin=$("emailListadmin");
+		emailListadmin.remove();
+		const participantesadicionalesadmin=$('participantesadicionalesadmin');
+		const div1 = document.createElement("div");
+		div1.id="emailListadmin";
+		participantesadicionalesadmin.append(div1);
+		iparticipanteadmin=1
+		const emailListredaccionadmin=$("emailListredaccionadmin");
+		emailListredaccionadmin.remove();
+		const participantesredaccionadicionalesadmin=$('participantesredaccionadicionalesadmin');
+		const div2 = document.createElement("div");
+		div2.id="emailListredaccionadmin";
+		participantesredaccionadicionalesadmin.append(div2);
+		iparticipanteredaccionadmin=1
+		}
+	
+	function encogepaneldatosglobales(){
+		paneltodoslosnuevosdatos.setAttribute("class","paneldatosglobales60");
+		paneltodoslospendientes.setAttribute("class","paneldatosglobales60");
+		paneltodoslosfinalizados.setAttribute("class","paneldatosglobales60");
+		paneltodoslosfallados.setAttribute("class","paneldatosglobales60");
+	};
+	function escondeformularios(){
+		for(let i=0;i<panelformulariosadmin.childElementCount;i++){
+			let panel =panelformulariosadmin.children[i];
+			panel.style.display="none";
+		}
+	};
+	escondeformularios();
+	function datosusuarioadmin(){
+		encogepaneldatosglobales();
+		escondeformularios();
+		panelformulariosadmin.children[0].style.display="block";
+	}
+	function mensajeriaadmin(){
+		encogepaneldatosglobales();
+		escondeformularios();
+		panelformulariosadmin.children[1].style.display="block";
+	}
+	function reunionesadmin(){
+		encogepaneldatosglobales();
+		escondeformularios();
+		panelformulariosadmin.children[2].style.display="block";
+	}
+	function traduccionadmin(){
+		encogepaneldatosglobales();
+		escondeformularios();
+		panelformulariosadmin.children[3].style.display="block";
+	}
+	function informepericialadmin(){
+		encogepaneldatosglobales();
+		escondeformularios();
+		panelformulariosadmin.children[4].style.display="block";
+	}
+	function respuestapericialadmin(){
+		encogepaneldatosglobales();
+		escondeformularios();
+		panelformulariosadmin.children[5].style.display="block";
+	}
+	function beaadmin(){
+		encogepaneldatosglobales();
+		escondeformularios();
+		panelformulariosadmin.children[6].style.display="block";
+	}
+	function redaccionadmin(){
+		encogepaneldatosglobales();
+		escondeformularios();
+		panelformulariosadmin.children[7].style.display="block";
+	}
+	function correccionpliegoadmin(){
+		encogepaneldatosglobales();
+		escondeformularios();
+		panelformulariosadmin.children[8].style.display="block";
+	}
+	function infraccionadmin(){
+		encogepaneldatosglobales();
+		escondeformularios();
+		panelformulariosadmin.children[9].style.display="block";
+	}
+	function eloadmin(){
+		encogepaneldatosglobales();
+		escondeformularios();
+		panelformulariosadmin.children[10].style.display="block";
+	}
+	function nulidadadmin(){
+		encogepaneldatosglobales();
+		escondeformularios();
+		panelformulariosadmin.children[11].style.display="block";
+	}
+	
+	/*A CONTINUACIÓN ESTÁN LAS FUNCIONES COMPLEMENTOS DE LOS PANELES FORMULARIOS ADMIN PARA AGREGAR VARIOS ARCHIVOS Y EMAILS:*/
+	/*A continuación un script para listar documentos múltiples cargados en un input "file" del panel de mensajes */
+			updateListadmin = function() {
+								var input = document.getElementById('fileadmin');
+								var output = document.getElementById('fileListadmin');
+								var children = "";
+								for (var i = 0; i < input.files.length; ++i) {
+											children += '<li>' + input.files.item(i).name + '</li>';
+													}
+								output.innerHTML = '<ul>'+children+'</ul>';
+							}			
+/*A continuación un script para listar email múltiples cargados en un input "email" del panel de reuniones*/
+let iparticipanteadmin=1;
+			function agregaparticipanteadmin() {
+						 iparticipanteadmin++;
+						 const emailList=document.getElementById('emailListadmin');
+						 const input = document.createElement("input");
+						input.type="email";input.className="participante";input.id="participanteadmin"+iparticipanteadmin;
+						 emailList.append(input);
+								}
+/*A CONTINUACIÓN LAS FUNCIONES PARA AGREGAR MÚLTIPLES ARICHIVOS Y CORREOS DESDE EL PANEL DE REQUERIMIENTOS*/
+		
+		/*A continuación un script para listar documentos múltiples cargados en un input "file"*/ 
+			updateListtraduccionadmin = function() {
+								var input2 = document.getElementById('filetraduccionadmin');
+								var output2 = document.getElementById('fileListtraduccionadmin');
+								var children2 = "";
+								for (var i = 0; i < input2.files.length; ++i) {
+											children2 += '<li>' + input2.files.item(i).name + '</li>';
+													}
+								output2.innerHTML = '<ul>'+children2+'</ul>';
+								}
 
-	
-	
+		/*A continuación un script para listar documentos múltiples cargados en un input "fileinformepericial"*/ 
+			updateListinformepericialadmin = function() {
+								var input3 = document.getElementById('fileinformepericialadmin');
+								var output3 = document.getElementById('fileListinformepericialadmin');
+								var children3 = "";
+								for (var i = 0; i < input3.files.length; ++i) {
+											children3 += '<li>' + input3.files.item(i).name + '</li>';
+													}
+								output3.innerHTML = '<ul>'+children3+'</ul>';}
+		/*A continuación un script para listar documentos múltiples cargados en un input "fileinformepericial" */
+			updateListrespuestapericialadmin = function() {
+								var input4 = document.getElementById('filerespuestapericialadmin');
+								var output4 = document.getElementById('fileListrespuestapericialadmin');
+								var children4 = "";
+								for (var i = 0; i < input4.files.length; ++i) {
+											children4 += '<li>' + input4.files.item(i).name + '</li>';
+													}
+								output4.innerHTML = '<ul>'+children4+'</ul>';
+								}
+		/*A continuación un script para listar documentos múltiples cargados en un input "filebea" */
+			updateListbeaadmin = function() {
+								var input5 = document.getElementById('filebeaadmin');
+								var output5 = document.getElementById('fileListbeaadmin');
+								var children5 = "";
+								for (var i = 0; i < input5.files.length; ++i) {
+											children5 += '<li>' + input5.files.item(i).name + '</li>';
+													}
+								output5.innerHTML = '<ul>'+children5+'</ul>';
+								}
+		/*A continuación un script para listar documentos múltiples cargados en un input "fileredaccion" */
+				updateListredaccionadmin = function() {
+								var input9 = document.getElementById('fileredaccionadmin');
+								var output9 = document.getElementById('fileListredaccionadmin');
+								var children9 = "";
+								for (var i = 0; i < input9.files.length; ++i) {
+											children9 += '<li>' + input9.files.item(i).name + '</li>';
+													}
+								output9.innerHTML = '<ul>'+children9+'</ul>';
+								}
+			/*A continuación un script para listar email múltiples cargados en un input "emailredaccion" */
+			let iparticipanteredaccionadmin=1;
+			function agregaparticipanteredaccionadmin() {
+						 iparticipanteredaccionadmin++;
+						 const emailListredaccionadmin=document.getElementById('emailListredaccionadmin');
+						 const input = document.createElement("input");
+						input.type="email";input.className="participante";input.id="participanteredaccionadmin"+iparticipante;
+						 emailListredaccionadmin.append(input);
+								}
+		/*A continuación un script para listar documentos múltiples cargados en un input "filecorreccionpliego" */
+			updateListcorreccionpliegoadmin = function() {
+								var input6 = document.getElementById('filecorreccionpliegoadmin');
+								var output6 = document.getElementById('fileListcorreccionpliegoadmin');
+								var children6 = "";
+								for (var i = 0; i < input6.files.length; ++i) {
+											children6 += '<li>' + input6.files.item(i).name + '</li>';
+													}
+								output6.innerHTML = '<ul>'+children6+'</ul>';
+								}
+		/*A continuación un script para listar documentos múltiples cargados en un input "fileinfraccion" */
+			updateListinfraccionadmin = function() {
+								var input7 = document.getElementById('fileinfraccionadmin');
+								var output7 = document.getElementById('fileListinfraccionadmin');
+								var children7 = "";
+								for (var i = 0; i < input7.files.length; ++i) {
+											children7 += '<li>' + input7.files.item(i).name + '</li>';
+													}
+								output7.innerHTML = '<ul>'+children7+'</ul>';
+								}
+						//A continuación un script para listar documentos múltiples cargados en un input "fileelo" 
+			updateListeloadmin = function() {
+								var input8 = document.getElementById('fileeloadmin');
+								var output8 = document.getElementById('fileListeloadmin');
+								var children8 = "";
+								for (var i = 0; i < input8.files.length; ++i) {
+											children8 += '<li>' + input8.files.item(i).name + '</li>';
+													}
+								output8.innerHTML = '<ul>'+children8+'</ul>';
+								}
+			/*A continuación las funciones de submit de los formularios en app Admin:*/
+	function	datosusuariosubmitadmin(form){
+			var nombreusuario=form.nombreusuarioadmin.value;
+			var organizacionusuario=form.organizacionusuarioadmin.value;
+			var cargousuario=form.cargousuarioadmin.value;
+		 	let idusuario=obteneridusuarioactivolocalStorage();
+			db.collection("usuarios").doc(idusuario).update({
+					nombre:	nombreusuario,
+					organizacion:	organizacionusuario,	
+					cargo:	cargousuario,
+					estado:	"actualizado"}).then((doc)=>{console.log("¡Escritura exitosa!");}).catch((error) =>{console.error("Error al escritura: ", error);});
+			cierrepanelformulariosadmin();
+					db.collection("usuarios").doc(idusuario).get().then((doc)=>{limpiapanelusuario();renderpanelusuario(doc);}).catch((Error)=>{console.error("Error al escritura: ", error);});
+			alert("Datos usuario registrado para usuario seleccionado.");
+	}		
+	function	mensajeriasubmitadmin(form){
+			var mensaje=form.mensajeusuarioadmin.value;
+			var refcliente=form.refclientemensajeriaadmin.value;
+			var refinterna="pendiente";
+			var filepath="";
+			var filename="";
+			var filesize=0;
+			var fechamensaje = new Date();
+			var fileList = [];
+			var numFiles = [];
+			var proceder=false;
+			if (form.fileadmin.value){ 
+			fileList = form.fileadmin.files;
+			numFiles =	fileList.length;
+			filepath=rutaarchivos(form.fileadmin);}else{
+				console.log("No se enviaron archivos.");
+				proceder=true;
+			};
+			var idusuario=obteneridusuarioactivolocalStorage();
+			let emailusuario=obteneremailusuarioactivolocalStorage();
+			let detallearchivos="";
+			var urlarchivos= [];
+			var subiendoarchivos=[];
+			var nombrearchivos=[];
+			var tamañoarchivos=[];
+			for (let i = 0; i < numFiles; i++) {
+				filesize=fileList[i].size/1000;
+				if (filesize>20000){
+					proceder=false;
+					alert("Este archivo es demasiado grande, debe ser inferior a 20MB.");
+					break;
+				}else{
+				proceder=true;
+					}
+				}
+			if (proceder){
+				for (let i = 0; i < numFiles; i++) {
+					filename=fileList[i].name;
+					nombrearchivos.push(filename);
+					filesize=Math.trunc(fileList[i].size/1000);
+					tamañoarchivos.push(filesize);
+					console.log(filename+" "+filesize+" "+filepath+filename);
+					console.log(idusuario);
+					detallearchivos+=filename+" "+filesize+"KB; ";
+					var usuariobucketRef = storageRef.child("usuarios/"+idusuario);
+					var fileRef = usuariobucketRef.child(filename);
+					var subiendoarchivo =fileRef.put(fileList[i]);
+					subiendoarchivos.push(subiendoarchivo);
+					urlarchivos.push(i);
+					subiendoarchivos[i].on(firebase.storage.TaskEvent.STATE_CHANGED,function(snapshot) {
+								var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+								console.log('Upload is ' + progress + '% done');
+								switch (snapshot.state) {
+									case firebase.storage.TaskState.PAUSED: 
+										console.log('Upload is paused');
+										break;
+									case firebase.storage.TaskState.RUNNING:
+										console.log('Upload is running');
+										break;
+											}
+								},function(error) {
+									switch (error.code) {
+										case 'storage/unauthorized':
+											alert("Error al cargar archivos, intente cambiar el nombre del archivo");
+											var docid=localStorage.getItem("docidnow");
+											db.collection("usuarios").doc(idusuario).collection("mensajes").doc(docid).set({fallo: "cargando archivo: "+filename, estado: "fallado"},{merge:true});
+											break;
+										case 'storage/canceled':
+										break;
+										case 'storage/unknown':
+										break;
+										}
+								},function() {
+							subiendoarchivos[i].snapshot.ref.getDownloadURL().then(function(downloadURL) {
+    							console.log('File available at', downloadURL);
+								urlarchivos[i]=downloadURL;
+								var docid=localStorage.getItem("docidnow");
+								db.collection("usuarios").doc(idusuario).collection("mensajes").doc(docid).set({urlarchivos: urlarchivos},{merge:true})
+								});});
+						}
+				db.collection("usuarios").doc(idusuario).collection("mensajes").add({
+					fechamensaje:	fechamensaje,
+					mensaje:	mensaje,
+					cantidadarchivos:	numFiles,
+					nombrearchivos:	nombrearchivos,
+					tamañoarchivos:	tamañoarchivos,	
+					detallearchivos:	detallearchivos,
+					emailusuario: emailusuario,
+					refcliente:	refcliente,
+					refinterna:	refinterna,
+					estado:	"nuevo"}).then((doc)=>{localStorage.setItem("docidnow",doc.id);console.log("¡Escritura exitosa!")}).catch((error) =>{console.error("Error al escritura: ", error);});
+			cierrepanelformulariosadmin();alert("Mensaje registrado para usuario seleccionado.");}
+	}
+	function	reunionessubmitadmin(form){
+			var fechadesolicitud = new Date();
+			var fechareunion=form.fechareunionadmin.value;
+			var mensajereunion=form.mensajereunionadmin.value;
+			var refcliente=form.refclientereunionesadmin.value;
+			var refinterna="pendiente";
+			var invitausuario = form.invitausuarioadmin.checked;
+			var invitalocal = form.invitalocaladmin.checked;
+			var invita="usuario";
+			if (invitalocal){
+					invita="local";
+				};
+			var participante1=form.participanteadmin1.value;
+			var cantidadparticipantes=1;
+			var participantesadicionales=form.emailListadmin.hasChildNodes();
+			var correoparticipantes=participante1;
+			if (participantesadicionales){
+				var listaemail = document.getElementById("emailListadmin");
+				for(var i=0; i < listaemail.childNodes.length; i++){
+					let j=2+i;
+					cantidadparticipantes++;
+					var emailextra = listaemail.childNodes[i].value;
+				console.log("participante n°"+j+": "+emailextra);
+					correoparticipantes+=";"+emailextra;
+					}
+				}
+				let idusuario=obteneridusuarioactivolocalStorage();
+				let emailusuario=obteneremailusuarioactivolocalStorage();
+				db.collection("usuarios").doc(idusuario).collection("reuniones").add({
+					fechadesolicitud:	fechadesolicitud,
+					fecha: fechareunion,
+					mensaje:	mensajereunion,
+					invita:	invita,
+					cantidadparticipantes:	cantidadparticipantes,	
+					correoparticipantes:	correoparticipantes,
+					emailusuario: emailusuario,
+					refcliente:	refcliente,
+					refinterna:	refinterna,
+					estado:	"nuevo"}).then(()=>{console.log("¡Escritura exitosa!")}).catch((error) =>{console.error("Error al escritura: ", error);});
+				 cierrepanelformulariosadmin();alert("Reunión registrada para usuario seleccionado."); 
+	}
+	function	reqtraduccionsubmitadmin(form){
+			var fechadesolicitud = new Date();
+			var fechatraduccion=form.fechatraduccionadmin.value;
+			var espanol=form.espanoladmin.checked;
+			var frances=form.francesadmin.checked;
+			var ingles=form.inglesadmin.checked;
+			var cotizatraduccion=form.cotizatraduccionadmin.checked;
+			var mensajetraduccion=form.mensajetraduccionadmin.value;
+			var refcliente=form.refclientetraduccionadmin.value;
+			var refinterna="pendiente";
+			var filepath="";
+			var filename="";
+			var filesize=0;
+			var fileList = [];
+			var numFiles = [];
+			var proceder=false;
+			if (form.filetraduccionadmin.value){ 
+			fileList = form.filetraduccionadmin.files;
+			numFiles =	fileList.length;
+			filepath=rutaarchivos(form.filetraduccionadmin);}else{
+				console.log("No se enviaron archivos.");
+				proceder=true;
+			}
+			let idusuario=obteneridusuarioactivolocalStorage();
+			let emailusuario=obteneremailusuarioactivolocalStorage();
+			let detallearchivos="";
+			var nombrearchivos=[];
+			var tamañoarchivos=[];
+			var urlarchivos= [];
+			var subiendoarchivos=[];
+				for (let i = 0; i < numFiles; i++) {
+				filesize=fileList[i].size/1000;
+				if (filesize>20000){
+					proceder=false;
+					alert("Archivo demasiado grande, debe ser inferior a 20MB.");
+					break;
+				}else{
+				proceder=true;
+					}
+				}
+			if (proceder){
+				for (let i = 0; i < numFiles; i++) {
+					filename=fileList[i].name;
+					nombrearchivos.push(filename);
+					filesize=Math.trunc(fileList[i].size/1000);
+					tamañoarchivos.push(filesize);
+					console.log(filename+" "+filesize+" "+filepath+filename);
+					console.log(idusuario);
+					detallearchivos+=filename+" "+filesize+"KB; ";
+					var usuariobucketRef = storageRef.child("usuarios/"+idusuario);
+					var fileRef = usuariobucketRef.child(filename);
+					var subiendoarchivo =fileRef.put(fileList[i]);
+					subiendoarchivos.push(subiendoarchivo);
+					var sleep=[];
+					let sleepsum=0;
+					sleep.push(0);
+					urlarchivos.push(i);
+					subiendoarchivos[i].on(firebase.storage.TaskEvent.STATE_CHANGED,function(snapshot) {
+								var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+								console.log('Upload is ' + progress + '% done');
+								switch (snapshot.state) {
+									case firebase.storage.TaskState.PAUSED: 
+										console.log('Upload is paused');
+										break;
+									case firebase.storage.TaskState.RUNNING:
+										console.log('Upload is running');
+										break;
+											}
+								},function(error) {
+								switch (error.code) {
+									case 'storage/unauthorized':
+										alert("Error al cargar archivos, intente cambiar el nombre del archivo");
+										var docid=localStorage.getItem("docidnow");
+										db.collection("usuarios").doc(idusuario).collection("requerimientos").doc(docid).set({fallo: "cargando archivo: "+filename, estado: "fallado"},{merge:true});
+										break;
+									case 'storage/canceled':
+      								break;
+									case 'storage/unknown':
+									break;
+									}},function() {
+							subiendoarchivos[i].snapshot.ref.getDownloadURL().then(function(downloadURL) {
+    							console.log('File available at', downloadURL);
+								urlarchivos[i]=downloadURL;
+								var docid=localStorage.getItem("docidnow");
+								db.collection("usuarios").doc(idusuario).collection("requerimientos").doc(docid).set({urlarchivos: urlarchivos},{merge:true})
+								});});
+						}
+			db.collection("usuarios").doc(idusuario).collection("requerimientos").add({
+					tipoderequerimiento:	"Traducción de documento",
+					fechadesolicitud:	fechadesolicitud,
+					fecha:	fechatraduccion,
+					espanol:	 espanol,
+					frances:	frances,
+					ingles:		ingles,
+					cotizacion:	cotizatraduccion,
+					cotizacionvalor:	0,
+					cotizacionmoneda:	"UF",
+					mensaje:	mensajetraduccion,
+					cantidadarchivos:	numFiles,
+					nombrearchivos:	nombrearchivos,
+					tamañoarchivos:	tamañoarchivos,	
+					detallearchivos:	detallearchivos,
+					emailusuario: emailusuario,
+					refcliente:	refcliente,
+					refinterna:	refinterna,
+					estado:	"nuevo"}).then((doc)=>{localStorage.setItem("docidnow",doc.id);console.log("¡Escritura exitosa!")}).catch((error) =>{console.error("Error al escritura: ", error);});
+			cierrepanelformulariosadmin();alert("Requerimiento de Traducción registrado para usuario seleccionado.");}
+	}		
+	function	reqinformepericialsubmitadmin(form){
+			var fechadesolicitud = new Date();
+			var fechainformepericial=form.fechainformepericialadmin.value;
+			var espanol=form.espanolinformepericialadmin.checked;
+			var frances=form.francesinformepericialadmin.checked;
+			var ingles=form.inglesinformepericialadmin.checked;
+			var cotizainformepericial=form.cotizainformepericialadmin.checked;
+			var mensajeinformepericial=form.mensajeinformepericialadmin.value;
+			var refcliente=form.refclienteinformepericialadmin.value;
+			var refinterna="pendiente";
+			var filepath="";
+			var filename="";
+			var filesize=0;
+			var fileList = [];
+			var numFiles = [];
+			var proceder=false;
+			if (form.fileinformepericialadmin.value){ 
+			fileList = form.fileinformepericialadmin.files;
+			numFiles =	fileList.length;
+			filepath=rutaarchivos(form.fileinformepericialadmin);}else{
+				console.log("No se enviaron archivos.");
+				proceder=true;
+			};
+			let idusuario=obteneridusuarioactivolocalStorage();
+			let emailusuario=obteneremailusuarioactivolocalStorage();
+			let detallearchivos="";
+			var nombrearchivos=[];
+			var tamañoarchivos=[];
+			var urlarchivos= [];
+			var subiendoarchivos=[];
+				for (let i = 0; i < numFiles; i++) {
+				filesize=fileList[i].size/1000;
+				if (filesize>20000){
+					proceder=false;
+					alert("Archivo demasiado grande, debe ser inferior a 20MB.");
+					break;
+				}else{
+				proceder=true;
+					}
+				}
+			if (proceder){
+				for (let i = 0; i < numFiles; i++) {
+					filename=fileList[i].name;
+					nombrearchivos.push(filename);
+					filesize=Math.trunc(fileList[i].size/1000);
+					tamañoarchivos.push(filesize);
+					console.log(filename+" "+filesize+" "+filepath+filename);
+					console.log(idusuario);
+					detallearchivos+=filename+" "+filesize+"KB; ";
+					var usuariobucketRef = storageRef.child("usuarios/"+idusuario);
+					var fileRef = usuariobucketRef.child(filename);
+					var subiendoarchivo =fileRef.put(fileList[i]);
+					subiendoarchivos.push(subiendoarchivo);
+					urlarchivos.push(i);
+					subiendoarchivos[i].on(firebase.storage.TaskEvent.STATE_CHANGED,function(snapshot) {
+								var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+								console.log('Upload is ' + progress + '% done');
+								switch (snapshot.state) {
+									case firebase.storage.TaskState.PAUSED: 
+										console.log('Upload is paused');
+										break;
+									case firebase.storage.TaskState.RUNNING:
+										console.log('Upload is running');
+										break;
+											}
+								},function(error) {
+								switch (error.code) {
+									case 'storage/unauthorized':
+										alert("Error al cargar archivos, intente cambiar el nombre del archivo");
+										var docid=localStorage.getItem("docidnow");
+										db.collection("usuarios").doc(idusuario).collection("requerimientos").doc(docid).set({fallo: "cargando archivo: "+filename, estado: "fallado"},{merge:true});
+									break;
+									case 'storage/canceled':
+      								break;
+									case 'storage/unknown':
+									break;
+									}},function() {
+							subiendoarchivos[i].snapshot.ref.getDownloadURL().then(function(downloadURL) {
+    							console.log('File available at', downloadURL);
+								urlarchivos[i]=downloadURL;
+								var docid=localStorage.getItem("docidnow");
+								db.collection("usuarios").doc(idusuario).collection("requerimientos").doc(docid).set({urlarchivos: urlarchivos},{merge:true});
+								});});
+						}
+			db.collection("usuarios").doc(idusuario).collection("requerimientos").add({
+					tipoderequerimiento:	"Análisis de informe pericial",
+					fechadesolicitud:	fechadesolicitud,
+					fecha:	fechainformepericial,
+					espanol:	 espanol,
+					frances:	frances,
+					ingles:		ingles,
+					cotizacion:	cotizainformepericial,
+					cotizacionvalor:	0,
+					cotizacionmoneda:	"UF",
+					mensaje:	mensajeinformepericial,
+					cantidadarchivos:	numFiles,
+					nombrearchivos:	nombrearchivos,
+					tamañoarchivos:	tamañoarchivos,	
+					detallearchivos:	detallearchivos,
+					emailusuario: emailusuario,
+					refcliente:	refcliente,
+					refinterna:	refinterna,
+					estado:	"nuevo"}).then((doc)=>{localStorage.setItem("docidnow",doc.id);console.log("¡Escritura exitosa!")}).catch((error) =>{console.error("Error al escritura: ", error);});
+			cierrepanelformulariosadmin();alert("Requerimiento de Informe pericial registrado para usuario seleccionado.");}	
+	}
+	function	reqrespuestapericialsubmitadmin(form){
+			var fechadesolicitud = new Date();
+			var fecharespuestapericial=form.fecharespuestapericialadmin.value;
+			var espanol=form.espanolrespuestapericialadmin.checked;
+			var frances=form.francesrespuestapericialadmin.checked;
+			var ingles=form.inglesrespuestapericial.checked;
+			var cotizarespuestapericial=form.cotizarespuestapericialadmin.checked;
+			var mensajerespuestapericial=form.mensajerespuestapericialadmin.value;			
+			var refcliente=form.refclienterespuestapericialadmin.value;
+			var refinterna="pendiente";
+			var filepath="";
+			var filename="";
+			var filesize=0;
+			var fileList = [];
+			var numFiles = [];
+			var proceder=false;
+			if (form.filerespuestapericialadmin.value){ 
+			fileList = form.filerespuestapericialadmin.files;
+			numFiles =	fileList.length;
+			filepath=rutaarchivos(form.filerespuestapericialadmin);}else{
+				console.log("No se enviaron archivos.");
+				proceder=true;
+			};
+			let idusuario=obteneridusuarioactivolocalStorage();
+			let emailusuario=obteneremailusuarioactivolocalStorage();
+			let detallearchivos="";
+			var urlarchivos= [];
+			var subiendoarchivos=[];
+			var nombrearchivos=[];
+			var tamañoarchivos=[];
+				for (let i = 0; i < numFiles; i++) {
+				filesize=fileList[i].size/1000;
+				if (filesize>20000){
+					proceder=false;
+					alert("Archivo demasiado grande, debe ser inferior a 20MB.");
+					break;
+				}else{
+				proceder=true;
+					}
+				}
+			if (proceder){
+				for (let i = 0; i < numFiles; i++) {
+					filename=fileList[i].name;
+					nombrearchivos.push(filename);
+					filesize=Math.trunc(fileList[i].size/1000);
+					tamañoarchivos.push(filesize);
+					console.log(filename+" "+filesize+" "+filepath+filename);
+					console.log(idusuario);
+					detallearchivos+=filename+" "+filesize+"KB; ";
+					var usuariobucketRef = storageRef.child("usuarios/"+idusuario);
+					var fileRef = usuariobucketRef.child(filename);
+					var subiendoarchivo =fileRef.put(fileList[i]);
+					subiendoarchivos.push(subiendoarchivo);
+					urlarchivos.push(i);
+					subiendoarchivos[i].on(firebase.storage.TaskEvent.STATE_CHANGED,function(snapshot) {
+								var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+								console.log('Upload is ' + progress + '% done');
+								switch (snapshot.state) {
+									case firebase.storage.TaskState.PAUSED: 
+										console.log('Upload is paused');
+										break;
+									case firebase.storage.TaskState.RUNNING:
+										console.log('Upload is running');
+										break;
+											}
+								},function(error) {
+								switch (error.code) {
+									case 'storage/unauthorized':
+										alert("Error al cargar archivos, intente cambiar el nombre del archivo");
+											var docid=localStorage.getItem("docidnow");										db.collection("usuarios").doc(idusuario).collection("requerimientos").doc(docid).set({fallo: "cargando archivo: "+filename, estado: "fallado"},{merge:true});
+									break;
+									case 'storage/canceled':
+      								break;
+									case 'storage/unknown':
+									break;
+									}},function() {
+							subiendoarchivos[i].snapshot.ref.getDownloadURL().then(function(downloadURL) {
+    							console.log('File available at', downloadURL);
+								urlarchivos[i]=downloadURL;
+								var docid=localStorage.getItem("docidnow");
+								db.collection("usuarios").doc(idusuario).collection("requerimientos").doc(docid).set({urlarchivos: urlarchivos},{merge:true});
+								});});
+						}
+			db.collection("usuarios").doc(idusuario).collection("requerimientos").add({
+					tipoderequerimiento:	"Respuesta a informe pericial",
+					fechadesolicitud:	fechadesolicitud,
+					fecha:	fecharespuestapericial,
+					espanol:	 espanol,
+					frances:	frances,
+					ingles:		ingles,
+					cotizacion:	cotizarespuestapericial,
+					cotizacionvalor:	0,
+					cotizacionmoneda:	"UF",
+					mensaje:	mensajerespuestapericial,
+					cantidadarchivos:	numFiles,	
+					nombrearchivos:	nombrearchivos,
+					tamañoarchivos:	tamañoarchivos,	
+					detallearchivos:	detallearchivos,
+					emailusuario: emailusuario,
+					refcliente:	refcliente,
+					refinterna:	refinterna,
+					estado:	"nuevo"}).then((doc)=>{localStorage.setItem("docidnow",doc.id);console.log("¡Escritura exitosa!")}).catch((error) =>{console.error("Error al escritura: ", error);});
+			cierrepanelformulariosadmin();alert("Requerimiento de Respuesta pericial registrado para usuario seleccionado.");}
+	}
+	function	reqbeasubmitadmin(form){
+			var fechadesolicitud = new Date();
+			var fechabea=form.fechabeaadmin.value;
+			var espanol=form.espanolbeaadmin.checked;
+			var frances=form.francesbeaadmin.checked;
+			var ingles=form.inglesbeaadmin.checked;
+			var cotizabea=form.cotizabeaadmin.checked;
+			var mensajebea=form.mensajebeaadmin.value;
+			var refcliente=form.refclientebeaadmin.value;
+			var refinterna="pendiente";
+			var filepath="";
+			var filename="";
+			var filesize=0;
+			var fileList = [];
+			var numFiles = [];
+			var proceder=false;
+			if (form.filebeaadmin.value){ 
+			fileList = form.filebeaadmin.files;
+			numFiles =	fileList.length;
+			filepath=rutaarchivos(form.filebeaadmin);}else{
+				console.log("No se enviaron archivos.");
+				proceder=true;
+			};
+			let idusuario=obteneridusuarioactivolocalStorage();
+			let emailusuario=obteneremailusuarioactivolocalStorage();
+			let detallearchivos="";
+			var urlarchivos= [];
+			var subiendoarchivos=[];
+			var nombrearchivos=[];
+			var tamañoarchivos=[];
+			for (let i = 0; i < numFiles; i++) {
+				filesize=fileList[i].size/1000;
+				if (filesize>20000){
+					proceder=false;
+					alert("Archivo demasiado grande, debe ser inferior a 20MB.");
+					break;
+				}else{
+				proceder=true;
+					}
+				}
+			if (proceder){
+				for (let i = 0; i < numFiles; i++) {
+					filename=fileList[i].name;
+					nombrearchivos.push(filename);
+					filesize=Math.trunc(fileList[i].size/1000);
+					tamañoarchivos.push(filesize);
+					console.log(filename+" "+filesize+" "+filepath+filename);
+					console.log(idusuario);
+					detallearchivos+=filename+" "+filesize+"KB; ";
+					var usuariobucketRef = storageRef.child("usuarios/"+idusuario);
+					var fileRef = usuariobucketRef.child(filename);
+					var subiendoarchivo =fileRef.put(fileList[i]);
+					subiendoarchivos.push(subiendoarchivo);
+					urlarchivos.push(i);
+					subiendoarchivos[i].on(firebase.storage.TaskEvent.STATE_CHANGED,function(snapshot) {
+								var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+								console.log('Upload is ' + progress + '% done');
+								switch (snapshot.state) {
+									case firebase.storage.TaskState.PAUSED: 
+										console.log('Upload is paused');
+										break;
+									case firebase.storage.TaskState.RUNNING:
+										console.log('Upload is running');
+										break;
+											}
+								},function(error) {
+								switch (error.code) {
+									case 'storage/unauthorized':
+										alert("Error al cargar archivos, intente cambiar el nombre del archivo");
+										var docid=localStorage.getItem("docidnow");
+										db.collection("usuarios").doc(idusuario).collection("requerimientos").doc(docid).set({fallo: "cargando archivo: "+filename, estado: "fallado"},{merge:true});
+									break;
+									case 'storage/canceled':
+      								break;
+									case 'storage/unknown':
+									break;
+									}},function() {
+							subiendoarchivos[i].snapshot.ref.getDownloadURL().then(function(downloadURL) {
+    							console.log('File available at', downloadURL);
+								urlarchivos[i]=downloadURL;
+								var docid=localStorage.getItem("docidnow");
+								db.collection("usuarios").doc(idusuario).collection("requerimientos").doc(docid).set({urlarchivos: urlarchivos},{merge:true});
+								});});
+				}
+				db.collection("usuarios").doc(idusuario).collection("requerimientos").add({
+					tipoderequerimiento:	"Informe de búsqueda y estudio de patentabilidad",
+					fechadesolicitud:	fechadesolicitud,
+					fecha:	fechabea,
+					espanol:	 espanol,
+					frances:	frances,
+					ingles:		ingles,
+					cotizacion:	cotizabea,
+					cotizacionvalor:	0,
+					cotizacionmoneda:	"UF",
+					mensaje:	mensajebea,
+					cantidadarchivos:	numFiles,
+					nombrearchivos:	nombrearchivos,
+					tamañoarchivos:	tamañoarchivos,
+					detallearchivos:	detallearchivos,
+					emailusuario: emailusuario,
+					refcliente:	refcliente,
+					refinterna:	refinterna,
+					estado:	"nuevo"}).then((doc)=>{localStorage.setItem("docidnow",doc.id);console.log("¡Escritura exitosa!")}).catch((error) =>{console.error("Error al escritura: "+error.message);});
+			cierrepanelformulariosadmin();alert("Requerimiento de Respuesta pericial registrado para usuario seleccionado.");}
+	}
+	function	reqredaccionsubmitadmin(form){
+			var fechadesolicitud = new Date();
+			var fecharedaccion=form.fecharedaccionadmin.value;
+			var mensajeredaccion=form.mensajeredaccionadmin.value;
+			var refcliente=form.refclienteredaccionadmin.value;
+			var refinterna="pendiente";
+			var cotizaredaccion=form.cotizaredaccionadmin.checked;
+			var invitausuario = form.invitaredaccionusuarioadmin.checked;
+			var invitalocal = form.invitaredaccionlocaladmin.checked;
+			var invita="usuario";
+			if (invitalocal){
+					invita="local";
+				};
+			var participante1=form.participanteadmin1.value;
+			var cantidadparticipantes=1;
+			var participantesadicionales=form.emailListredaccionadmin.hasChildNodes();
+			var correoparticipantes=participante1;
+			if (participantesadicionales){
+				var listaemail = document.getElementById("emailListredaccionadmin");
+				for(var i=0; i < listaemail.childNodes.length; i++){
+					let j=2+i;
+					cantidadparticipantes++;
+					var emailextra = listaemail.childNodes[i].value;
+				console.log("participante n°"+j+": "+emailextra);
+					correoparticipantes+=";"+emailextra;
+					}
+				}
+			let idusuario=obteneridusuarioactivolocalStorage();
+			let emailusuario=obteneremailusuarioactivolocalStorage();
+			var filepath="";
+			var filename="";
+			var filesize=0;
+			var fileList = [];
+			var numFiles = [];
+			var proceder=false;
+			if (form.fileredaccionadmin.value){ 
+			fileList = form.fileredaccionadmin.files;
+			numFiles =	fileList.length;
+			filepath=rutaarchivos(form.fileredaccionadmin);}else{
+				console.log("No se enviaron archivos.");
+				proceder=true;
+			};
+			let detallearchivos="";
+			var urlarchivos= [];
+			var subiendoarchivos=[];
+			var nombrearchivos=[];
+			var tamañoarchivos=[];
+				for (let i = 0; i < numFiles; i++) {
+				filesize=fileList[i].size/1000;
+				if (filesize>20000){
+					proceder=false;
+					alert("Archivo demasiado grande, debe ser inferior a 20MB.");
+					break;
+				}else{
+				proceder=true;
+					}
+				}
+			if (proceder){
+				for (let i = 0; i < numFiles; i++) {
+					filename=fileList[i].name;
+					nombrearchivos.push(filename);
+					filesize=Math.trunc(fileList[i].size/1000);
+					tamañoarchivos.push(filesize);
+					console.log(filename+" "+filesize+" "+filepath+filename);
+					console.log(idusuario);
+					detallearchivos+=filename+" "+filesize+"KB; ";
+					var usuariobucketRef = storageRef.child("usuarios/"+idusuario);
+					var fileRef = usuariobucketRef.child(filename);
+					var subiendoarchivo =fileRef.put(fileList[i]);
+					subiendoarchivos.push(subiendoarchivo);
+					urlarchivos.push(i);
+					subiendoarchivos[i].on(firebase.storage.TaskEvent.STATE_CHANGED,function(snapshot) {
+								var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+								console.log('Upload is ' + progress + '% done');
+								switch (snapshot.state) {
+									case firebase.storage.TaskState.PAUSED: 
+										console.log('Upload is paused');
+										break;
+									case firebase.storage.TaskState.RUNNING:
+										console.log('Upload is running');
+										break;
+											}
+								},function(error) {
+								switch (error.code) {
+									case 'storage/unauthorized':
+										alert("Error al cargar archivos, intente cambiar el nombre del archivo");
+										var docid=localStorage.getItem("docidnow");
+										db.collection("usuarios").doc(idusuario).collection("requerimientos").doc(docid).set({fallo: "cargando archivo: "+filename, estado: "fallado"},{merge:true});
+									break;
+									case 'storage/canceled':
+      								break;
+									case 'storage/unknown':
+									break;
+									}},function() {
+							subiendoarchivos[i].snapshot.ref.getDownloadURL().then(function(downloadURL) {
+    							console.log('File available at', downloadURL);
+								urlarchivos[i]=downloadURL;
+								var docid=localStorage.getItem("docidnow");
+								db.collection("usuarios").doc(idusuario).collection("requerimientos").doc(docid).set({urlarchivos: urlarchivos},{merge:true});
+								});});
+						}
+			db.collection("usuarios").doc(idusuario).collection("requerimientos").add({
+					tipoderequerimiento:	"Redacción de patente",
+					fechadesolicitud:	fechadesolicitud,
+					fecha:	fecharedaccion,
+					invita:	invita,	
+					mensaje:	mensajeredaccion,
+					cantidadarchivos:	numFiles,
+					nombrearchivos:	nombrearchivos,
+					tamañoarchivos:	tamañoarchivos,
+					detallearchivos:	detallearchivos,
+					cotizacion:	cotizaredaccion,
+					cotizacionvalor:	0,
+					cotizacionmoneda:	"UF",
+					cantidadparticipantes:	cantidadparticipantes,	
+					correoparticipantes:	correoparticipantes,
+					emailusuario: emailusuario,
+					refcliente:	refcliente,
+					refinterna:	refinterna,
+					estado:	"nuevo"}).then((doc)=>{localStorage.setItem("docidnow",doc.id);console.log("¡Escritura exitosa!")}).catch((error) =>{console.error("Error al escritura: "+error.message);});
+			cierrepanelformulariosadmin();alert("Requerimiento de Redacción registrado para usuario seleccionado.");}
+	}
+	function	reqcorreccionpliegosubmitadmin(form){
+			var fechadesolicitud = new Date();
+			var fechacorreccionpliego=form.fechacorreccionpliegoadmin.value;
+			var espanol=form.espanolcorreccionpliegoadmin.checked;
+			var frances=form.francescorreccionpliegoadmin.checked;
+			var ingles=form.inglescorreccionpliegoadmin.checked;
+			var cotizacorreccionpliego=form.cotizacorreccionpliegoadmin.checked;
+			var mensajecorreccionpliego=form.mensajecorreccionpliegoadmin.value;
+			var refcliente=form.refclientecorreccionpliegoadmin.value;
+			var refinterna="pendiente";
+			var filepath="";
+			var filename="";
+			var filesize=0;
+			var fileList = [];
+			var numFiles = [];
+			var proceder=false;
+			if (form.filecorreccionpliegoadmin.value){ 
+			fileList = form.filecorreccionpliegoadmin.files;
+			numFiles =	fileList.length;
+			filepath=rutaarchivos(form.filecorreccionpliegoadmin);}else{
+				console.log("No se enviaron archivos.");
+				proceder=true;
+			};
+			let idusuario=obteneridusuarioactivolocalStorage();
+			let emailusuario=obteneremailusuarioactivolocalStorage();
+			let detallearchivos="";
+			var urlarchivos= [];
+			var subiendoarchivos=[];
+			var nombrearchivos=[];
+			var tamañoarchivos=[];
+				for (let i = 0; i < numFiles; i++) {
+				filesize=fileList[i].size/1000;
+				if (filesize>20000){
+					proceder=false;
+					alert("Archivo demasiado grande, debe ser inferior a 20MB.");
+					break;
+				}else{
+				proceder=true;
+					}
+				}
+			if (proceder){
+				for (let i = 0; i < numFiles; i++) {
+					filename=fileList[i].name;
+					nombrearchivos.push(filename);
+					filesize=Math.trunc(fileList[i].size/1000);
+					tamañoarchivos.push(filesize);
+					console.log(filename+" "+filesize+" "+filepath+filename);
+					console.log(idusuario);
+					detallearchivos+=filename+" "+filesize+"KB; ";
+					var usuariobucketRef = storageRef.child("usuarios/"+idusuario);
+					var fileRef = usuariobucketRef.child(filename);
+					var subiendoarchivo =fileRef.put(fileList[i]);
+					subiendoarchivos.push(subiendoarchivo);
+					urlarchivos.push(i);
+					subiendoarchivos[i].on(firebase.storage.TaskEvent.STATE_CHANGED,function(snapshot) {
+								var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+								console.log('Upload is ' + progress + '% done');
+								switch (snapshot.state) {
+									case firebase.storage.TaskState.PAUSED: 
+										console.log('Upload is paused');
+										break;
+									case firebase.storage.TaskState.RUNNING:
+										console.log('Upload is running');
+										break;
+											}
+								},function(error) {
+								switch (error.code) {
+									case 'storage/unauthorized':
+										alert("Error al cargar archivos, intente cambiar el nombre del archivo");
+											var docid=localStorage.getItem("docidnow");
+										db.collection("usuarios").doc(idusuario).collection("requerimientos").doc(docid).set({fallo: "cargando archivo: "+filename, estado: "fallado"},{merge:true});
+									break;
+									case 'storage/canceled':
+      								break;
+									case 'storage/unknown':
+									break;
+									}},function() {
+							subiendoarchivos[i].snapshot.ref.getDownloadURL().then(function(downloadURL) {
+    							console.log('File available at', downloadURL);
+								urlarchivos[i]=downloadURL;
+								var docid=localStorage.getItem("docidnow");
+								db.collection("usuarios").doc(idusuario).collection("requerimientos").doc(docid).set({urlarchivos: urlarchivos},{merge:true});
+								});});
+						}
+			db.collection("usuarios").doc(idusuario).collection("requerimientos").add({
+					tipoderequerimiento:	"Corrección de pliego de reivindicaciones",
+					fechadesolicitud:	fechadesolicitud,
+					fecha:	fechacorreccionpliego,
+					espanol:	 espanol,
+					frances:	frances,
+					ingles:		ingles,
+					cotizacion:	cotizacorreccionpliego,
+					cotizacionvalor:	0,
+					cotizacionmoneda:	"UF",
+					mensaje:	mensajecorreccionpliego,
+					cantidadarchivos:	numFiles,
+					nombrearchivos:	nombrearchivos,
+					tamañoarchivos:	tamañoarchivos,
+					detallearchivos:	detallearchivos,
+					emailusuario: emailusuario,
+					refcliente:	refcliente,
+					refinterna:	refinterna,
+					estado:	"nuevo"}).then((doc)=>{localStorage.setItem("docidnow",doc.id);console.log("¡Escritura exitosa!")}).catch((error) =>{console.error("Error al escritura: ", error);});
+				cierrepanelformulariosadmin();alert("Requerimiento de Corrección de pliego registrado para usuario seleccionado.");}
+	}
+	function	reqinfraccionsubmitadmin(form){
+			var fechadesolicitud = new Date();
+			var fechainfraccion=form.fechainfraccionadmin.value;
+			var espanol=form.espanolinfraccionadmin.checked;
+			var frances=form.francesinfraccionadmin.checked;
+			var ingles=form.inglesinfraccionadmin.checked;
+			var cotizainfraccion=form.cotizainfraccionadmin.checked;
+			var mensajeinfraccion=form.mensajeinfraccionadmin.value;
+			var refcliente=form.refclienteinfraccionadmin.value;
+			var refinterna="pendiente";
+			var filepath="";
+			var filename="";
+			var filesize=0;
+			var fileList = [];
+			var numFiles = [];
+			var proceder=false;
+			if (form.fileinfraccionadmin.value){ 
+			fileList = form.fileinfraccionadmin.files;
+			numFiles =	fileList.length;
+			filepath=rutaarchivos(form.fileinfraccionadmin);}else{
+				console.log("No se enviaron archivos.");
+				proceder=true;
+			};
+			let idusuario=obteneridusuarioactivolocalStorage();
+			let emailusuario=obteneremailusuarioactivolocalStorage();
+			let detallearchivos="";
+			var urlarchivos= [];
+			var subiendoarchivos=[];
+			var nombrearchivos=[];
+			var tamañoarchivos=[];
+				for (let i = 0; i < numFiles; i++) {
+				filesize=fileList[i].size/1000;
+				if (filesize>20000){
+					proceder=false;
+					alert("Archivo demasiado grande, debe ser inferior a 20MB.");
+					break;
+				}else{
+				proceder=true;
+					}
+				}
+			if (proceder){
+				for (let i = 0; i < numFiles; i++) {
+					filename=fileList[i].name;
+					nombrearchivos.push(filename);
+					filesize=Math.trunc(fileList[i].size/1000);
+					tamañoarchivos.push(filesize);
+					console.log(filename+" "+filesize+" "+filepath+filename);
+					console.log(idusuario);
+					detallearchivos+=filename+" "+filesize+"KB; ";
+					var usuariobucketRef = storageRef.child("usuarios/"+idusuario);
+					var fileRef = usuariobucketRef.child(filename);
+					var subiendoarchivo =fileRef.put(fileList[i]);
+					subiendoarchivos.push(subiendoarchivo);
+					urlarchivos.push(i);
+					subiendoarchivos[i].on(firebase.storage.TaskEvent.STATE_CHANGED,function(snapshot) {
+								var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+								console.log('Upload is ' + progress + '% done');
+								switch (snapshot.state) {
+									case firebase.storage.TaskState.PAUSED: 
+										console.log('Upload is paused');
+										break;
+									case firebase.storage.TaskState.RUNNING:
+										console.log('Upload is running');
+										break;
+											}
+								},function(error) {
+								switch (error.code) {
+									case 'storage/unauthorized':
+										alert("Error al cargar archivos, intente cambiar el nombre del archivo");
+											var docid=localStorage.getItem("docidnow");
+										db.collection("usuarios").doc(idusuario).collection("requerimientos").doc(docid).set({fallo: "cargando archivo: "+filename, estado: "fallado"},{merge:true});
+									break;
+									case 'storage/canceled':
+      								break;
+									case 'storage/unknown':
+									break;
+									}},function() {
+							subiendoarchivos[i].snapshot.ref.getDownloadURL().then(function(downloadURL) {
+    							console.log('File available at', downloadURL);
+								urlarchivos[i]=downloadURL;
+								var docid=localStorage.getItem("docidnow");
+								db.collection("usuarios").doc(idusuario).collection("requerimientos").doc(docid).set({urlarchivos: urlarchivos},{merge:true});
+								});});
+						}
+			db.collection("usuarios").doc(idusuario).collection("requerimientos").add({
+					tipoderequerimiento:	"Estudio de infracción de patente",
+					fechadesolicitud:	fechadesolicitud,
+					fecha:	fechainfraccion,
+					espanol:	 espanol,
+					frances:	frances,
+					ingles:		ingles,
+					cotizacion:	cotizainfraccion,
+					cotizacionvalor:	0,
+					cotizacionmoneda:	"UF",
+					mensaje:	mensajeinfraccion,
+					cantidadarchivos:	numFiles,	
+					nombrearchivos:	nombrearchivos,
+					tamañoarchivos:	tamañoarchivos,
+					detallearchivos:	detallearchivos,
+					emailusuario: emailusuario,
+					refcliente:	refcliente,
+					refinterna:	refinterna,
+					estado:	"nuevo"}).then((doc)=>{localStorage.setItem("docidnow",doc.id);console.log("¡Escritura exitosa!")}).catch((error) =>{console.error("Error al escritura: ", error);});
+			cierrepanelformulariosadmin();alert("Requerimiento de Infracción registrado para usuario seleccionado.");}
+	}
+	function	reqelosubmitadmin(form){
+			var fechadesolicitud = new Date();
+			var fechaelo=form.fechaeloadmin.value;
+			var espanol=form.espanoleloadmin.checked;
+			var frances=form.franceseloadmin.checked;
+			var ingles=form.ingleseloadmin.checked;
+			var cotizaelo=form.cotizaeloadmin.checked;
+			var mensajeelo=form.mensajeeloadmin.value;
+			var refcliente=form.refclienteeloadmin.value;
+			var refinterna="pendiente";
+			var filepath="";
+			var filename="";
+			var filesize=0;
+			var fileList = [];
+			var numFiles = [];
+			var proceder=false;
+			if (form.fileeloadmin.value){ 
+			fileList = form.fileeloadmin.files;
+			numFiles =	fileList.length;
+			filepath=rutaarchivos(form.fileeloadmin);}else{
+				console.log("No se enviaron archivos.");
+				proceder=true;
+			};
+			let idusuario=obteneridusuarioactivolocalStorage();
+			let emailusuario=obteneremailusuarioactivolocalStorage();
+			let detallearchivos="";
+			var urlarchivos= [];
+			var subiendoarchivos=[];
+			var nombrearchivos=[];
+			var tamañoarchivos=[];
+				for (let i = 0; i < numFiles; i++) {
+				filesize=fileList[i].size/1000;
+				if (filesize>20000){
+					proceder=false;
+					alert("Archivo demasiado grande, debe ser inferior a 20MB.");
+					break;
+				}else{
+				proceder=true;
+					}
+				}
+			if (proceder){
+				for (let i = 0; i < numFiles; i++) {
+					filename=fileList[i].name;
+					nombrearchivos.push(filename);
+					filesize=Math.trunc(fileList[i].size/1000);
+					tamañoarchivos.push(filesize);
+					console.log(filename+" "+filesize+" "+filepath+filename);
+					console.log(idusuario);
+					detallearchivos+=filename+" "+filesize+"KB; ";
+					var usuariobucketRef = storageRef.child("usuarios/"+idusuario);
+					var fileRef = usuariobucketRef.child(filename);
+					var subiendoarchivo =fileRef.put(fileList[i]);
+					subiendoarchivos.push(subiendoarchivo);
+					urlarchivos.push(i);
+					subiendoarchivos[i].on(firebase.storage.TaskEvent.STATE_CHANGED,function(snapshot) {
+								var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+								console.log('Upload is ' + progress + '% done');
+								switch (snapshot.state) {
+									case firebase.storage.TaskState.PAUSED: 
+										console.log('Upload is paused');
+										break;
+									case firebase.storage.TaskState.RUNNING:
+										console.log('Upload is running');
+										break;
+											}
+								},function(error) {
+								switch (error.code) {
+									case 'storage/unauthorized':
+										alert("Error al cargar archivos, intente cambiar el nombre del archivo");
+										var docid=localStorage.getItem("docidnow");									
+										db.collection("usuarios").doc(idusuario).collection("requerimientos").doc(docid).set({fallo: "cargando archivo: "+filename, estado: "fallado"},{merge:true});
+									break;
+									case 'storage/canceled':
+      								break;
+									case 'storage/unknown':
+									break;
+									}},function() {
+							subiendoarchivos[i].snapshot.ref.getDownloadURL().then(function(downloadURL) {
+    							console.log('File available at', downloadURL);
+								urlarchivos[i]=downloadURL;
+								var docid=localStorage.getItem("docidnow");
+								db.collection("usuarios").doc(idusuario).collection("requerimientos").doc(docid).set({urlarchivos: urlarchivos},{merge:true});
+								});});
+						}
+			db.collection("usuarios").doc(idusuario).collection("requerimientos").add({
+					tipoderequerimiento:	"Estudio de libertad de operación",
+					fechadesolicitud:	fechadesolicitud,
+					fecha:	fechaelo,
+					espanol:	 espanol,
+					frances:	frances,
+					ingles:		ingles,
+					cotizacion:	cotizaelo,
+					cotizacionvalor:	0,
+					cotizacionmoneda:	"UF",
+					mensaje:	mensajeelo,
+					cantidadarchivos:	numFiles,	
+					nombrearchivos:	nombrearchivos,
+					tamañoarchivos:	tamañoarchivos,
+					detallearchivos:	detallearchivos,
+					emailusuario: emailusuario,
+					refcliente:	refcliente,
+					refinterna:	refinterna,
+					estado:	"nuevo"}).then((doc)=>{localStorage.setItem("docidnow",doc.id);console.log("¡Escritura exitosa!")}).catch((error) =>{console.error("Error al escritura: ", error);});
+			cierrepanelformulariosadmin();alert("Requerimiento de Estudio de libertad de operación registrado para usuario seleccionado.");}
+	}
+	function	reqnulidadsubmitadmin(form){
+			var fechadesolicitud = new Date();
+			var fechanulidad=form.fechanulidadadmin.value;
+			var espanol=form.espanolnulidadadmin.checked;
+			var frances=form.francesnulidadadmin.checked;
+			var ingles=form.inglesnulidadadmin.checked;
+			var cotizanulidad=form.cotizanulidadadmin.checked;
+			var mensajenulidad=form.mensajenulidadadmin.value;
+			var refcliente=form.refclientenulidadadmin.value;
+			var refinterna="pendiente";
+			let idusuario=obteneridusuarioactivolocalStorage();
+			let emailusuario=obteneremailusuarioactivolocalStorage();
+			db.collection("usuarios").doc(idusuario).collection("requerimientos").add({
+					tipoderequerimiento:	"Estudio de nulidad de patente",
+					fechadesolicitud:	fechadesolicitud,
+					fecha:	fechanulidad,
+					espanol:	 espanol,
+					frances:	frances,
+					ingles:		ingles,
+					cotizacion:	cotizanulidad,
+					cotizacionvalor:	0,
+					cotizacionmoneda:	"UF",
+					mensaje:	mensajenulidad,
+					emailusuario: emailusuario,
+					refcliente:	refcliente,
+					refinterna:	refinterna,
+					estado:	"nuevo"}).then(()=>{console.log("¡Escritura exitosa!")}).catch((error) =>{console.error("Error al escritura: ", error);});
+			cierrepanelformulariosadmin();
+			alert("Requerimiento de Estudio de libertad de operación registrado para usuario seleccionado.");
+	}
 	</script>
-</body>
+	
+	</body>
 	
 </html>

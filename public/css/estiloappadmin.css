@@ -290,6 +290,11 @@
 
 #paneladministrador {
 	display: none;
+	height: 90vh;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	overflow-y: scroll;
 }
 
 .paneladmindesplegado {
@@ -320,4 +325,58 @@
 	display: none;
 	text-align: left;
 	float: left;
+}
+#panelformulariosadmin {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 40%;
+	float: right;
+	position: static;
+	padding-left: 1vw;
+	padding-right: 1vw;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	margin-top: 4vh;
+}
+.paneldatosglobales60 {
+	float: left;
+	width: 60%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	top: 0vw;
+	padding-top: 3vh;
+}
+.paneldatosglobales100 {
+	float: left;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	top: 0vw;
+	padding-top: 3vh;
+}
+
+.paneldesplegadoadmin {
+	font-family: cardo;
+	font-style: normal;
+	font-weight: 400;
+	color: #403939;
+	padding-bottom: 2%;
+	margin-left: 2%;
+	margin-right: 6%;
+	float: right;
+	animation-name: despliegue;
+	animation-duration: 0.5s;
+	border: medium ridge #A2D4F2;
+	border-radius: 7px;
+	padding-left: 2%;
+	padding-right: 3%;
+	padding-top: 2%;
+	background-image: -webkit-linear-gradient(270deg,rgba(191,179,164,1.00) 45.60%,rgba(162,212,242,1.00) 100%);
+	background-image: linear-gradient(180deg,rgba(191,179,164,1.00) 45.60%,rgba(162,212,242,1.00) 100%);
+	-webkit-box-shadow: 14px 14px 5px #593E2E;
+	box-shadow: 14px 14px 5px #593E2E;
+	/* [disabled]display: none; */
 }

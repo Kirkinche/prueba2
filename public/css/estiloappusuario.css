@@ -568,15 +568,3 @@ from {	height: 0vh;}
 	border-width: thin;
 	font-size: small;
 }
-
-
-.botonsimple {
-	cursor: pointer;
-	background-color: #BFB3A4;
-	color: #BFB3A4;
-	font-family: cardo;
-	font-style: normal;
-	font-weight: 400;
-	text-shadow: 1px 1px 3px #8C6E5D;
-	border-width: thin;
-}
